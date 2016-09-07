@@ -1,5 +1,4 @@
 # 00-BlackCherry
-Icon Discovery &amp; Managment Tool 
 
 Instructions for running locally:
 * 1. Clone repo ]n

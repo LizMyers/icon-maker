@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Red Cherry</title>
+<link rel="shortcut icon" href="resources/css/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="resources/css/images/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='resources/css/jquery.mobile-1.2.1.min.css' />	
+<link rel='stylesheet' href='resources/css/allSets.min.css' />
+<link rel='stylesheet' href='resources/css/black-cherry.css' />	
+
+<script src='resources/js/jquery-1.11.2.min.js'></script>	
+	<script language="text/javascript">
+			//configure jQM
+			$(document).bind("mobileinit", function () {
+			$.mobile.ajaxEnabled = false;
+			$.mobile.defaultPageTransition= 'none';
+		});
+	 </script>
+<script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
+
+<style>
+/*  ----------------------------------------------------- */
+/*  --------------------CANVAS----------------------- */
+/*  ---------------------------------------------------- */
+  canvas {
+      border:1px solid #000;
+      float:left;
+      clear:both;
+      min-height: 512px;
+      min-width: 512px;
+  }
+    #canvas {
+      border:1px solid #000;
+      float:left;
+      clear:both;
+      min-height: 512px;
+      min-width: 512px;
+      max-height: 512px;
+      max-width: 512px;
+  }
+
+#myIconBackground {
+  position: relative;
+  display:block;
+  top:200px;
+  left:50%;
+  border:0px solid black;
+  width:256px;
+  height:256px;
+  border-radius: 50%;
+  background:#ffa500;
+  box-shadow: 6px 10px 10px #ccc;
+}
+#myIconSymbol {
+/*  border:1px solid orange;*/
+  width:250px;
+  height:250px;
+  margin:0;
+  padding:0;
+  font-size: 150px;
+  position:relative;
+  top:0;
+  left:0;
+  text-align: center;
+}
+.myIcon {
+/*  border:1px solid blue;*/
+  margin-top: 18%;
+  display:block;
+  position:relative;
+
+}
+#downloadButton {
+  width:250px;
+  height:50px;
+  text-align: center;
+  line-height: 3em;
+  margin-top:50px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px #cdcdcd;
+  background:green;
+  cursor:pointer;
+}
+#propertiesPanel {
+   float:right;
+   position:fixed;
+   top:70px;
+   right:0px;
+   width:300px;
+   height:100%;
+   background:#343434;
+   border-left:1px solid white;
+}
+#glyph01 {background:#ffffff;}
+#glyph02 {background:#232323;}
+
+.backgroundColor {
+  float:left;
+  width:50px;
+  height:50px;
+  margin:10px;
+  border-radius: 50%;
+  cursor:pointer;
+  border:0px solid yellow;
+}
+#bk01 {background:#FFF;}
+#bk02 {background:#232323;}
+#bk03 {background:#4CD964;}
+#bk04 {background:#5AC8FA;}
+#bk05 {background:#007AFF}
+#bk06 {background: #8E8E93}
+#bk07 {background:#34AADC;}
+#bk08 {background:#5856D6;}
+#bk09 {background:#FF2D55;}
+#bk10 {background:#FF3B30;}
+#bk11 {background:#FF9500}
+#bk12 {background: #FFCC00}
+#bk13 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
+#bk14 {background: -webkit-linear-gradient(#f15f3e, #f8951d)}
+#bk15 {background: -webkit-linear-gradient(#ffce06, #fedb4d)}
+#bk16 {background: -webkit-linear-gradient(#4cb748, #9ccd63)}
+#bk17 {background: -webkit-linear-gradient(#64c5f0, #76c9b6)}
+#bk18 {background: -webkit-linear-gradient(#4265b0, #4cc8ee)}
+#bk19 {background: -webkit-linear-gradient(#5a5daa, #975aa4)}
+#bk20 {background: -webkit-linear-gradient(#965aa4, #db57a0)}
+#bk21 {background: -webkit-linear-gradient(#2b2b2b, #4b4b4b)}
+#bk22 {background: -webkit-linear-gradient(#898c90, #dbddde)}
+#bk23 {background: -webkit-linear-gradient(#96d8e9, #4272b8)}
+#bk24 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
+
+button {
+  float:left;
+  width:40%;
+  height:50px;
+  background:#34AADC;
+  margin:50px;
+  margin-left:20px!important;
+  margin-top:20px!important;
+  color:white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#icon-xpos-plus, #icon-xpos-minus, {
+    position:absolute!important;
+    top:650px;
+  }
+  #icon-ypos-plus, #icon-ypos-minus, {
+    position:absolute!important;
+    top:750px;
+  }
+/*  ----------------------------------------------------- */
+/*  --------------------end Canvas----------------------- */
+/*  ---------------------------------------------------- */
+      #slide-list {
+        width:260px;
+        border:0px solid green;
+      }
+      #slide-list  ul {
+        width:260px;
+      }
+      #slide-list p {
+        margin-top:10px;
+        display:inline-block;
+        border:0px solid green;
+      }
+      p.list-glyph {
+        display:inline-block;
+        position:relative;
+        top:-6px;
+        margin:0px 0 0 15px;
+        width:60px;
+        font-size:1.75em;
+        text-align:center;
+        color:#333!important;
+      }
+      .list-title {
+        margin:18px 0 0 20px;
+        width:100px;
+        color:#383f46;
+        line-height: 1.7em;
+        white-space: nowrap;
+      }
+      span.list-code {
+        color:#383f46!important;
+        border:0px solid green;
+        white-space: nowrap;
+      }
+      .list-glyph, .list-glyph >i{
+        color:#333!important;
+        font-size:1.15em!important;
+      }
+      #myPicksTotalLabel{
+        float:left;margin:-7px 0 0px 10px;border:0px solid red;
+      }
+  
+</style>
+
+</head>
+	
+<body>
+<div class="cover"></div>
+<div data-role='page' id='cGrid' class="gridView">
+
+<div data-role="header" data-id="header" id="header" data-tap-toggle="false">
+
+<!-- LOGO + BLUE BAR -->
+
+<div id="nav">
+
+    <div id="blueSeperator"></div>  
+
+    <!-- LOGO -->                 
+    <div id="alexaLogo">
+      <img src="resources/img/alexaLogo.png" />
+    </div>   
+
+</div><!-- //nav -->
+</div><!-- //end header -->
+	
+<div data-role='content'>
+    <!-- SEARCH   -->              
+    <div id="mySearch" style="float:left;border:1px solid white;position:absolute;top:100px;left:50px;">
+      <i class="icon-search"></i>
+      <input type="text" name="search" id="search" placeholder="Search on"   />
+          <a href="#" id="clearSearch"><i class="icon-close-2"></i></a>
+          <div class="bar"></div> 
+    </div>  
+<div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item", "getSortData": {  "number": ".number parseInt", "name": ".name", "category": "[data-category]" }, "layoutMode" : "fitRows"}'>
+
+</div><!--//end isotope container-->
+
+<!-- // CANVAS AREA  // -->
+
+<div id="myIconBackground" style="position:fixed">
+  <div id="myIconSymbol"><p class="myIcon"><i class="fa fa-amazon"></i><p></div>
+    <div id="downloadButton">Download</div>
+</div>
+
+<!-- // PROPERTIES PANEL // -->
+<div id="propertiesPanel">
+    <div id="iconSymbolColorGroup" style="margin-top:20px;">
+      <div id="glyph01" class="backgroundColor"></div>
+      <div id="glyph02" class="backgroundColor"></div>
+<!--       <div id="glyph03" class="backgroundColor"></div>
+      <div id="glyph04" class="backgroundColor"></div>
+      <div id="glyph05" class="backgroundColor"></div>
+      <div id="glyph06" class="backgroundColor"></div> -->
+  </div>
+<!--//iconSymbolColorGroup-->
+    <div id="backgroundColorGroup" style="margin-top:100px;border-top:1px solid #666">
+      
+      <div id="bk01" class="backgroundColor"></div>
+      <div id="bk02" class="backgroundColor"></div>
+      <div id="bk03" class="backgroundColor"></div>
+      <div id="bk04" class="backgroundColor"></div>
+      <div id="bk05" class="backgroundColor"></div>
+      <div id="bk06" class="backgroundColor"></div>
+      <div id="bk07" class="backgroundColor"></div>
+      <div id="bk08" class="backgroundColor"></div>
+      <div id="bk09" class="backgroundColor"></div>
+      <div id="bk10" class="backgroundColor"></div>
+      <div id="bk11" class="backgroundColor"></div>
+      <div id="bk12" class="backgroundColor"></div>
+      <div id="bk13" class="backgroundColor"></div>
+      <div id="bk14" class="backgroundColor"></div>
+      <div id="bk15" class="backgroundColor"></div>
+      <div id="bk16" class="backgroundColor"></div>
+      <div id="bk17" class="backgroundColor"></div>
+      <div id="bk18" class="backgroundColor"></div>
+      <div id="bk19" class="backgroundColor"></div>
+      <div id="bk20" class="backgroundColor"></div>
+      <div id="bk21" class="backgroundColor"></div>
+      <div id="bk22" class="backgroundColor"></div>
+      <div id="bk23" class="backgroundColor"></div>
+      <div id="bk24" class="backgroundColor"></div>
+   </div><!--//backgroundColorGroup-->
+
+    <!--//iconSize-->
+    <div id="icon-size">
+      <button id="icon-bigger">Larger</button>
+      <button id="icon-smaller">Smaller</button>
+   </div><!--//icon-size-->
+
+    <!--//iconXPos-->
+    <div id="icon-xpos">
+      <button id="icon-xpos-plus">Left</button>
+      <button id="icon-xpos-minus">Right</button>
+   </div><!--//icon-xpos-->
+
+       <!--//iconYPos-->
+    <div id="icon-ypos">
+      <button id="icon-ypos-minus">Up</button>
+      <button id="icon-ypos-plus">Down</button>
+   </div><!--//icon-xpos-->
+
+
+ </div><!--//END PROPERTIES-->
+
+
+ <script src="resources/js/black-cherry-utils.js"></script> // 
+     <script src="resources/js/black-cherry.js"></script>  
+</div><!--//end content-->
+      
+    <script src="resources/js/jquery.sidr.min.js"></script>
+    <script src="resources/js/isotope.js"></script>	
+    <script src="resources/js/html2canvas.js"></script> 
+</div><!--//end cGrid-->
+
+</body>
+</html>

@@ -1,18 +1,9 @@
-# 02-BlackCherry
+# 002-BlackCherry
 Icon Discovery &amp; Managment Tool 
 
-# CC Assets for Concur
-
-[Black Cherry Icons](http://adobe.ly/1QqsEUz)
-
-[Concur - WEB](http://adobe.ly/1TKDvcN)
-
-[Concur - MOBILE](http://adobe.ly/1TcFt97)
-
-[Concur - Grey Ramp](http://adobe.ly/24zPy3w)
-
-[Gateway - Brand](http://adobe.ly/1XZ8Tqo)
-
-[Gateway - Messaging](http://adobe.ly/1Sgygn0)
-
-[Gateway - Typography](http://adobe.ly/1P45EqY)
+Instructions for running locally:
+1. Clone repo
+2. Use command line tool to navigate to parent directory
+3. $ scripts/web-server.js (launches project locally)
+4. Naviage to http://localhost:8000 in browser
+5. Use Live Reload (Chrome exntension) to see changes as you make them

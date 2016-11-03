@@ -1509,21 +1509,21 @@
     "symbol":"fa fa-facebook",
     "category":"social",
     "set":"faSet",
-    "keywords":"social"
+    "keywords":"social, facebook"
   },
   {
     "name":"Facebook",
     "symbol":"fa fa-facebook-official",
     "category":"social",
     "set":"faSet",
-    "keywords":"social"
+    "keywords":"social, facebook"
   },
   {
     "name":"Facebook",
     "symbol":"fa fa-facebook-square",
     "category":"social",
     "set":"faSet",
-    "keywords":"social"
+    "keywords":"social, facebook"
   },
   {
     "name":"Step Forward",
@@ -3952,14 +3952,14 @@
     "symbol":"fa fa-twitter",
     "category":"social",
     "set":"faSet",
-    "keywords":"social"
+    "keywords":"social, twitter"
   },
   {
     "name":"Twitter",
     "symbol":"fa fa-twitter-square",
     "category":"social",
     "set":"faSet",
-    "keywords":"social"
+    "keywords":"social, twitter"
   },
   {
     "name":"Umbrella",

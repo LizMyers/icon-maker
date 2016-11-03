@@ -272,7 +272,6 @@ $(document).on('pageshow', '#cGrid', function() {
 			} else {
 				$('#container').isotope({
 					filter: ':contains(' + kwd + ')' 
-
 				});
 				$('#setGroup').find('a').removeClass('selected').find('i').removeClass('selected');
 			}
@@ -281,23 +280,23 @@ $(document).on('pageshow', '#cGrid', function() {
 	});
 
 $('#clearSearch').on('click', function() {
-	var mySet = localStorage.getItem('mySet');
+	// var mySet = localStorage.getItem('mySet');
 
-	if(mySet  == 'faSet') {
-		$('#faSet').trigger('click');
-	} else if (mySet == 'mdSet') {
-		$('#mdSet').trigger('click');
-	} else if (mySet == 'glyphSet') {
-		$('#glyphSet').trigger('click');
-	} else if (mySet == 'ionicSet') {	
-		$('#ionicSet').trigger('click');
-	}
+	// if(mySet  == 'faSet') {
+	// 	$('#faSet').trigger('click');
+	// } else if (mySet == 'mdSet') {
+	// 	$('#mdSet').trigger('click');
+	// } else if (mySet == 'glyphSet') {
+	// 	$('#glyphSet').trigger('click');
+	// } else if (mySet == 'ionicSet') {	
+	// 	$('#ionicSet').trigger('click');
+	// }
 
 	$('#container').isotope({
-		 filter: ':contains('+mySet+')'
+		 filter: '*'
 	});
 
-	$('#search').val('');
+	$('#search').val(' ');
 	$(this).hide();
 	
 });
@@ -478,56 +477,82 @@ function clearAllMyPicks() {
 	}, 1000);	
 
 }
-	 
-$('#filterGroup > li').on('click', this, function() {
+		 
+$('.menuItem ').on('click', this, function() {
 	var catSelector = $(this).attr('data-category-value');
-	if (catSelector == "*") {
-		$('#showAll *').css('color', '#fff');
-	} else {
-		$('#showAll *').css('color', '#999');
-		$('#btnClearCategories').css('color', '#fc6');
+	switch(catSelector) {
+		case '*':
+		$('#filterType').text('All Categories')
+		break;
+		case '.business':
+		$('#filterType').text('Business')
+		break;
+		case '.entertainment':
+		$('#filterType').text('Entertainment')
+		break;
+		case '.food':
+		$('#filterType').text('Food & Drink')
+		break;
+		case '.nature':
+		$('#filterType').text('Nature')
+		break;
+		case '.objects':
+		$('#filterType').text('Objects')
+		break;
+		case '.office':
+		$('#filterType').text('Office')
+		break;
+		case '.people':
+		$('#filterType').text('People')
+		break;
+		case '.social':
+		$('#filterType').text('Social')
+		break;
+		case '.sports':
+		$('#filterType').text('Sports')
+		break;
+		case '.technology':
+		$('#filterType').text('Technology')
+		break;
+		case '.travel':
+		$('#filterType').text('Travel')
+		break;
+		case '.UI':
+		$('#filterType').text('UI Elements')
+		break;
 	}
+	
 	$('#container').isotope({
 		filter: catSelector
 	});
-	$('#showMyPicks *').removeClass('selected');
-	$(this).siblings().find('a').removeClass('selected').find('i').removeClass('selected');
-	$(this).siblings().find('span').removeClass('selected');
-	$(this).siblings().find('countTxt').removeClass('selected');
-	$(this).find('a').addClass('selected').find('i').addClass('selected');
-	$(this).find('span').addClass('selected');
-	$(this).find('countTxt').addClass('selected');
-	$('#setGroup *').removeClass('selected');
-	$('#clearSearch').hide();
-	$('#search').val('');
-	$('#showMyPicks *').css('color', '#999');
-	$('#totals li *').removeClass('selected');
-	$('#view-all').css('background', 'none').css('color', '#ccc');
-	$('#view-all *').css('color', '#ccc');
-	$('#view-my-picks').css('background', 'none').css('color', '#ccc');
-	$('#view-my-picks *').css('color', '#ccc');
-	$('#btnClearLibraries').css('color', '#555');
+
 });
 
-$('#btnClearCategories').on('click', function() {
-	$('#filterGroup *').removeClass('selected');
-	$(this).css('color', '#666');
-	var mySet = localStorage.getItem('mySet');
+var orginalWidth = $("#image").width();
 
-	if(mySet  == 'faSet') {
-		$('#faSet').trigger('click');
-	} else if (mySet == 'mdSet') {
-		$('#mdSet').trigger('click');
-	} else if (mySet == 'glyphSet') {
-		$('#glyphSet').trigger('click');
-	} else if (mySet == 'ionicSet') {	
-		$('#ionicSet').trigger('click');
-	}
+$("#infoSlider").text(orginalWidth + ', 100%');
 
-	$('#container').isotope({
-		 filter: ':contains('+mySet+')'
+$("#slider").slider({
+    value: 0,
+    min: -50,
+    max: 50,
+    step: 10,
+    slide: function (event, ui) {
+        var fraction = (1 + ui.value / 100),
+            newWidth = orginalWidth * fraction;
+  
+        $("#infoSlider").text(newWidth + ', ' + Math.floor(fraction * 100) + '%');
+
+        $("#image").width(newWidth);
+    }
+});
+
+	$('#iconSize').keyup(function() { 
+		icon_size = $('#iconSize').val()+'px';
+		$('#myIconSymbol').css('width', icon_size);
+		$('#myIconSymbol >').css('font-size', icon_size);
+		//iconSize(bg_size,icon_size);
 	});
-});
 
 ///////////////////////// ICON MAKER /////////////////////////////////	
 
@@ -549,56 +574,46 @@ $('#icon-smaller').on('click', function(){
 });
 
 //MOVE RIGHT
-$('#icon-xpos-plus').on('click', function(){
+$('#btn-move-right').on('click', function(){
    var myIcon = $('#myIconSymbol');
    var position = myIcon.position();
    var myIconLeft = position.left;
-   var newLeft = myIconLeft +10;
+   var newLeft = myIconLeft +1;
    myIcon.position.left = myIconLeft;
     $('#myIconSymbol').css('left', newLeft);
 });
 
 //MOVE LEFT
-$('#icon-xpos-minus').on('click', function(){
+$('#btn-move-left').on('click', function(){
    var myIcon = $('#myIconSymbol');
    var position = myIcon.position();
    var myIconLeft = position.left;
-   var newLeft = myIconLeft -10;
+   var newLeft = myIconLeft - 1;
    myIcon.position.left = myIconLeft;
-    $('#myIconSymbol').css('left', newLeft);
-});
-
-//MOVE DOWN
-$('#icon-ypos-plus').on('click', function(){
-   var myIcon = $('#myIconSymbol');
-   var position = myIcon.position();
-   var myIconTop = position.top;
-   var newTop =(myIconTop + 1);
-   myIcon.position.top = myIconTop;
-    $('#myIconSymbol').css('top', newTop);
+   $('#myIconSymbol').css('left', newLeft);
 });
 
 //MOVE UP
-$('#icon-ypos-minus').on('click', function(){
-   var myIcon = $('.myIcon');
+$('#btn-move-up').on('click', function(){
+   var myIcon = $('#myIconSymbol');
    var position = myIcon.position();
    var myIconTop = position.top;
-   console.log ("now top: " + position.top);
-   var newTop = (myIconTop +(-1));
-   console.log ("NEW top: " +newTop);
-   myIcon.position.top = newTop;
-    $('.myIcon').css('top', newTop);
-    console.log ("coord: " + position.left + ", " +position.top);
+   var newTop = myIconTop - 1;
+   myIcon.position.top = myIconTop;
+   $('#myIconSymbol').css('top', newTop);
+   console.log("moved up");
 });
 
-//CHANGE GLYPH COLOR
-$('#glyph01').on('click', function(){
-     $('#myIconSymbol').css('color', '#ffffff');
+//MOVE DOWN
+$('#btn-move-down').on('click', function(){
+   var myIcon = $('#myIconSymbol');
+   var position = myIcon.position();
+   var myIconTop = position.top;
+   var newTop = myIconTop + 1;
+   myIcon.position.top = myIconTop;
+   $('#myIconSymbol').css('top', newTop);
+   console.log("moved down");
 });
-$('#glyph02').on('click', function(){
-     $('#myIconSymbol').css('color', '#343434');
-});
-
 //CHANGE BACKGROUND COLOR
 $('#bk01').on('click', function(){
      $('#myIconBackground').css('background', '#FFF');
@@ -677,17 +692,34 @@ $('#bk24').on('click', function(){
 //download button
 $('#downloadButton').click(function() {
 
+
+	$('#myIconBackground').css('width', '512');
+	$('#myIconBackground').css('height', '512');
+
     html2canvas($('#myIconBackground'), {
 	
         	onrendered: function(canvas) {
+          
             // canvas is the final rendered <canvas> element
             var myImage = canvas.toDataURL("image/png");
+            canvas.width = '512';
             window.open(myImage);
         }
     });
 });
 
 
+function updateColor(element, color) {
+    var hexColor = "transparent";
+    if (color) hexColor = color.toHexString();
+    $(element).css("color", hexColor);
+}
+
+$("#flatClearable").spectrum({
+    flat: true,
+    showInput: true,
+    allowEmpty:true
+});
 
 ///////////////////////// SELECT LIBRARY /////////////////////////////////		
 

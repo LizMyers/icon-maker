@@ -48,7 +48,7 @@ body {
 }
 #alexaLogo {
     margin-top:4px;
-    margin-left:25px;
+    margin-left:46%;
     font-family: 'Helvetica', sans-serif;
     color:#eaa7cb;
     font-size:1.5em;
@@ -86,42 +86,40 @@ h1 {
 
 /*-----------SEARCH------------*/
 
-#pageTitle{width:150px!important;}
+#pageTitle{width:100px!important;}
 
 #mySearch{
   position:absolute;
-  top:110px!important;
-  left:50px;
-  width:250px;
+  top:30px!important;
+  left:20px!important;
+  width:100px!important;
   height:50px;
-  border:1px solid yellow;
+  padding-left:20px;
+  border:0px solid red;
 }
-#mySearch > i.icon-search{
-    color:#ccc; 
+#mySearch > i.fa-search{
     float:left;
-    margin-left:150px;
+    margin-left:54px;
     font-size: 1.25em;
-    width:3em;
+    /*width:3em;*/
     display:block;
-    margin-top:40px;
-    border:1px solid yellow;
     z-index: 10003;
   }
-#mySearch input{border:0px solid #34a5dd; border-radius:5px; vertical-align: text-top;}
+#mySearch input{border:0px solid #ff9900; border-radius:0px; vertical-align: text-top;}
 #mySearch input, .ui-input-text{
   margin:0;
   padding:0;
-  border:1px solid white;
-  color:white!important;
+  border:1px solid #ccc;
+  color:#333!important;
   position:absolute; 
   top:-1px;
   left:0px;
-  padding-left:5px;
+  padding-left:30px;
   padding:-4px!important;
   font-size:0.925em;
   line-height: -2em!important;
   text-shadow:none!important;
-  width:200px!important;
+  width:160px!important;
   height:32px!important;
   background:none!important;
   border-radius:4px;
@@ -133,38 +131,41 @@ h1 {
 #mySearch input:focus {
     outline:none;
     border:none;
-    box-shadow: 0 0 0px #fcd235!important;
-    -webkit-box-shadow:0 0 0px #fcd235!important;
-    -moz-box-shadow:0 0 0px #fcd235!important;
+    box-shadow: 0 0 0px #ff9900!important;
+    -webkit-box-shadow:0 0 0px #ff9900!important;
+    -moz-box-shadow:0 0 0px #ff9900!important;
 }
 .ui-focus { 
-    border:0px solid #fcd235;
-    -moz-box-shadow: 0 0 0px #fcd235 !important;
-    -webkit-box-shadow: 0 0 0px #fcd235 !important;
-    box-shadow: 0 0 0px #fcd235 !important;
+    border:0px solid #ff9900;
+    -moz-box-shadow: 0 0 0px #ff9900 !important;
+    -webkit-box-shadow: 0 0 0px #ff9900 !important;
+    box-shadow: 0 0 0px #ff9900 !important;
 }
 #clearSearch {
     display:block;
     position:absolute;
-    top:7px;
-    left:200px;
+    color:#369!important;
+    top:6px;
+    left:170px;
+    height:12px;
+    width:12px;
     z-index: 20000;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
      /*    color: #e1f3f9;*/
-    color:#ccc;
+    color:#999;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     /*    color: #e1f3f9;*/
-    color:#ccc;
+    color:#999;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   /*    color: #e1f3f9;*/
-    color:#ccc;
+    color:#999;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 /*    color: #e1f3f9;*/
-    color:#ccc;
+    color:#999;
 }
  #mySearch i.icon-close-2 {
     float:left;
@@ -173,7 +174,7 @@ h1 {
     top:1px;
     font-size: 1em;
     font-weight: bold;
-    color:#0078c9;
+    color:red;
     /*visibility: hidden;*/
   }
    #mySearch i.icon-close-2:hover {
@@ -184,13 +185,12 @@ h1 {
     box-shadow: none; 
     }
    input:focus ~ .bar, .ui-focus ~ .bar {
-    width:220px;
+    width:185px;
     left:0;
     top:34px;
     transition: .3s ease;
     }
     .bar {
-      border:1px solid red;
       background:#0078c9;
       position:absolute;
       left:60px;
@@ -289,13 +289,15 @@ a#setToggle, .menu{background: none!important}
 	}
 
 #container {
-
     width:35%;
-    height:100%; 
+    height:6000px!important; 
     margin:0px!important;
     margin-left:-20px!important;
-    padding-top:170px!important;
-    padding-right:20px!important;
+    padding-top:80px!important;
+    padding-left:20px!important;
+    padding-right:10px!important;
+    padding-bottom:0px!important;
+    margin-bottom:-40px!important;
     border-right:1px solid #fff;
     background:#343434;
   }
@@ -303,16 +305,17 @@ a#setToggle, .menu{background: none!important}
     border:0px solid orange;
     float:left;
     font-weight:normal!important;
-    margin:5px!important;
-    width:70px!important;
-    height:auto!important;
+    margin-top:6px!important;
+    width:60px!important;
+    height:60px!important;
     cursor: pointer;
     -webkit-transform:translate3d(0,0,0);
     -moz-transform:translate3d(0,0,0);
     transform:translate3d(0,0,0);
  }
  #container .item:hover {
-    border:1px solid yellow;
+    background:#ff9900;
+    border-radius:50%;
  }
  #container .item i {
     font-size:2em; 
@@ -325,7 +328,7 @@ a#setToggle, .menu{background: none!important}
     padding-bottom:6px;
     padding-top:6px;
     bottom:0px;
-    left:0px;
+    left:10px;
     width:94.5%;
     height:auto;
     font-size:0.8em;

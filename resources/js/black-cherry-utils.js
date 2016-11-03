@@ -10,7 +10,7 @@ var Utils = {
 		var nBusiness=0;
 		var nEntertainment=0;
 		var nFood=0;
-                        var nHealth=0;
+                       var nHealth=0;
 		var nNature=0;
 		var nObjects=0;
 		var nOffice=0;
@@ -133,11 +133,10 @@ var Utils = {
                             var item = '<div data-title="'+symbol+'"class="hvr-sweep-to-top item '+category+' '+author+' '+isMyPick+'"data-id="'+i+'"data-category="'+category+'"data-libe="'+set+'">'+
     
                                             '<p class = "glyph"><i class="'+symbol+'"></i></p>'+
-                                             '<p class="keywords">'+category+'</p>'+
+                                            '<p class="keywords">'+name+'</p>'+
+                                            '<p class="keywords">'+category+'</p>'+
                                             '<p class="keywords">'+keywords+'</p>'
                                             '</div>';
-                       
-                
             
                 //UPDATE COUNT TOTALS
                 $('#nMdSet').text(nMdSet);

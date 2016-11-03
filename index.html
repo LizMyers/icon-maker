@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Red Cherry</title>
+<title>Icon-Maker</title>
 <link rel="shortcut icon" href="resources/css/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="resources/css/images/favicon.ico" type="image/x-icon">
 <meta charset="UTF-8">
@@ -9,8 +9,11 @@
 <link rel='stylesheet' href='resources/css/jquery.mobile-1.2.1.min.css' />	
 <link rel='stylesheet' href='resources/css/allSets.min.css' />
 <link rel='stylesheet' href='resources/css/black-cherry.css' />	
+<link rel='stylesheet' href='resources/css/spectrum.css' /> 
+<link rel='stylesheet' href='resources/css/spectrum.css' /> 
 
 <script src='resources/js/jquery-1.11.2.min.js'></script>	
+<script src='resources/js/jquery-ui.js'></script> 
 	<script language="text/javascript">
 			//configure jQM
 			$(document).bind("mobileinit", function () {
@@ -19,6 +22,7 @@
 		});
 	 </script>
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
+<script src="resources/js/spectrum.js"></script>
 
 <style>
 /*  ----------------------------------------------------- */
@@ -40,12 +44,11 @@
       max-height: 512px;
       max-width: 512px;
   }
-
 #myIconBackground {
   position: relative;
   display:block;
-  top:200px;
-  left:50%;
+  top:120px;
+  left:43.25%;
   border:0px solid black;
   width:256px;
   height:256px;
@@ -54,33 +57,27 @@
   box-shadow: 6px 10px 10px #ccc;
 }
 #myIconSymbol {
-/*  border:1px solid orange;*/
+  border:0px solid orange;
   width:250px;
   height:250px;
-  margin:0;
   padding:0;
+  line-height: 1.7em;
   font-size: 150px;
   position:relative;
   top:0;
   left:0;
   text-align: center;
 }
-.myIcon {
-/*  border:1px solid blue;*/
-  margin-top: 18%;
-  display:block;
-  position:relative;
-
-}
 #downloadButton {
-  width:250px;
+  width:200px;
   height:50px;
   text-align: center;
   line-height: 3em;
-  margin-top:50px;
+  margin-top:40px;
+  margin-left:11%;
   border-radius: 8px;
   box-shadow: 4px 4px 4px #cdcdcd;
-  background:green;
+  background:#3ab9f2;
   cursor:pointer;
 }
 #propertiesPanel {
@@ -88,7 +85,7 @@
    position:fixed;
    top:70px;
    right:0px;
-   width:300px;
+   width:30%;
    height:100%;
    background:#343434;
    border-left:1px solid white;
@@ -142,7 +139,6 @@ button {
   font-size: 1.2em;
   cursor: pointer;
 }
-
 #icon-xpos-plus, #icon-xpos-minus, {
     position:absolute!important;
     top:650px;
@@ -195,8 +191,330 @@ button {
       #myPicksTotalLabel{
         float:left;margin:-7px 0 0px 10px;border:0px solid red;
       }
-  
-</style>
+      .ui-input-text {
+        border:0px solid yellow!important;
+      }
+      #bkgndColorPicker {
+        margin-top:50px;
+        background: none;
+      }
+      #fullBkgnd {
+        border:4px solid red;
+        margin-top:20px;
+      }
+      #iconColorPicker {
+        margin-top:50px;
+        background: none;
+      }
+      #fullIcon {
+        border:4px solid red;
+        margin-top:20px;
+      }
+      .sp-picker-container {
+        position:fixed;
+        margin:0;
+        padding:10px;
+        padding-bottom:50px;
+        background:#dedede;
+      }
+      .sp-cancel {
+        float:left;
+        position:absolute;
+        top:195px;
+        left:15px;
+        font-size:1.2em;
+      }
+      .sp-choose {
+        background: linear-gradient(to right, rgba(0,105,166,1) 0%, rgba(0,192,222,1) 100%);
+        position:absolute;
+        float:right;
+        top:170px;
+        right:10px;
+        height:30px!important;
+        width:100px;
+        padding:0;
+        margin:0;
+      }
+      #position-container {
+        /*background:#454545;*/
+        height:100px;
+        width:100px;
+        left:20px;
+        position:relative;
+        top:-20px;
+      }
+     #btn-move-up {
+        margin-left:35px;
+      }
+      #btn-move-left {
+        float:left;
+        position:absolute;
+        top:5px;
+      }
+      #btn-move-right {
+        float:right;
+        position:absolute;
+        top:5px;
+        right:0px;
+      }
+      #btn-move-down{
+        position:absolute;
+        bottom:2px;
+        left:35px;
+      }
+      .btn-move {
+        height:30px;
+        width:30px;
+        background:#ccc;
+        color:#444;
+        cursor:pointer;
+        line-height:1.5em;
+        margin-top:30%;
+        text-align:center;
+        border-radius: 4px
+      }
+      #cat-selector {
+        float:left;
+        width:180px;
+        height:32px;
+        margin:0;
+        padding:0;
+        position:absolute;
+        top:28px;
+        left:220px;
+        border:1px solid #ccc;
+        border-radius: 4px;
+      }
+      .label {
+        color:#999;
+        font-size:0.9em;
+        font-family:arial, sans-serif;
+        font-weight:normal;
+        margin:10px 0 0 10px;
+        line-height: 2em;
+      }
+      .fa-angle-down {
+        color:#999;
+        font-size:1.2em;
+        float:right;
+        margin-right:10px;
+        margin-top:6px;
+      }
+      #slider {
+        width: 20px;
+        height:20px;
+        background:red;
+        border:1px solid yellow;
+
+      }
+      #infoSlider {
+        border:1px solid white;
+        
+        width:200px;
+        color:white;
+      }
+
+    /*-----------DROP-DOWN MENU------------*/
+
+    #filterDropDown{
+      margin:0;
+      padding:0;
+      padding-left:4px;
+      padding-top:6px;
+      position:absolute;
+      font-size: 0.9em;
+      line-height: 1.2em;
+      top:29px;
+      left:230px;
+      width:150px;
+      height:25px;
+      list-style: none!important;
+      border:1px solid #ddd;
+      border-radius:4px;
+      cursor:pointer;
+    }
+    #filterDropDown ul {
+      margin:0;
+      padding:0;
+      list-style: none;
+      background:none;
+      text-decoration: none;
+    }
+    #filterDropDown ul li ul {
+      margin-top:10px;
+      background:#f7fafd!important;
+      box-shadow: 1px 1px 2px #787878;
+    }
+    li.menuItem{
+      display:none;
+      line-height: 2em;
+      width:100%;
+      padding:0px;
+      margin:0;
+    }
+    li.menuItem:hover {
+        background:#f90;
+    }
+    li.menuItem a {
+        color: #383f46!important;
+        text-decoration: none!important;
+    }
+    li.menuItem:hover ~ a {
+      font-weight: bold;
+      color:#900!important;
+      text-decoration: none;
+    }
+
+    #filterDropDown:hover li.menuItem {
+      display:block;
+    }
+    li a.menuItemOn  {
+       font-weight: bold;
+       color:#900!important;
+       width:100%;
+       padding:4px;
+       text-decoration: none;
+    }
+    #down-arrow {
+      float:right;
+      position:absolute;
+      top:-1px;
+      right:16px;
+      color:#383d46;
+      font-size: 1.25em;
+      padding-top:2px;
+      padding-left:10px;
+    }
+
+    li.showMyPicks {
+      display:hidden;
+      padding-top:10px;
+    }
+    li.showMyPicks:hover {
+      display:inherit;
+    }
+    .showMyPicksLabel {
+      float:right;
+      position:absolute;
+      top:20px;
+      left:720px;
+      color:#383f46;
+    }
+    #showAll{
+      margin-left:10px;
+    }
+    #myCount, .myPicks{
+        color:#f3a91d!important;
+    }
+    .menu li a:hover{
+        color:#f3a91d!important;
+    }
+    .cover {
+      display:none;
+      height:100%;
+      width:100%;
+      background-color:black;
+      opacity:0;
+      position: fixed;
+      left:0;
+      top:0;
+      z-index: 1000;
+    }
+    .degree_picker{
+  padding: 68px 0px 20px;
+}
+.depth_picker{
+  padding: 38px 0px 10px;
+}
+.ui-slider{
+  width: 0.2em; 
+  background: #e2e2e2;
+  border: 12px solid #f8f7f7;
+  color: #222222;
+  position: relative;
+  text-align: left;
+  margin: 0 auto; 
+}
+
+.ui-slider-range{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;  
+  font-weight: bold;
+}
+
+.ui-slider-handle{
+  border-radius: 50%;
+  background-color: #df3518;
+  left: -.45em;
+  margin-left: 0;
+  margin-bottom: -.6em;position: absolute;
+  z-index: 2;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-slider-handle:focus, .ui-slider-handle:active{
+  outline: none;
+}
+
+.depth_picker p, .degree_picker p{
+  text-align: center;
+  font-size: 24px;
+  font-family: 'proxima_novasemibold'; 
+}
+
+.increment, .decrement{
+  text-align: center;
+  display: block; 
+}
+
+.increment span, .decrement span{
+  margin: 0 auto;
+  width: 0.2em;
+  background: #e2e2e2;  
+}
+
+.increment span{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 2px; 
+  padding: 9px 5px 5px 6px; 
+  cursor: pointer;
+}
+
+.decrement span{
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 2px;
+  border-top: 2px solid #e2e2e2;
+  padding: 6px 5px 1px 6px;
+  cursor: pointer;  
+}
+
+#slider-vertical{
+  height: 125px;
+}
+#slider {
+    width : 200px;
+}
+#iconSize {
+  margin:0;
+  padding:0;
+  font-size:1.2em;
+  width:50px;
+  height:50px;
+  position:absolute;
+  margin-top:400px;
+  background:white
+}
+
+  </style>
 
 </head>
 	
@@ -212,44 +530,160 @@ button {
 
     <div id="blueSeperator"></div>  
 
+    <!-- SEARCH-->              
+    <div id="mySearch" style="float:left!important;position:absolute;top:-20px;left:-20px;color:#999!important">
+      <i class="fa fa-search" style="float:left;position:absolute; top:5px;left:-46px;width:20px;""></i>
+      <input type="text" name="search" id="search" placeholder="Keyword search"   />
+          <a href="#" id="clearSearch"><i class="fa fa-times"></i></a>
+          <div class="bar"></div> 
+    </div>  
+  <!-- CATEGORIES DROPDOWN-->  
+
+    <div id="filterDropDown">
+    <ul>
+      <li><span id="filterType" style="color:#999;font-family:arial, sans-serif;font-weight:normal">All Categories</span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px"></i></li>
+      <li>
+        <ul>
+            <li data-category-value="*" class="menuItem"><a href="#" class="ui-link">All Categories</a></li>
+            <li data-category-value=".business" class="menuItem"><a href="#" class="ui-link">Business</a></li>
+            <li data-category-value=".entertainment" class="menuItem"><a href="#" class="ui-link">Entertainment</a></li>
+            <li data-category-value=".food" class="menuItem"><a href="#" class="ui-link">Food &amp; Drink</a></li>
+            <li data-category-value=".nature" class="menuItem"><a href="#" class="ui-link">Nature</a></li>
+            <li data-category-value=".objects" class="menuItem"><a href="#" class="ui-link">Objects</a></li>
+            <li data-category-value=".office" class="menuItem"><a href="#" class="ui-link">Office</a></li>
+            <li data-category-value=".people" class="menuItem"><a href="#" class="ui-link">People</a></li>
+            <li data-category-value=".social" class="menuItem"><a href="#" class="ui-link">Social</a></li>
+            <li data-category-value=".sports" class="menuItem"><a href="#" class="ui-link">Sports</a></li>
+            <li data-category-value=".technology" class="menuItem"><a href="#" class="ui-link">Technology</a></li>
+            <li data-category-value=".travel" class="menuItem"><a href="#" class="ui-link">Travel</a></li>
+            <li data-category-value=".UI" class="menuItem"><a href="#" class="ui-link">UI Elements</a></li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+
+
     <!-- LOGO -->                 
     <div id="alexaLogo">
       <img src="resources/img/alexaLogo.png" />
     </div>   
 
-</div><!-- //nav -->
-</div><!-- //end header -->
+</div><!-- nav -->
+</div><!-- end header -->
 	
 <div data-role='content'>
-    <!-- SEARCH   -->              
-    <div id="mySearch" style="float:left;border:1px solid white;position:absolute;top:100px;left:50px;">
-      <i class="icon-search"></i>
-      <input type="text" name="search" id="search" placeholder="Search on"   />
-          <a href="#" id="clearSearch"><i class="icon-close-2"></i></a>
-          <div class="bar"></div> 
-    </div>  
+
 <div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item", "getSortData": {  "number": ".number parseInt", "name": ".name", "category": "[data-category]" }, "layoutMode" : "fitRows"}'>
 
-</div><!--//end isotope container-->
+</div><!--end isotope container-->
 
-<!-- // CANVAS AREA  // -->
+<!-- CANVAS AREA -->
 
 <div id="myIconBackground" style="position:fixed">
-  <div id="myIconSymbol"><p class="myIcon"><i class="fa fa-amazon"></i><p></div>
-    <div id="downloadButton">Download</div>
+    <div id="myIconSymbol" style="border:1px solid red;"><div class="myIcon target" style="border:1px solid blue"><i class="fa fa-amazon"></i></div>
 </div>
+<div id="downloadButton">Download</div>
 
-<!-- // PROPERTIES PANEL // -->
+<!-- PROPERTIES PANEL -->
+
 <div id="propertiesPanel">
-    <div id="iconSymbolColorGroup" style="margin-top:20px;">
-      <div id="glyph01" class="backgroundColor"></div>
-      <div id="glyph02" class="backgroundColor"></div>
-<!--       <div id="glyph03" class="backgroundColor"></div>
-      <div id="glyph04" class="backgroundColor"></div>
-      <div id="glyph05" class="backgroundColor"></div>
-      <div id="glyph06" class="backgroundColor"></div> -->
+
+    <div id="bkgndColorPicker">
+    <p style="margin-left:20px!important">
+    Background:<br />
+    <p style="margin:-10px 0 0 20px"><input type='text' id="fullBkgnd" /></p>
+    </p>
+
+    <script type="text/javascript">
+
+    $("#fullBkgnd").spectrum({
+        color: "#f90",
+        flat: false,
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: false,
+        showPalette: false,
+        showSelectionPalette: false,
+        maxPaletteSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) {
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+          var newColor1 = $('#fullBkgnd').spectrum('get');
+          $("#myIconBackground").css('background', newColor1);
+        }
+    });
+
+    </script>
+</div> <!--//colorPickerBkgnd-->
+
+<div id="foregroundColorPicker">
+    <p style="margin-left:20px!important">
+    Foreground:<br />
+    <p style="margin:-10px 0 0 20px"><input type='text' id="fullIcon" /></p>
+    </p>
+
+    <script type="text/javascript">
+    $("#fullIcon").spectrum({
+        color: "#fff",
+        flat: false,
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: false,
+        showPalette: false,
+        showSelectionPalette: false,
+        maxPaletteSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function (color) { 
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+          var newColor2 = $('#fullIcon').spectrum('get');
+          $("#myIconSymbol").css('color', newColor2);
+        }
+    });
+
+    </script>
+</div> <!--//colorPickerForeground-->
+
+<!-- PROPERTIES PANEL: POSITION -->
+<p style="margin-left:20px!important">Position:</p>
+<div id="position-container">
+  <div id="btn-move-up" class="btn-move"><i class="fa fa-arrow-up"></i></div>
+  <div id="btn-move-left" class="btn-move"><i class="fa fa-arrow-left"></i></div>
+  <div id="btn-move-right" class="btn-move"><i class="fa fa-arrow-right"></i></div>
+  <div id="btn-move-down" class="btn-move"><i class="fa fa-arrow-down"></i></div>
+</div><!-- position-container -->
+
+
+<!-- PROPERTIES PANEL: SIZE -->
+<span style="label">Icon Size</span><br />
+<div id="customSize">
+  <input type="text" id="iconSize" value="250"  />
   </div>
-<!--//iconSymbolColorGroup-->
+
+
+<!-- iconSymbolColorGroup -->
+<!--
     <div id="backgroundColorGroup" style="margin-top:100px;border-top:1px solid #666">
       
       <div id="bk01" class="backgroundColor"></div>
@@ -275,38 +709,21 @@ button {
       <div id="bk21" class="backgroundColor"></div>
       <div id="bk22" class="backgroundColor"></div>
       <div id="bk23" class="backgroundColor"></div>
-      <div id="bk24" class="backgroundColor"></div>
-   </div><!--//backgroundColorGroup-->
-
-    <!--//iconSize-->
-    <div id="icon-size">
-      <button id="icon-bigger">Larger</button>
-      <button id="icon-smaller">Smaller</button>
-   </div><!--//icon-size-->
-
-    <!--//iconXPos-->
-    <div id="icon-xpos">
-      <button id="icon-xpos-plus">Left</button>
-      <button id="icon-xpos-minus">Right</button>
-   </div><!--//icon-xpos-->
-
-       <!--//iconYPos-->
-    <div id="icon-ypos">
-      <button id="icon-ypos-minus">Up</button>
-      <button id="icon-ypos-plus">Down</button>
-   </div><!--//icon-xpos-->
-
+      <div id="bk24" class="backgroundColor"></div> 
+   </div>-->
+ 
 
  </div><!--//END PROPERTIES-->
 
-
- <script src="resources/js/black-cherry-utils.js"></script> // 
-     <script src="resources/js/black-cherry.js"></script>  
+<script src="resources/js/black-cherry-utils.js"></script> 
+<script src="resources/js/black-cherry.js"></script>  
 </div><!--//end content-->
+  
+<script src="resources/js/jquery.sidr.min.js"></script>
+<script src="resources/js/isotope.js"></script>	
+<script src="resources/js/html2canvas.js"></script>
+
       
-    <script src="resources/js/jquery.sidr.min.js"></script>
-    <script src="resources/js/isotope.js"></script>	
-    <script src="resources/js/html2canvas.js"></script> 
 </div><!--//end cGrid-->
 
 </body>

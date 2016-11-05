@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
 <title>Icon-Maker</title>
-<link rel="shortcut icon" href="resources/css/images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="resources/css/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="resources/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="resources/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="resources/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="resources/img/favicons/manifest.json">
+<link rel="mask-icon" href="resources/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel='stylesheet' href='resources/css/jquery.mobile-1.2.1.min.css' />	
 <link rel='stylesheet' href='resources/css/allSets.min.css' />
-<link rel='stylesheet' href='resources/css/black-cherry.css' />	
+<link rel='stylesheet' href='resources/css/icon-maker.css' />	
 <link rel='stylesheet' href='resources/css/spectrum.css' /> 
 <link rel='stylesheet' href='resources/css/spectrum.css' /> 
 
@@ -85,7 +89,7 @@
    position:fixed;
    top:70px;
    right:0px;
-   width:30%;
+   width:24.25%;
    height:100%;
    background:#343434;
    border-left:1px solid white;
@@ -353,7 +357,7 @@ button {
       margin:0;
     }
     li.menuItem:hover {
-        background:#f90;
+        background:#fc0;
     }
     li.menuItem a {
         color: #383f46!important;
@@ -510,8 +514,105 @@ button {
   width:50px;
   height:50px;
   position:absolute;
+  margin-top:500px;
+  background:white;
+}
+#bkgndSize {
+  margin:0;
+  padding:0;
+  font-size:1.2em;
+  width:50px;
+  height:50px;
+  position:absolute;
   margin-top:400px;
-  background:white
+  background:yellow;
+}
+#sm-container{
+  background:#fff;
+  border:1px solid #ebebeb;
+  box-shadow: 0px 1px 1px #a7a7a7;
+  width:108px;
+  height:108px;
+  position:fixed;
+  left:430px;
+  top:100px;
+}
+#sm-background {
+  background: #f90;
+  border:1px solid #a7a7a7;
+  border-radius: 50%;
+  height:75px;
+  position:absolute;
+  left:15px;
+  top:7px;
+  width:75px;
+  z-index:10!important;
+}
+#sm-glyph-container {
+  border:0px solid red;
+  position:absolute;
+  left:0;
+  right:0;
+}
+#sm-glyph {
+ border:0px solid red;
+ color:#fff;
+ font-size:4vw;
+ line-height: 9vh;
+ width:100%;
+ height:100%;
+ text-align:center;
+}
+#sm-mask {
+  border:0px solid red;
+  background: url('resources/img/108-mask.png')0 0;
+  height:100%;
+  width:100%;
+  z-index: 1000;
+}
+#lg-container{
+  background:#ffcc00;
+  border:0px solid #ebebeb;
+  box-shadow: 0px 1px 1px #a7a7a7;
+  width:512px;
+  height:512px;
+  position:fixed;
+  left:430px;
+  top:230px;
+}
+#lg-background {
+  background: #f90;
+  border:1px solid #a7a7a7;
+  border-radius: 50%;
+  height:380px;
+  position:absolute;
+  left:65px;
+  top:27px;
+  width:380px;
+  z-index:10!important;
+}
+#lg-glyph-container {
+  border:0px solid red;
+  position:absolute;
+  left:0;
+  right:0;
+}
+#lg-glyph {
+ border:0px solid red;
+ color:#fff;
+ font-size:22vw;
+ line-height: 47vh;
+ width:100%;
+ height:100%;
+ text-align:center;
+}
+#lg-mask {
+  border:0px solid red;
+  background: url('resources/img/512-mask.png')0 0;
+  background-color: #fff;
+  height:100%;
+  width:100%;
+  z-index:10000!important;
 }
 
   </style>
@@ -579,10 +680,29 @@ button {
 
 <!-- CANVAS AREA -->
 
-<div id="myIconBackground" style="position:fixed">
+<div id="sm-container">
+  <div id="sm-background">
+        <div id="sm-glyph-container">
+          <i class="fa fa-amazon" id="sm-glyph"></i>
+      </div>
+</div>
+  <div id="sm-mask"></div>
+</div>
+
+<div id="lg-container">
+  <div id="lg-background">
+      <div id="lg-glyph-container">
+          <i class="fa fa-amazon" id="lg-glyph"></i>
+      </div>
+  </div>
+  <!-- <div id="lg-glyph"></div> -->
+    <div id="lg-mask"></div>
+</div>
+
+<!-- <div id="myIconBackground" style="position:fixed">
     <div id="myIconSymbol" style="border:1px solid red;"><div class="myIcon target" style="border:1px solid blue"><i class="fa fa-amazon"></i></div>
 </div>
-<div id="downloadButton">Download</div>
+ -->
 
 <!-- PROPERTIES PANEL -->
 
@@ -590,7 +710,7 @@ button {
 
     <div id="bkgndColorPicker">
     <p style="margin-left:20px!important">
-    Background:<br />
+    Background color:<br />
     <p style="margin:-10px 0 0 20px"><input type='text' id="fullBkgnd" /></p>
     </p>
 
@@ -620,53 +740,18 @@ button {
         },
         change: function() {
           var newColor1 = $('#fullBkgnd').spectrum('get');
-          $("#myIconBackground").css('background', newColor1);
+          $("#sm-background").css('background', newColor1);
+          $("#lg-background").css('background', newColor1);
         }
     });
 
     </script>
 </div> <!--//colorPickerBkgnd-->
 
-<div id="foregroundColorPicker">
-    <p style="margin-left:20px!important">
-    Foreground:<br />
-    <p style="margin:-10px 0 0 20px"><input type='text' id="fullIcon" /></p>
-    </p>
 
-    <script type="text/javascript">
-    $("#fullIcon").spectrum({
-        color: "#fff",
-        flat: false,
-        showInput: true,
-        className: "full-spectrum",
-        showInitial: false,
-        showPalette: false,
-        showSelectionPalette: false,
-        maxPaletteSize: 10,
-        preferredFormat: "hex",
-        localStorageKey: "spectrum.demo",
-        move: function (color) { 
-        },
-        show: function () {
-        
-        },
-        beforeShow: function () {
-        
-        },
-        hide: function () {
-        
-        },
-        change: function() {
-          var newColor2 = $('#fullIcon').spectrum('get');
-          $("#myIconSymbol").css('color', newColor2);
-        }
-    });
-
-    </script>
-</div> <!--//colorPickerForeground-->
 
 <!-- PROPERTIES PANEL: POSITION -->
-<p style="margin-left:20px!important">Position:</p>
+<p style="margin-left:20px!important">IcoPosition:</p>
 <div id="position-container">
   <div id="btn-move-up" class="btn-move"><i class="fa fa-arrow-up"></i></div>
   <div id="btn-move-left" class="btn-move"><i class="fa fa-arrow-left"></i></div>
@@ -675,12 +760,8 @@ button {
 </div><!-- position-container -->
 
 
-<!-- PROPERTIES PANEL: SIZE -->
-<span style="label">Icon Size</span><br />
-<div id="customSize">
-  <input type="text" id="iconSize" value="250"  />
-  </div>
-
+<!-- PROPERTIES PANEL: DOWNLOAD -->
+<div id="downloadButton">Download 512 x 512</div>
 
 <!-- iconSymbolColorGroup -->
 <!--
@@ -715,8 +796,8 @@ button {
 
  </div><!--//END PROPERTIES-->
 
-<script src="resources/js/black-cherry-utils.js"></script> 
-<script src="resources/js/black-cherry.js"></script>  
+<script src="resources/js/icon-maker-utils.js"></script> 
+<script src="resources/js/icon-maker.js"></script>  
 </div><!--//end content-->
   
 <script src="resources/js/jquery.sidr.min.js"></script>

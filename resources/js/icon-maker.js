@@ -1,6 +1,10 @@
-// Maraschino.js 
-// by Liz Myers
-// May 27, 2015
+/*
+Icon-Maker for Alexa
+by Liz Myers 
+lizmyers@amazon.com
+November 2016
+*/
+
 var mySet;
 
 $(document).on('pagecreate', '#cGrid', function() {
@@ -144,86 +148,18 @@ $(document).on('pagebeforeshow', '#cGrid', function() {
 		 openMySet();
 		}, 3000);
     
-	/////////////////////////////// CLICK TILES ////////////////////////////////////////////  
+	/////////////////////////////// CHANGE GLYPH ////////////////////////////////////////////  
 
 	$item.on('click', function(evt) {
 		evt.preventDefault();
 		var $this = $(this);
 		var newIcon = $this.closest('.item').find('i').attr('class');
 		console.log("newIcon " + newIcon);
-		$('.myIcon').find('i').removeClass();
-		$('.myIcon').find('i').addClass(newIcon);
-		// var myCount = localStorage.getItem('myCount');
-		// console.log("New Count: " + myCount);
-		// var $myPicksArray = localStorage.getItem('myPicksArray');
-		// console.log($myPicksArray);
-
-		// if (($myPicksArray) && ($myPicksArray !=='undefined') && ($myPicksArray !==' ')&& ($myPicksArray !==null)) {
-		// 	$myPicksArray = JSON.parse(localStorage.getItem('myPicksArray'));
-		// } else {
-		// 	var $myPicksArray = [];
-		// 	myCount = 0;
-		// 	$('#myPicks').find('.countTxt').text = '0';
-		// }
-
-		// $this.toggleClass('mypicks');
-
-		// //remove items that were deselected
-		// var myPicksFilterStatus = $('#myPicks').find('a').attr('class');
-		// var myPicks = $this.find('b').attr('class');
-
-		// console.log("myPicksFilterStatus "+myPicksFilterStatus);
-
-		// //after de-selecting or unfaving item, run filter again to eliminate that  item from view
-
-		// if (myPicksFilterStatus == "ui-link selected") {
-		// 	$('#container').isotope({
-		// 		filter: '.mypicks'
-		// 	});
-		// }
-
-		// //change star color = red/light-theme else yellow
-		// var $icon = $this.find($('b'));
-		// var isSelected = $('.menu #steel-blue ').find('a').attr('class');
-
-		// if (isSelected == "ui-link selected") {
-		// 	$icon.toggleClass('faveShow');
-		// 	$icon.css('color', '#fc0');
-		// } else {
-		// 	$icon.toggleClass('faveShow');
-		// 	$icon.css('color', '#f46666');
-		// }
-		// var $number = $this.find('.number').text();
-		// var $name = $this.find('.name').text();
-		// var $star = $this.find('b').attr('class');
-
-		// //unfave = remove from array
-		// if ($star !== "md-star faveShow") {
-
-		// 	var $myDiscard = $myPicksArray.indexOf($number);
-
-		// 	$myPicksArray.splice($myDiscard, 1);
-
-		// 	localStorage.setItem('myPicksArray', JSON.stringify($myPicksArray));
-		// 	myCount--;
-		// 	if (myCount <= 0) {
-		// 		localStorage.removeItem("myPicksArray");
-		// 	}
-		// } else {
-		// 	$myPicksArray.push($number);
-		// 	localStorage.setItem('myPicksArray', JSON.stringify($myPicksArray));
-		// 	myCount++;
-
-		// }
-		// //update myPicks count for this set
-		// $('#myCount').text(myCount);
-		// localStorage.setItem("myCount", myCount);
-
-		// myCount = JSON.parse(localStorage.getItem('myCount'));
-		// var picksTotal = JSON.stringify(myCount);
-		// $('#myPicks').find('.countTxt').text(picksTotal);
+		$('#sm-background').find('i').removeClass();
+		$('#sm-background').find('i').addClass(newIcon);
+		$('#lg-background').find('i').removeClass();
+		$('#lg-background').find('i').addClass(newIcon);
 		
-
 	}); //end item onClick
 
 }); //end pagebeforeshow
@@ -290,9 +226,6 @@ $('#clearSearch').on('click', function() {
 	/////////////////////////////// TRIGGER MENUS ////////////////////////////////////////////
 
 	$('#clearSearch').hide();
-
-	//restore menu states
-	menuStates();
  
  	var firstOpen = localStorage.getItem('mySet');
  	if (mySet == null) {
@@ -306,73 +239,6 @@ $('#clearSearch').on('click', function() {
 //////////////////             GLOBAL                  //////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
-function menuStates() {
-
-		var mClr = localStorage.getItem("mClr");
-		var mSet = localStorage.getItem("mSet");
-		var mBrowse = localStorage.getItem("mBrowse");
-
-		if ((!mClr) || (mClr == '') || (mClr == "open")) {
-			$('#colorToggle').trigger('click');
-		}
-
-		if ((!mSet) || (mSet == '') || (mSet == "open")) {
-			$('#setToggle').trigger('click');
-		}
-
-		if ((!mBrowse) || (mBrowse == '') || (mBrowse == "open")) {
-			$('#browseToggle').trigger('click');
-		}
-
-	} //function menu states
-
-//slider-menu
-
-$('#simple-menu').on('click', function() {
-
-	var sliderIsOpen = localStorage.getItem('mSlider');
-	console.log("sliderIsOpen= " + sliderIsOpen);
-
-	if (sliderIsOpen == "open") {
-		localStorage.setItem('mSlider', "closed");
-	} else if (sliderIsOpen == "closed") {
-		localStorage.setItem('mSlider', "open");
-	}
-});
-
-//////////////////////////// TOGGLE MENUS /////////////////////////////////	
-
-$('#colorGroup').hide();
-$('#colorToggle').on('click', function() {
-	$('#colorToggle i').toggleClass('fa-rotate-270');
-	$('#colorGroup').slideToggle('fast');
-	if ($('#colorToggle i').hasClass('fa-rotate-270')) {
-		localStorage.setItem('mClr', "open");
-	} else {
-		localStorage.setItem('mClr', "closed");
-	}
-});
-$('#setGroup').hide();
-$('#setToggle').on('click', function() {
-	$('#setToggle i').toggleClass('fa-rotate-270');
-	$('#setGroup').slideToggle('fast');
-	if ($('#setToggle i').hasClass('fa-rotate-270')) {
-		localStorage.setItem('mSet', "open");
-	} else {
-		localStorage.setItem('mSet', "closed");
-	}
-});
-$('#filterGroup').hide();
-$('#browseToggle').on('click', function() {
-	$('#browseToggle i').toggleClass('fa-rotate-270');
-	$('#filterGroup').slideToggle('fast');
-	if ($('#browseToggle i').hasClass('fa-rotate-270')) {
-		localStorage.setItem('mBrowse', "open");
-	} else {
-		localStorage.setItem('mBrowse', "closed");
-
-	}
-});
 
 //////////////////////////// CATEGORIES MENU /////////////////////////////////////	
 
@@ -479,47 +345,47 @@ $('#icon-smaller').on('click', function(){
     $('.myIcon').css('font-size', newTypeSize);
 });
 
-//MOVE RIGHT
-$('#btn-move-right').on('click', function(){
-   var myIcon = $('#myIconSymbol');
-   var position = myIcon.position();
-   var myIconLeft = position.left;
-   var newLeft = myIconLeft +1;
-   myIcon.position.left = myIconLeft;
-    $('#myIconSymbol').css('left', newLeft);
+//////////////////////////MOVE SMALL GLYPH/////////////////////////////
+
+$('body').on('keydown', function(e) {
+	    
+    e.preventDefault();
+
+  if(e.keyCode == 37) { // left
+    $('#sm-background #sm-glyph-container').animate({
+      left: "-=5px"
+    });
+    $('#lg-background #lg-glyph-container').animate({
+      left: "-=5px"
+    });
+  }
+  else if(e.keyCode == 39) { // right
+    $('#sm-background #sm-glyph-container').animate({
+      left: "+=5px"
+    });
+    $('#lg-background #lg-glyph-container').animate({
+      left: "+=5px"
+    });
+  }
+   else if(e.keyCode == 38) { // up
+    $('#sm-background #sm-glyph-container').animate({
+      top: "-=5px"
+    });
+    $('#lg-background #lg-glyph-container').animate({
+      top: "-=5px"
+    });
+  }
+ else if(e.keyCode == 40) { // down
+    $('#sm-background #sm-glyph-container').animate({
+      top: "+=5px"
+    });
+    $('#lg-background #lg-glyph-container').animate({
+      top: "+=5px"
+    });
+  }
+
 });
 
-//MOVE LEFT
-$('#btn-move-left').on('click', function(){
-   var myIcon = $('#myIconSymbol');
-   var position = myIcon.position();
-   var myIconLeft = position.left;
-   var newLeft = myIconLeft - 1;
-   myIcon.position.left = myIconLeft;
-   $('#myIconSymbol').css('left', newLeft);
-});
-
-//MOVE UP
-$('#btn-move-up').on('click', function(){
-   var myIcon = $('#myIconSymbol');
-   var position = myIcon.position();
-   var myIconTop = position.top;
-   var newTop = myIconTop - 1;
-   myIcon.position.top = myIconTop;
-   $('#myIconSymbol').css('top', newTop);
-   console.log("moved up");
-});
-
-//MOVE DOWN
-$('#btn-move-down').on('click', function(){
-   var myIcon = $('#myIconSymbol');
-   var position = myIcon.position();
-   var myIconTop = position.top;
-   var newTop = myIconTop + 1;
-   myIcon.position.top = myIconTop;
-   $('#myIconSymbol').css('top', newTop);
-   console.log("moved down");
-});
 //CHANGE BACKGROUND COLOR
 $('#bk01').on('click', function(){
      $('#myIconBackground').css('background', '#FFF');
@@ -597,16 +463,14 @@ $('#bk24').on('click', function(){
 //download button
 $('#downloadButton').click(function() {
 
-	$('#myIconBackground').css('width', '512');
-	$('#myIconBackground').css('height', '512');
-
-    html2canvas($('#myIconBackground'), {
+    html2canvas($('#lg-background'), {
 	
         	onrendered: function(canvas) {
           
             // canvas is the final rendered <canvas> element
             var myImage = canvas.toDataURL("image/png");
             canvas.width = '512';
+            canvas.background = 'white';
             window.open(myImage);
         }
     });

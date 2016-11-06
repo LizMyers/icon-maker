@@ -6,6 +6,8 @@ November 2016
 */
 
 var mySet;
+var largeIcon = false;
+var smallIcon = false;
 
 $(document).on('pagecreate', '#cGrid', function() {
 
@@ -245,6 +247,248 @@ $('.menuItem ').on('click', this, function() {
 
 });
 
+//////////////////////////// SWATCHES MENU /////////////////////////////////////	
+
+$('#bk01').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#FFF');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#FFF');
+    } else {
+    	$('#sm-background').css('background', '#FFF');
+    	$('#lg-background').css('background', '#FFF');
+    }
+});
+$('#bk02').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#232323');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#232323');
+    } else {
+    	$('#sm-background').css('background', '#232323');
+    	$('#lg-background').css('background', '#232323');
+    }	
+});
+$('#bk03').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#4CD964');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#4CD964');
+    } else {
+    	$('#sm-background').css('background', '#4CD964');
+    	$('#lg-background').css('background', '#4CD964');
+    }
+});
+$('#bk04').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#5AC8FA');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#5AC8FA');
+    } else {
+    	$('#sm-background').css('background', '#5AC8FA');
+    	$('#lg-background').css('background', '#5AC8FA');
+    }	
+});
+$('#bk05').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#007AFF');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#007AFF');
+    } else {
+    	$('#sm-background').css('background', '#007AFF');
+    	$('#lg-background').css('background', '#007AFF');
+    }
+});
+$('#bk06').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#8E8E93');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#8E8E93');
+    } else {
+    	$('#sm-background').css('background', '#8E8E93');
+    	$('#lg-background').css('background', '#8E8E93');
+    }	
+});
+$('#bk07').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#34AADC');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#34AADC');
+    } else {
+    	$('#sm-background').css('background', '#34AADC');
+    	$('#lg-background').css('background', '#34AADC');
+    }
+});
+$('#bk08').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#5856D6');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#5856D6');
+    } else {
+    	$('#sm-background').css('background', '#5856D6');
+    	$('#lg-background').css('background', '#5856D6');
+    }	
+});
+$('#bk09').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#FF2D55');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#FF2D55');
+    } else {
+    	$('#sm-background').css('background', '#FF2D55');
+    	$('#lg-background').css('background', '#FF2D55');
+    }
+});
+$('#bk10').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#FF3B30');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#FF3B30');
+    } else {
+    	$('#sm-background').css('background', '#FF3B30');
+    	$('#lg-background').css('background', '#FF3B30');
+    }	
+});
+$('#bk11').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#FF9500');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#FF9500');
+    } else {
+    	$('#sm-background').css('background', '#FF9500');
+    	$('#lg-background').css('background', '#FF9500');
+    }
+});
+$('#bk12').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '#FFCC00');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '#FFCC00');
+    } else {
+    	$('#sm-background').css('background', '#FFCC00');
+    	$('#lg-background').css('background', '#FFCC00');
+    }	
+});
+$('#bk13').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    }
+});
+$('#bk14').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#f15f3e, #f8951d)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#f15f3e, #f8951d)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#f15f3e, #f8951d)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#f15f3e, #f8951d)');
+    }	
+});
+$('#bk15').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ffce06, #fedb4d)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ffce06, #fedb4d)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ffce06, #fedb4d)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ffce06, #fedb4d)');
+    }
+});
+$('#bk16').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#4cb748, #9ccd63)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#4cb748, #9ccd63)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#4cb748, #9ccd63)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#4cb748, #9ccd63)');
+    }	
+});
+$('#bk17').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#64c5f0, #76c9b6)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#64c5f0, #76c9b6)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#64c5f0, #76c9b6)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#64c5f0, #76c9b6)');
+    }
+});
+$('#bk18').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#4265b0, #4cc8ee)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#4265b0, #4cc8ee)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#4265b0, #4cc8ee)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#4265b0, #4cc8ee)');
+    }	
+});
+$('#bk19').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#5a5daa, #975aa4)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#5a5daa, #975aa4)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#5a5daa, #975aa4)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#5a5daa, #975aa4)');
+    }
+});
+$('#bk20').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#965aa4, #db57a0)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#965aa4, #db57a0)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#965aa4, #db57a0)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#965aa4, #db57a0)');
+    }	
+});
+$('#bk21').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#2b2b2b, #4b4b4b)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#2b2b2b, #4b4b4b)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#2b2b2b, #4b4b4b)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#2b2b2b, #4b4b4b)');
+    }
+});
+$('#bk22').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#898c90, #dbddde)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#898c90, #dbddde)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#898c90, #dbddde)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#898c90, #dbddde)');
+    }	
+});
+$('#bk23').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#96d8e9, #4272b8)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#96d8e9, #4272b8)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#96d8e9, #4272b8)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#96d8e9, #4272b8)');
+    }
+});
+$('#bk24').on('click', function() {
+    if (largeIcon) {
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    } else if (smallIcon) {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    } else {
+    	$('#sm-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    	$('#lg-background').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
+    }	
+});
 var orginalWidth = $("#image").width();
 
 $("#infoSlider").text(orginalWidth + ', 100%');
@@ -264,29 +508,63 @@ $("#slider").slider({
     }
 });
 
-	$('#iconSize').keyup(function() { 
-		icon_size = $('#iconSize').val()+'px';
-		$('#myIconSymbol').css('width', icon_size);
-		$('#myIconSymbol >').css('font-size', icon_size);
-		//iconSize(bg_size,icon_size);
-	});
+$('#iconSize').keyup(function() { 
+	icon_size = $('#iconSize').val()+'px';
+	$('#myIconSymbol').css('width', icon_size);
+	$('#myIconSymbol >').css('font-size', icon_size);
+	//iconSize(bg_size,icon_size);
+});
 
-	$('#bkgndSize').keyup(function() { 
-		bkgnd_size = $('#bkgndSize').val()+'px';
-		$('#myIconBackground').css('width', bkgnd_size);
-		$('#myIconBackground').css('height', bkgnd_size);
-		//iconSize(bg_size,icon_size);
-	});
 
-///////////////////////// ICON MAKER /////////////////////////////////	
+
+// $('#shadow').keydown(function() { 
+// 	shadow_depth = $('#shadow').val()+'px';
+// 	$('#lg-glyph-container').css('filter', 'blur(20px) grayscale(20%)');
+	
+// });
+
+///////////////////////// ICON MAKER /////////////////////////////////
+
+//WHICH ICON BUTTONS
+$('#btn-large-icon').on('click', function(){
+     smallIcon = false;
+     largeIcon = true;
+     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+});
+$('#btn-small-icon').on('click', function(){
+     largeIcon = false;
+     smallIcon = true;
+     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+});
+$('#btn-both').on('click', function(){
+     smallIcon = false;
+     largeIcon = false;
+     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+});
+
 
 //CHANGE GLYPH SIZE
 $('#icon-bigger').on('click', function(){
-     var myIcon = $('.myIcon');
-     var typeSize = parseInt($('.myIcon').css('font-size'));
-     console.log("typeSize: " +typeSize);
-     var newTypeSize =(typeSize + 10);
-    $('.myIcon').css('font-size', newTypeSize);
+     if (smIcon) { //resize small icon
+     	     var iconSize = parseInt($('#sm-glyph').css('font-size'));
+	     var newIconSize = (iconSize + 1);
+	     $('#smIcon').css('font-size', newIconSize);
+	     var newLineHeight = (newIconSize * 2) + 3;
+	     $('#smIcon').css('lineheight', newLineHeight);
+     } else if (lgIcon) { //resize lgicon
+     	     var iconSize = parseInt($('#sm-glyph').css('font-size'));
+	     var newIconSize = (iconSize + 1);
+	     $('#smIcon').css('font-size', newIconSize);
+	     var newLineHeight = (newIconSize * 2) + 3;
+	     $('#smIcon').css('lineheight', newLineHeight);
+     } else { //resize both
+     	     var smIconSize = parseInt($('#sm-glyph').css('font-size'));
+	     var newIconSize = (iconSize + 1);
+	     $('#smIcon').css('font-size', newIconSize);
+	     var newLineHeight = (newIconSize * 2) + 3;
+	     $('#smIcon').css('lineheight', newLineHeight);
+     }
+
 });
 
 $('#icon-smaller').on('click', function(){
@@ -297,45 +575,70 @@ $('#icon-smaller').on('click', function(){
     $('.myIcon').css('font-size', newTypeSize);
 });
 
-//////////////////////////MOVE SMALL GLYPH/////////////////////////////
+//////////////////////////MOVE  GLYPH/////////////////////////////
 
 $('body').on('keydown', function(e) {
-	    
-  if(e.keyCode == 37) { // left
-    $('#sm-background #sm-glyph-container').animate({
-      left: "-=5px"
-    });
-    $('#lg-background #lg-glyph-container').animate({
-      left: "-=5px"
-    });
-  }
-  else if(e.keyCode == 39) { // right
-    $('#sm-background #sm-glyph-container').animate({
-      left: "+=5px"
-    });
-    $('#lg-background #lg-glyph-container').animate({
-      left: "+=5px"
-    });
-  }
-   else if(e.keyCode == 38) { // up
-    e.preventDefault();
-    $('#sm-background #sm-glyph-container').animate({
-      top: "-=5px"
-    });
-    $('#lg-background #lg-glyph-container').animate({
-      top: "-=5px"
-    });
-  }
- else if(e.keyCode == 40) { // down
-    e.preventDefault();
-    $('#sm-background #sm-glyph-container').animate({
-      top: "+=5px"
-    });
-    $('#lg-background #lg-glyph-container').animate({
-      top: "+=5px"
-    });
-  }
-
+	if (largeIcon) { //LARGE icon
+		 if(e.keyCode == 37) { // left
+		    $('#lg-background #lg-glyph-container').animate({
+		      left: "-=5px"
+		    });
+		  }
+		  else if(e.keyCode == 39) { // right
+		    $('#lg-background #lg-glyph-container').animate({
+		      left: "+=5px"
+		    });
+		  }
+		   else if(e.keyCode == 38) { // up
+		    e.preventDefault();
+		    $('#lg-background #lg-glyph-container').animate({
+		      top: "-=5px"
+		    });
+		  }
+		 else if(e.keyCode == 40) { // down
+		    e.preventDefault();
+		    $('#lg-background #lg-glyph-container').animate({
+		      top: "+=5px"
+		    });
+		  }
+		else if(e.keyCode == 13) { // resize large glyph
+		    e.preventDefault();
+		  	var font_size = $('#icon_size_input').val()+'vw';
+			var line_height = ($('#icon_size_input').val() * 2) + 'vh';
+			$('#lg-glyph').css('font-size', font_size);
+			$('#lg-glyph').css('line-height', line_height);
+		  }
+	} else { //SMALL icon
+ 		if(e.keyCode == 37) { // left
+		    $('#sm-background #sm-glyph-container').animate({
+		      left: "-=5px"
+		    });
+		  }
+		  else if(e.keyCode == 39) { // right
+		    $('#sm-background #sm-glyph-container').animate({
+		      left: "+=5px"
+		    });
+		  }
+		   else if(e.keyCode == 38) { // up
+		    e.preventDefault();
+		    $('#sm-background #sm-glyph-container').animate({
+		      top: "-=5px"
+		    });
+		  }
+		 else if(e.keyCode == 40) { // down
+		    e.preventDefault();
+		    $('#sm-background #sm-glyph-container').animate({
+		      top: "+=5px"
+		    });
+		  }
+		  else if(e.keyCode == 13) { // resize small glyph
+		    e.preventDefault();
+		  	var font_size = $('#icon_size_input').val()+'vw';
+			var line_height = ($('#icon_size_input').val() * 2) + 'vh';
+			$('#sm-glyph').css('font-size', font_size);
+			$('#sm-glyph').css('line-height', line_height);
+		  }
+	}
 });
 
 //CHANGE BACKGROUND COLOR

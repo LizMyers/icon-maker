@@ -83,10 +83,11 @@
   height:50px;
   text-align: center;
   line-height: 3em;
-  margin-top:40px;
-  margin-left:11%;
+  position:absolute;
+  top:450px;
+  left:20px;
   border-radius: 8px;
-  box-shadow: 4px 4px 4px #cdcdcd;
+/*  box-shadow: 4px 4px 4px #cdcdcd;*/
   background:#3ab9f2;
   cursor:pointer;
 }
@@ -103,39 +104,6 @@
 #glyph01 {background:#ffffff;}
 #glyph02 {background:#232323;}
 
-.backgroundColor {
-  float:left;
-  width:50px;
-  height:50px;
-  margin:10px;
-  border-radius: 50%;
-  cursor:pointer;
-  border:0px solid yellow;
-}
-#bk01 {background:#FFF;}
-#bk02 {background:#232323;}
-#bk03 {background:#4CD964;}
-#bk04 {background:#5AC8FA;}
-#bk05 {background:#007AFF}
-#bk06 {background: #8E8E93}
-#bk07 {background:#34AADC;}
-#bk08 {background:#5856D6;}
-#bk09 {background:#FF2D55;}
-#bk10 {background:#FF3B30;}
-#bk11 {background:#FF9500}
-#bk12 {background: #FFCC00}
-#bk13 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
-#bk14 {background: -webkit-linear-gradient(#f15f3e, #f8951d)}
-#bk15 {background: -webkit-linear-gradient(#ffce06, #fedb4d)}
-#bk16 {background: -webkit-linear-gradient(#4cb748, #9ccd63)}
-#bk17 {background: -webkit-linear-gradient(#64c5f0, #76c9b6)}
-#bk18 {background: -webkit-linear-gradient(#4265b0, #4cc8ee)}
-#bk19 {background: -webkit-linear-gradient(#5a5daa, #975aa4)}
-#bk20 {background: -webkit-linear-gradient(#965aa4, #db57a0)}
-#bk21 {background: -webkit-linear-gradient(#2b2b2b, #4b4b4b)}
-#bk22 {background: -webkit-linear-gradient(#898c90, #dbddde)}
-#bk23 {background: -webkit-linear-gradient(#96d8e9, #4272b8)}
-#bk24 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
 
 button {
   float:left;
@@ -248,7 +216,7 @@ button {
       #position-container {
         /*background:#454545;*/
         height:100px;
-        width:100px;
+        width:200px;
         left:20px;
         position:relative;
         top:-20px;
@@ -324,9 +292,9 @@ button {
         color:white;
       }
 
-    /*-----------DROP-DOWN MENU------------*/
+    /*-----------DROP-DOWN MENUS------------*/
 
-    #filterDropDown{
+    #filterDropDown {
       margin:0;
       padding:0;
       padding-left:4px;
@@ -351,7 +319,8 @@ button {
       text-decoration: none;
     }
     #filterDropDown ul li ul {
-      margin-top:10px;
+      margin-top:8px;
+      margin-left:-3px;
       background:#f7fafd!important;
       box-shadow: 1px 1px 2px #787878;
     }
@@ -361,6 +330,7 @@ button {
       width:100%;
       padding:0px;
       margin:0;
+      border-top: 1px solid #ebebeb;
     }
     li.menuItem:hover {
         background:#fc0;
@@ -374,7 +344,6 @@ button {
       color:#900!important;
       text-decoration: none;
     }
-
     #filterDropDown:hover li.menuItem {
       display:block;
     }
@@ -385,6 +354,52 @@ button {
        padding:4px;
        text-decoration: none;
     }
+    #gradientDropDown {
+      margin:0;
+      padding:0;
+      padding-left:4px;
+      padding-top:6px;
+      position:absolute;
+      font-size: 0.9em;
+      line-height: 1.2em;
+      top:165px;
+      right:44px;
+      width:150px;
+      height:25px;
+      list-style: none!important;
+      border:1px solid #ddd;
+      border-radius:4px;
+      cursor:pointer;
+      overflow: none;
+    }
+    #gradientDropDown ul {
+      margin:0;
+      padding:0;
+      height:100%;
+      list-style: none;
+      background:none;
+      text-decoration: none;
+    }
+    #gradientDropDown ul li ul li{
+      border:0px solid yellow;
+      margin-top:8px;
+      margin-left:-3px;
+      background:#f7fafd!important;
+      box-shadow: 1px 1px 2px #787878;
+    }
+    li.menuItem,
+    li.gradientItem{
+      display:none;
+      line-height: 2em;
+      width:100%;
+      padding:0px;
+      margin:0;
+      border-top: 0px solid #ebebeb;
+    }
+    #gradientDropDown:hover li.gradientItem {
+      display:block;
+    }
+
     #down-arrow {
       float:right;
       position:absolute;
@@ -395,6 +410,38 @@ button {
       padding-top:2px;
       padding-left:10px;
     }
+    .backgroundColor {
+        float:left;
+        width:20px;
+        height:20px;
+        margin:5px;
+        cursor:pointer;
+        border:0px solid blue;
+      }
+      #bk01 {background:#FFF;}
+      #bk02 {background:#232323;}
+      #bk03 {background:#4CD964;}
+      #bk04 {background:#5AC8FA;}
+      #bk05 {background:#007AFF}
+      #bk06 {background: #8E8E93}
+      #bk07 {background:#34AADC;}
+      #bk08 {background:#5856D6;}
+      #bk09 {background:#FF2D55;}
+      #bk10 {background:#FF3B30;}
+      #bk11 {background:#FF9500}
+      #bk12 {background: #FFCC00}
+      #bk13 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
+      #bk14 {background: -webkit-linear-gradient(#f15f3e, #f8951d)}
+      #bk15 {background: -webkit-linear-gradient(#ffce06, #fedb4d)}
+      #bk16 {background: -webkit-linear-gradient(#4cb748, #9ccd63)}
+      #bk17 {background: -webkit-linear-gradient(#64c5f0, #76c9b6)}
+      #bk18 {background: -webkit-linear-gradient(#4265b0, #4cc8ee)}
+      #bk19 {background: -webkit-linear-gradient(#5a5daa, #975aa4)}
+      #bk20 {background: -webkit-linear-gradient(#965aa4, #db57a0)}
+      #bk21 {background: -webkit-linear-gradient(#2b2b2b, #4b4b4b)}
+      #bk22 {background: -webkit-linear-gradient(#898c90, #dbddde)}
+      #bk23 {background: -webkit-linear-gradient(#96d8e9, #4272b8)}
+      #bk24 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
 
     li.showMyPicks {
       display:hidden;
@@ -445,7 +492,6 @@ button {
   text-align: left;
   margin: 0 auto; 
 }
-
 .ui-slider-range{
   bottom: 0;
   left: 0;
@@ -457,7 +503,6 @@ button {
   border: 0;  
   font-weight: bold;
 }
-
 .ui-slider-handle{
   border-radius: 50%;
   background-color: #df3518;
@@ -553,6 +598,8 @@ button {
   top:7px;
   width:75px;
   z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
 }
 #sm-glyph-container {
   border:0px solid red;
@@ -596,6 +643,8 @@ button {
   top:27px;
   width:380px;
   z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
 }
 #lg-glyph-container {
   border:0px solid red;
@@ -603,7 +652,7 @@ button {
   left:0;
   right:0;
 }
-#lg-glyph {
+#lg-glyph  {
  border:0px solid red;
  color:#fff;
  font-size:22vw;
@@ -611,6 +660,8 @@ button {
  width:100%;
  height:100%;
  text-align:center;
+
+/* filter: drop-shadow(1px 1px 30px #930);*/
 }
 #lg-mask {
   border:0px solid red;
@@ -620,8 +671,54 @@ button {
   width:100%;
   z-index:10000!important;
 }
+#clip-mask {
+    width: 380px;
+    height:380px;
+    background: #1e90ff;
+}
+#iconSize {
+  position:absolute;
+  top:-250px;
+  left:50px;
+  background: none;
+/*  height:50px;
+  width:50px;*/
+}
+#icon_size_input {
+  background-color:white;
+  font-size:1em;
+  height:100%;
+  width:25%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.myRadioChoice{
+  width:30%;
+  height:50px;
+  background:yellow;
+}
+button {
+  background: light-blue;
+  border:0px;
+  color:white;
+  font-size:.9em;
+  height:30px;
+  border-radius: 4px!important;
+  box-shadow: none;
+  padding:0;
+  margin:0;
+  width:50px;
+}
+.panel-label {
+  top:20px;
+  left:20px;
+  position:absolute;
+  font-size:1.2em;
+}
+  
+</style>
 
-  </style>
 
 </head>
 	
@@ -643,9 +740,9 @@ button {
       <input type="text" name="search" id="search" placeholder="Keyword search"   />
           <a href="#" id="clearSearch"><i class="fa fa-times"></i></a>
           <div class="bar"></div> 
-    </div>  
-  <!-- CATEGORIES DROPDOWN-->  
+    </div>
 
+  <!-- CATEGORIES DROPDOWN-->  
     <div id="filterDropDown">
     <ul>
       <li><span id="filterType" style="color:#999;font-family:arial, sans-serif;font-weight:normal">All Categories</span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px"></i></li>
@@ -668,7 +765,6 @@ button {
         </li>
       </ul>
     </div>
-
 
     <!-- LOGO -->                 
     <div id="alexaLogo">
@@ -696,30 +792,83 @@ button {
 </div>
 
 <div id="lg-container">
-  <div id="lg-background">
-      <div id="lg-glyph-container">
-          <i class="fa fa-amazon" id="lg-glyph"></i>
-      </div>
-  </div>
-  <!-- <div id="lg-glyph"></div> -->
+    <div id="lg-background">
+        <div id="lg-glyph-container">
+            <i class="fa fa-amazon" id="lg-glyph"></i>
+        </div>
+    </div>
     <div id="lg-mask"></div>
 </div>
 
-<!-- <div id="myIconBackground" style="position:fixed">
-    <div id="myIconSymbol" style="border:1px solid red;"><div class="myIcon target" style="border:1px solid blue"><i class="fa fa-amazon"></i></div>
-</div>
- -->
-
 <!-- PROPERTIES PANEL -->
 
-<div id="propertiesPanel">
+    <div id="propertiesPanel">
 
-    <div id="bkgndColorPicker">
-    <p style="margin-left:20px!important">
-    Background color:<br />
-    <p style="margin:-10px 0 0 20px"><input type='text' id="fullBkgnd" /></p>
-    </p>
+    <p style="position:absolute; top:10px; left:20px">Controls Apply To:</p>
+    <div style="position:absolute; top:46px; left:0px">
+        <button id="btn-both">Both</button>
+        <button id="btn-small-icon">108</button>
+        <button id="btn-large-icon">512</button>
+    </div>
 
+    <div id="bkgndColorPicker" style="position:absolute;border:0px solid yellow;top:60px; left:20px;width:250px!important">
+          <p style="margin-left:20px!important">
+          <p>Background Color:<p/>
+          <p><input type='text' id="fullBkgnd" /></p>
+  </div> <!--//colorPickerBkgnd-->
+
+      <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:220px; left:20px;width:250px!important">
+          <p style="margin-left:20px!important">
+          <p>Icon Color:<p/>
+          <p><input type='text' id="glyph-color" /></p>
+  </div> <!--//glyph-color-picker-->
+
+    <!-- SWATCHES DROPDOWN-->  
+    <div id="gradientDropDown" style="background:#ebebeb;">
+    <ul>
+      <li><span id="gradientType" style="color:#444;font-family:arial, sans-serif;font-weight:normal">Swatches</span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px;"></i></li>
+      <li>
+        <ul style="z-index:60000!important">
+                <li class="gradientItem" style="height:150px;width:100%;border:1px solid black;background-color:#454545!important">
+                      <div id="bk01" class="backgroundColor"></div>
+                      <div id="bk02" class="backgroundColor"></div>
+                      <div id="bk03" class="backgroundColor"></div>
+                      <div id="bk04" class="backgroundColor"></div>
+                      <div id="bk05" class="backgroundColor"></div>
+                      <div id="bk06" class="backgroundColor"></div>
+                      <div id="bk07" class="backgroundColor"></div>
+                      <div id="bk08" class="backgroundColor"></div>
+                      <div id="bk09" class="backgroundColor"></div>
+                      <div id="bk10" class="backgroundColor"></div>
+                      <div id="bk11" class="backgroundColor"></div>
+                      <div id="bk12" class="backgroundColor"></div>
+                      <div id="bk13" class="backgroundColor"></div>
+                      <div id="bk14" class="backgroundColor"></div>
+                      <div id="bk15" class="backgroundColor"></div>
+                      <div id="bk16" class="backgroundColor"></div>
+                      <div id="bk17" class="backgroundColor"></div>
+                      <div id="bk18" class="backgroundColor"></div>
+                      <div id="bk19" class="backgroundColor"></div>
+                      <div id="bk20" class="backgroundColor"></div>
+                      <div id="bk21" class="backgroundColor"></div>
+                      <div id="bk22" class="backgroundColor"></div>
+                      <div id="bk23" class="backgroundColor"></div>
+                      <div id="bk24" class="backgroundColor"></div>
+              </li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+
+<div id="iconSize" style="position:absolute; top:-50px; left:20px">
+    <p style="position:relative;top:-130px;left:0px;width:150px;font-size:18px">Icon Size:<p/>
+    <input type="number" value="22" id="icon_size_input" style="position: relative; top:-80px;left:-30px" />
+</div>
+
+<!-- PROPERTIES PANEL: DOWNLOAD -->
+<div id="downloadButton">Download 512 x 512</div>
+
+ </div><!--//END PROPERTIES-->
     <script type="text/javascript">
 
     $("#fullBkgnd").spectrum({
@@ -727,10 +876,10 @@ button {
         flat: false,
         showInput: true,
         className: "full-spectrum",
-        showInitial: false,
+        showInitial: true,
+        clickoutFiresChange:true,
         showPalette: false,
-        showSelectionPalette: false,
-        maxPaletteSize: 10,
+        showSelectionPalette: true,
         preferredFormat: "hex",
         localStorageKey: "spectrum.demo",
         move: function (color) {
@@ -746,62 +895,57 @@ button {
         },
         change: function() {
           var newColor1 = $('#fullBkgnd').spectrum('get');
-          $("#sm-background").css('background', newColor1);
-          $("#lg-background").css('background', newColor1);
+          if (largeIcon) {
+            $("#lg-background").css('background', newColor1);
+          } else if (smallIcon) {
+            $("#sm-background").css('background', newColor1);
+          } else {
+            $("#lg-background").css('background', newColor1);
+            $("#sm-background").css('background', newColor1);
+          }
         }
+       
     });
 
     </script>
-</div> <!--//colorPickerBkgnd-->
+    <script>
+        $("#glyph-color").spectrum({
+        color: "#fff",
+        flat: false,
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        clickoutFiresChange:true,
+        showPalette: false,
+        showSelectionPalette: true,
+        preferredFormat: "hex",
+        move: function (color) {
+        },
+        show: function () {
+        
+        },
+        beforeShow: function () {
+        
+        },
+        hide: function () {
+        
+        },
+        change: function() {
+          var newColor2 = $('#glyph-color').spectrum('get');
+          console.log("glyph-color" + newColor2);
+          if (largeIcon) {
+            $("#lg-glyph").css('color', "'"+ newColor2 + "'");
+          } else if (smallIcon) {
+            $("#sm-glyph").css('color',  "'"+ newColor2 + "'");
+          } else {
+            $("#sm-glyph").css('color',  "'"+ newColor2 + "'");
+            $("#lg-glyph").css('color',  "'"+ newColor2 + "'");
+          }
+        }
+       
+    });
 
-
-
-<!-- PROPERTIES PANEL: POSITION -->
-<p style="margin-left:20px!important">IcoPosition:</p>
-<div id="position-container">
-  <div id="btn-move-up" class="btn-move"><i class="fa fa-arrow-up"></i></div>
-  <div id="btn-move-left" class="btn-move"><i class="fa fa-arrow-left"></i></div>
-  <div id="btn-move-right" class="btn-move"><i class="fa fa-arrow-right"></i></div>
-  <div id="btn-move-down" class="btn-move"><i class="fa fa-arrow-down"></i></div>
-</div><!-- position-container -->
-
-
-<!-- PROPERTIES PANEL: DOWNLOAD -->
-<div id="downloadButton">Download 512 x 512</div>
-
-
-<!-- iconSymbolColorGroup -->
-<!--
-    <div id="backgroundColorGroup" style="margin-top:100px;border-top:1px solid #666">
-      
-      <div id="bk01" class="backgroundColor"></div>
-      <div id="bk02" class="backgroundColor"></div>
-      <div id="bk03" class="backgroundColor"></div>
-      <div id="bk04" class="backgroundColor"></div>
-      <div id="bk05" class="backgroundColor"></div>
-      <div id="bk06" class="backgroundColor"></div>
-      <div id="bk07" class="backgroundColor"></div>
-      <div id="bk08" class="backgroundColor"></div>
-      <div id="bk09" class="backgroundColor"></div>
-      <div id="bk10" class="backgroundColor"></div>
-      <div id="bk11" class="backgroundColor"></div>
-      <div id="bk12" class="backgroundColor"></div>
-      <div id="bk13" class="backgroundColor"></div>
-      <div id="bk14" class="backgroundColor"></div>
-      <div id="bk15" class="backgroundColor"></div>
-      <div id="bk16" class="backgroundColor"></div>
-      <div id="bk17" class="backgroundColor"></div>
-      <div id="bk18" class="backgroundColor"></div>
-      <div id="bk19" class="backgroundColor"></div>
-      <div id="bk20" class="backgroundColor"></div>
-      <div id="bk21" class="backgroundColor"></div>
-      <div id="bk22" class="backgroundColor"></div>
-      <div id="bk23" class="backgroundColor"></div>
-      <div id="bk24" class="backgroundColor"></div> 
-   </div>-->
- 
-
- </div><!--//END PROPERTIES-->
+    </script>
 
 <script src="resources/js/icon-maker-utils.js"></script> 
 <script src="resources/js/icon-maker.js"></script>  

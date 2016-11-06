@@ -14,6 +14,11 @@ body {
     text-shadow:none!important;
     background:none!important;
 }
+button {
+  background: #999;
+  color:white;
+}
+
 .ui-content {background:none!important;}
 
 #nav {
@@ -48,7 +53,7 @@ body {
 }
 #alexaLogo {
     margin-top:4px;
-    margin-left:46%;
+    margin-left:46.59%;
     font-family: 'Helvetica', sans-serif;
     color:#eaa7cb;
     font-size:1.5em;

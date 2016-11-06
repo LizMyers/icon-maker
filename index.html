@@ -14,7 +14,6 @@
 <link rel='stylesheet' href='resources/css/allSets.min.css' />
 <link rel='stylesheet' href='resources/css/icon-maker.css' />	
 <link rel='stylesheet' href='resources/css/spectrum.css' /> 
-<link rel='stylesheet' href='resources/css/spectrum.css' /> 
 
 <script src='resources/js/jquery-1.11.2.min.js'></script>	
 <script src='resources/js/jquery-ui.js'></script> 
@@ -28,26 +27,33 @@
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
 <script src="resources/js/spectrum.js"></script>
 
+
 <style>
 /*  ----------------------------------------------------- */
 /*  --------------------CANVAS----------------------- */
 /*  ---------------------------------------------------- */
   canvas {
-      border:1px solid #000;
-      float:left;
-      clear:both;
-      min-height: 512px;
-      min-width: 512px;
+      background:white;
+       border-radius: 50%;
+      border:0px solid green;
+      position:absolute;
+      left:0;
+      top:0;
+      height:512px;
+      width:512px;
   }
+
     #canvas {
-      border:1px solid #000;
-      float:left;
-      clear:both;
-      min-height: 512px;
-      min-width: 512px;
-      max-height: 512px;
-      max-width: 512px;
+      background:white;
+      border:0px solid green;
+      border-radius: 50%;
+      position:absolute;
+      left:0;
+      top:0;
+      height:512px;
+      width:512px;
   }
+
 #myIconBackground {
   position: relative;
   display:block;
@@ -645,7 +651,7 @@ button {
       <li><span id="filterType" style="color:#999;font-family:arial, sans-serif;font-weight:normal">All Categories</span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px"></i></li>
       <li>
         <ul>
-            <li data-category-value="*" class="menuItem"><a href="#" class="ui-link">All Categories</a></li>
+            <li data-category-value="*" class="menuItem" id="allCat"><a href="#" class="ui-link">All Categories</a></li>
             <li data-category-value=".business" class="menuItem"><a href="#" class="ui-link">Business</a></li>
             <li data-category-value=".entertainment" class="menuItem"><a href="#" class="ui-link">Entertainment</a></li>
             <li data-category-value=".food" class="menuItem"><a href="#" class="ui-link">Food &amp; Drink</a></li>
@@ -763,6 +769,7 @@ button {
 <!-- PROPERTIES PANEL: DOWNLOAD -->
 <div id="downloadButton">Download 512 x 512</div>
 
+
 <!-- iconSymbolColorGroup -->
 <!--
     <div id="backgroundColorGroup" style="margin-top:100px;border-top:1px solid #666">
@@ -800,9 +807,9 @@ button {
 <script src="resources/js/icon-maker.js"></script>  
 </div><!--//end content-->
   
-<script src="resources/js/jquery.sidr.min.js"></script>
 <script src="resources/js/isotope.js"></script>	
 <script src="resources/js/html2canvas.js"></script>
+
 
       
 </div><!--//end cGrid-->

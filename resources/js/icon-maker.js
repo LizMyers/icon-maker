@@ -67,40 +67,7 @@ $(document).on('pagecreate', '#cGrid', function() {
 			});
 		} //grabIcons
 
-	$('#simple-menu').sidr({
-		//side: 'right',
-		speed: 200
-	});
-
-	var sliderIsOpen = localStorage.getItem("mSlider");
-	if ((sliderIsOpen == 'undefined') || (sliderIsOpen == '') || (sliderIsOpen == "closed")) {
-		sliderIsOpen == "closed";
-	} else {
-		sliderIsOpen == "open";
-		$('#simple-menu').trigger('click');
-		localStorage.setItem("mSlider", "open");
-	}
-
-	$(window).resize(function() {
-		console.log("resized window");
-		$('#container').isotope('layout');
-	});
-
-	//set colour of default menus to show defaults
-	$('#allIcons').find('a').addClass('selected').find('i').addClass('selected');
-	$('#allIcons').find('#iconsTotal').addClass('selected');
-
-	var theme = localStorage.getItem('theme');
-	if (theme == "steel-blue") {
-		$('.menu #steel-blue').find('a').addClass('selected').find('i').addClass('selected');
-	} else if (theme == "light-theme") {
-		$('.menu #light-theme').find('a').addClass('selected').find('i').addClass('selected');
-	} else {
-		$('.menu #dark-theme').find('a').addClass('selected').find('i').addClass('selected');
-	}
-
-	$('#view-all').css('background', '#f46666').css('color', 'white');
-	$('#view-all i').css('color', 'white');
+	
 
 }); //end pagecreate
 
@@ -111,15 +78,7 @@ $(document).on('pagebeforeshow', '#cGrid', function() {
 
 	/////////////////////////////// INIT VARS //////////////////////////////////////
 
-	var myCount = JSON.parse(localStorage.getItem('myCount'));
-	console.log("MyCount: " + myCount);
-
-	if (myCount !== 'undefined' && myCount !==' ' && myCount !== null) {
-		$('#picksTotal').text(myCount);
-	} else {
-		myCount = 0;
-		$('#picksTotal').find('.countTxt').text(myCount);
-	}
+	// $('#clearSearch').css('visibility', 'hidden');
 	var $container = $('#container');
 	var $item = $('#container .item');
 
@@ -169,14 +128,11 @@ $(document).on('pagebeforeshow', '#cGrid', function() {
 
 $(document).on('pageshow', '#cGrid', function() {
 
-	$('#simple-menu').trigger('click');
-	sliderIsOpen = 1;
-	localStorage.setItem("sliderIsOpen", true);
 
 	/////////////////////////////// SEARCH ////////////////////////////////////////////
 	
 	$('#search').on('keyup', function() {
-		$('#btnClear').css({
+		$('#clearSearch').css({
 			'visibility': 'visible'
 		});
 		return false;
@@ -210,28 +166,21 @@ $(document).on('pageshow', '#cGrid', function() {
 					filter: ':contains(' + kwd + ')' 
 				});
 				$('#setGroup').find('a').removeClass('selected').find('i').removeClass('selected');
+				$('#filterType').text('All Categories');
 			}
 		}
 		return false;
 	});
 
-$('#clearSearch').on('click', function() {
-	$('#container').isotope({
-		 filter: '*'
+	$('#clearSearch').on('click', function() {
+		$('#container').isotope({
+			 filter: '*'
+		});
+		$('#search').val('');
+		$('#dropDownFilter').find('#catAll').trigger('click');
+		$(this).hide();
 	});
-	$('#search').val(' ');
-	$(this).hide();
-});
 
-	/////////////////////////////// TRIGGER MENUS ////////////////////////////////////////////
-
-	$('#clearSearch').hide();
- 
- 	var firstOpen = localStorage.getItem('mySet');
- 	if (mySet == null) {
- 		$("#faSet").find('a').addClass('selected').find('i').addClass('selected');
-		$("#faSet").find('.countTxt').addClass('selected');
- 	}
 
 }); //end bbGrid pageshow
 
@@ -244,6 +193,9 @@ $('#clearSearch').on('click', function() {
 
 
 $('.menuItem ').on('click', this, function() {
+	$('#search').val('');
+	$('#clearSearch').css('visibility', 'hidden');
+
 	var catSelector = $(this).attr('data-category-value');
 	switch(catSelector) {
 		case '*':
@@ -349,8 +301,6 @@ $('#icon-smaller').on('click', function(){
 
 $('body').on('keydown', function(e) {
 	    
-    e.preventDefault();
-
   if(e.keyCode == 37) { // left
     $('#sm-background #sm-glyph-container').animate({
       left: "-=5px"
@@ -368,6 +318,7 @@ $('body').on('keydown', function(e) {
     });
   }
    else if(e.keyCode == 38) { // up
+    e.preventDefault();
     $('#sm-background #sm-glyph-container').animate({
       top: "-=5px"
     });
@@ -376,6 +327,7 @@ $('body').on('keydown', function(e) {
     });
   }
  else if(e.keyCode == 40) { // down
+    e.preventDefault();
     $('#sm-background #sm-glyph-container').animate({
       top: "+=5px"
     });
@@ -463,19 +415,28 @@ $('#bk24').on('click', function(){
 //download button
 $('#downloadButton').click(function() {
 
-    html2canvas($('#lg-background'), {
+    html2canvas($('#lg-container'), {
 	
         	onrendered: function(canvas) {
           
             // canvas is the final rendered <canvas> element
             var myImage = canvas.toDataURL("image/png");
-            canvas.width = '512';
-            canvas.background = 'white';
             window.open(myImage);
-        }
+        },
+        width:512
+        
     });
 });
+// $('#downloadButton').click(function() {
+// 	var canvas = document.getElementById('canvas');
+// 	var context = canvas.getContext('2d');
 
+// 	domvas.toImage(document.getElementById('lg-container'), function() {
+// 		console.log("Drawing your icon");
+//     	context.drawImage(this, 512, 512);
+// 	});
+
+// });
 
 function updateColor(element, color) {
     var hexColor = "transparent";

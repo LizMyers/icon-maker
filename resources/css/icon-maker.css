@@ -148,6 +148,7 @@ h1 {
     top:6px;
     left:170px;
     height:12px;
+    visibility: hidden;
     width:12px;
     z-index: 20000;
 }

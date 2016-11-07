@@ -1,9 +1,6 @@
-/*
-Icon-Maker for Alexa
-by Liz Myers 
-lizmyers@amazon.com
-November 2016
-*/
+// Maraschino-Utils.js 
+// by Liz Myers
+// May 27, 2015
 
 var Utils = {
     

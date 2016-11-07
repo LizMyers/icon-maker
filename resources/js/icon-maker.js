@@ -661,16 +661,7 @@ $('body').on('keydown', function(e) {
 //         }
 //     });
 // });
-$('#downloadButton').click(function() {
-	var canvas = document.getElementById('canvas');
-	var context = canvas.getContext('2d');
 
-	domvas.toImage(document.getElementById('lg-background'), function() {
-		console.log("Drawing your icon");
-    	context.drawImage(this, 512, 512);
-	});
-
-});
 
 function updateColor(element, color) {
     var hexColor = "transparent";

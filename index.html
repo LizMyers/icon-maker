@@ -85,7 +85,7 @@
   text-align: center;
   line-height: 3em;
   position:absolute;
-  top:500px;
+  top:450px;
   left:20px;
   border-radius: 8px;
 /*  box-shadow: 4px 4px 4px #cdcdcd;*/
@@ -93,7 +93,7 @@
   cursor:pointer;
 }
 #download108{
-  top:430px;
+  top:530px;
 }
 #propertiesPanel {
    float:right;
@@ -582,15 +582,14 @@ button {
   margin-top:400px;
   background:yellow;
 }
-
 #sm-container{
   background:#fff;
-  border:0px solid #ebebeb;
+  border:1px solid #ebebeb;
   box-shadow: 0px 1px 1px #a7a7a7;
   width:108px;
   height:108px;
   position:fixed;
-  left: calc(39.5% - 52px);
+  left:430px;
   top:100px;
 }
 /*#sm-background {
@@ -624,10 +623,8 @@ button {
   border:0px solid red;
   position:absolute;
   text-align: center;
-  top:0;
-  left:0;
-  height:108px;
-  width:108px;
+  top:10%;
+  left:15%;
 }
 #sm-glyph {
  border:0px solid red;
@@ -635,14 +632,10 @@ button {
 /* font-size:4vw;
  line-height: 9vh;*/
  font-size:4.25em;
- position:relative;
- top:0px;
- left:0px;
- line-height: 0em;
+ line-height: 1.2em;
  width:100%;
  height:100%;
  text-align:center;
- vertical-align: middle!important
 filter: drop-shadow(1px 1px 1px #b57a22);
 }
 #sm-mask {
@@ -659,7 +652,7 @@ filter: drop-shadow(1px 1px 1px #b57a22);
   width:512px;
   height:512px;
   position:fixed;
-  left:calc(52.75% - 250px);
+  left:430px;
   top:230px;
 }
 /*#lg-background {
@@ -679,6 +672,7 @@ filter: drop-shadow(1px 1px 1px #b57a22);
   background: #f90;
  /* border:1px solid #a7a7a7;*/
   border-radius: 50%;
+ 
   position:relative;
   left:0px;
   top:0px;
@@ -687,8 +681,6 @@ filter: drop-shadow(1px 1px 1px #b57a22);
   z-index:10!important;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  clip-path:width(512px);
-  clip-path: height:512px;
    overflow:hidden;
 }
 #lg-glyph-container {
@@ -828,23 +820,24 @@ button {
 </div><!--end isotope container-->
 
 <!-- CANVAS AREA -->
-      <div id="sm-container">
-        <div id="sm-background">
-              <div id="sm-glyph-container">
-                <i class="fa fa-amazon" id="sm-glyph"></i>
-            </div>
-      </div>
-        <!-- <div id="sm-mask"></div> -->
-      </div>
 
-      <div id="lg-container">
-          <div id="lg-background">
-              <div id="lg-glyph-container">
-                  <i class="fa fa-amazon" id="lg-glyph"></i>
-              </div>
-          </div>
-      <!--     <div id="lg-mask"></div> -->
+<div id="sm-container">
+  <div id="sm-background" clipPathUnits="objectBoundingBox">
+        <div id="sm-glyph-container">
+          <i class="fa fa-amazon" id="sm-glyph"></i>
       </div>
+</div>
+  <!-- <div id="sm-mask"></div> -->
+</div>
+
+<div id="lg-container">
+    <div id="lg-background" clipPathUnits="objectBoundingBox">
+        <div id="lg-glyph-container">
+            <i class="fa fa-amazon" id="lg-glyph"></i>
+        </div>
+    </div>
+<!--     <div id="lg-mask"></div> -->
+</div>
 
 <!-- PROPERTIES PANEL -->
 

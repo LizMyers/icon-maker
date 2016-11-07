@@ -641,105 +641,36 @@ $('body').on('keydown', function(e) {
 	}
 });
 
-//CHANGE BACKGROUND COLOR
-$('#bk01').on('click', function(){
-     $('#myIconBackground').css('background', '#FFF');
-});
-$('#bk02').on('click', function(){
-     $('#myIconBackground').css('background', '#232323');
-});
-$('#bk03').on('click', function(){
-     $('#myIconBackground').css('background', '#4CD964');
-});
-$('#bk04').on('click', function(){
-     $('#myIconBackground').css('background', '#5AC8FA');
-});
-$('#bk05').on('click', function(){
-     $('#myIconBackground').css('background', '#007AFF');
-});
-$('#bk06').on('click', function(){
-      $('#myIconBackground').css('background', '#8E8E93');
-});
-$('#bk07').on('click', function(){
-     $('#myIconBackground').css('background', '#34AADC');
-});
-$('#bk08').on('click', function(){
-     $('#myIconBackground').css('background', '#5856D6');
-});
-$('#bk09').on('click', function(){
-     $('#myIconBackground').css('background', '#FF2D55');
-});
-$('#bk10').on('click', function(){
-     $('#myIconBackground').css('background', '#FF3B30');
-});
-$('#bk11').on('click', function(){
-     $('#myIconBackground').css('background', '#FF9500');
-});
-$('#bk12').on('click', function(){
-      $('#myIconBackground').css('background', '#FFCC00');
-});
-$('#bk13').on('click', function(){
-      $('#myIconBackground').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
-});
-$('#bk14').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#f15f3e, #f8951d)');
-});
-$('#bk15').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#ffce06, #fedb4d)');
-});
-$('#bk16').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#4cb748, #9ccd63)');
-});
-$('#bk17').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#64c5f0, #76c9b6)');
-});
-$('#bk18').on('click', function(){
-      $('#myIconBackground').css('background', '-webkit-linear-gradient(#4265b0, #4cc8ee)');
-});
-$('#bk19').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#5a5daa, #975aa4)');
-});
-$('#bk20').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#965aa4, #db57a0)');
-});
-$('#bk21').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#2b2b2b, #4b4b4b)');
-});
-$('#bk22').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#898c90, #dbddde)');
-});
-$('#bk23').on('click', function(){
-     $('#myIconBackground').css('background', '-webkit-linear-gradient(#96d8e9, #4272b8)');
-});
-$('#bk24').on('click', function(){
-      $('#myIconBackground').css('background', '-webkit-linear-gradient(#ee3369, #f15f3e)');
-});
 
 //download button
-$('#downloadButton').click(function() {
 
-    html2canvas($('#lg-container'), {
-	
-        	onrendered: function(canvas) {
-          
-            // canvas is the final rendered <canvas> element
-            var myImage = canvas.toDataURL("image/png");
-            window.open(myImage);
-        },
-        width:512
-        
-    });
-});
+
+
 // $('#downloadButton').click(function() {
-// 	var canvas = document.getElementById('canvas');
-// 	var context = canvas.getContext('2d');
 
-// 	domvas.toImage(document.getElementById('lg-container'), function() {
-// 		console.log("Drawing your icon");
-//     	context.drawImage(this, 512, 512);
-// 	});
+//     var width = 512;
+//     var height = 512;
 
+//     html2canvas($('#lg-background'), {
+	
+//         	onrendered: function(canvas) {
+          
+//             // canvas is the final rendered <canvas> element
+//             var myImage = canvas.toDataURL("image/png");
+//             window.open(myImage);
+//         }
+//     });
 // });
+$('#downloadButton').click(function() {
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+
+	domvas.toImage(document.getElementById('lg-background'), function() {
+		console.log("Drawing your icon");
+    	context.drawImage(this, 512, 512);
+	});
+
+});
 
 function updateColor(element, color) {
     var hexColor = "transparent";

@@ -26,32 +26,33 @@
 	 </script>
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
 <script src="resources/js/spectrum.js"></script>
-
-
 <style>
 /*  ----------------------------------------------------- */
 /*  --------------------CANVAS----------------------- */
 /*  ---------------------------------------------------- */
   canvas {
-      background:white;
-       border-radius: 50%;
-      border:0px solid green;
-      position:absolute;
-      left:0;
-      top:0;
-      height:512px;
-      width:512px;
-  }
-
-    #canvas {
-      background:white;
-      border:0px solid green;
+      background:#f90!important;
       border-radius: 50%;
+      border:0px solid green;
       position:absolute;
-      left:0;
+      left:20px;
       top:0;
-      height:512px;
-      width:512px;
+      height:380px;
+      width:380px;
+      text-align:center;
+  }
+/*  img {
+    background:green;
+    height:512px;
+    width:512px;
+  }*/
+  #canvas {
+      background:#f90;
+      border:0px solid green;
+      border-radius: none;
+      position:absolute;
+      left:50px;
+      top:150px;
   }
 
 #myIconBackground {
@@ -78,18 +79,21 @@
   left:0;
   text-align: center;
 }
-#downloadButton {
+.downloadButton {
   width:200px;
   height:50px;
   text-align: center;
   line-height: 3em;
   position:absolute;
-  top:450px;
+  top:500px;
   left:20px;
   border-radius: 8px;
 /*  box-shadow: 4px 4px 4px #cdcdcd;*/
   background:#3ab9f2;
   cursor:pointer;
+}
+#download108{
+  top:430px;
 }
 #propertiesPanel {
    float:right;
@@ -578,17 +582,18 @@ button {
   margin-top:400px;
   background:yellow;
 }
+
 #sm-container{
   background:#fff;
-  border:1px solid #ebebeb;
+  border:0px solid #ebebeb;
   box-shadow: 0px 1px 1px #a7a7a7;
   width:108px;
   height:108px;
   position:fixed;
-  left:430px;
+  left: calc(39.5% - 52px);
   top:100px;
 }
-#sm-background {
+/*#sm-background {
   background: #f90;
   border:1px solid #a7a7a7;
   border-radius: 50%;
@@ -600,40 +605,64 @@ button {
   z-index:10!important;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+}*/
+#sm-background {
+  background: #f90;
+  /*border:1px solid #a7a7a7;*/
+  border-radius: 50%;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:108px;
+  height:108px;
+  z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  overflow:hidden;
 }
 #sm-glyph-container {
   border:0px solid red;
   position:absolute;
+  text-align: center;
+  top:0;
   left:0;
-  right:0;
+  height:108px;
+  width:108px;
 }
 #sm-glyph {
  border:0px solid red;
  color:#fff;
- font-size:4vw;
- line-height: 9vh;
+/* font-size:4vw;
+ line-height: 9vh;*/
+ font-size:4.25em;
+ position:relative;
+ top:0px;
+ left:0px;
+ line-height: 0em;
  width:100%;
  height:100%;
  text-align:center;
+ vertical-align: middle!important
+filter: drop-shadow(1px 1px 1px #b57a22);
 }
 #sm-mask {
   border:0px solid red;
   background: url('resources/img/108-mask.png')0 0;
-  height:100%;
-  width:100%;
+  height:512px;
+  width:512px;
   z-index: 1000;
 }
 #lg-container{
-  background:#ffcc00;
+  background:#fff;
   border:0px solid #ebebeb;
   box-shadow: 0px 1px 1px #a7a7a7;
   width:512px;
   height:512px;
   position:fixed;
-  left:430px;
+  left:calc(52.75% - 250px);
   top:230px;
 }
-#lg-background {
+/*#lg-background {
   background: #f90;
   border:1px solid #a7a7a7;
   border-radius: 50%;
@@ -645,23 +674,41 @@ button {
   z-index:10!important;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+}*/
+#lg-background {
+  background: #f90;
+ /* border:1px solid #a7a7a7;*/
+  border-radius: 50%;
+  position:relative;
+  left:0px;
+  top:0px;
+  width:512px;
+  height:512px;
+  z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  clip-path:width(512px);
+  clip-path: height:512px;
+   overflow:hidden;
 }
 #lg-glyph-container {
   border:0px solid red;
   position:absolute;
   left:0;
   right:0;
+  padding-top:10%;
 }
 #lg-glyph  {
  border:0px solid red;
  color:#fff;
- font-size:22vw;
- line-height: 47vh;
+/* font-size:22vw;
+ line-height: 47vh;*/
+ font-size:22em;
  width:100%;
  height:100%;
  text-align:center;
-
-/* filter: drop-shadow(1px 1px 30px #930);*/
+ vertical-align: middle;
+ filter: drop-shadow(1px 1px 1px #b57a22);
 }
 #lg-mask {
   border:0px solid red;
@@ -781,24 +828,23 @@ button {
 </div><!--end isotope container-->
 
 <!-- CANVAS AREA -->
-
-<div id="sm-container">
-  <div id="sm-background">
-        <div id="sm-glyph-container">
-          <i class="fa fa-amazon" id="sm-glyph"></i>
+      <div id="sm-container">
+        <div id="sm-background">
+              <div id="sm-glyph-container">
+                <i class="fa fa-amazon" id="sm-glyph"></i>
+            </div>
       </div>
-</div>
-  <div id="sm-mask"></div>
-</div>
+        <!-- <div id="sm-mask"></div> -->
+      </div>
 
-<div id="lg-container">
-    <div id="lg-background">
-        <div id="lg-glyph-container">
-            <i class="fa fa-amazon" id="lg-glyph"></i>
-        </div>
-    </div>
-    <div id="lg-mask"></div>
-</div>
+      <div id="lg-container">
+          <div id="lg-background">
+              <div id="lg-glyph-container">
+                  <i class="fa fa-amazon" id="lg-glyph"></i>
+              </div>
+          </div>
+      <!--     <div id="lg-mask"></div> -->
+      </div>
 
 <!-- PROPERTIES PANEL -->
 
@@ -866,7 +912,8 @@ button {
 </div>
 
 <!-- PROPERTIES PANEL: DOWNLOAD -->
-<div id="downloadButton">Download 512 x 512</div>
+<div id="download108" class="downloadButton">Download 108</div>
+<div id="download512" class="downloadButton">Download 512</div>
 
  </div><!--//END PROPERTIES-->
     <script type="text/javascript">
@@ -946,16 +993,31 @@ button {
     });
 
     </script>
-
+    <script src="resources/js/FileSaver.min.js"></script> 
+    <script src="resources/js/dom-to-image.min.js"></script> 
+    <script>
+    $('#download108').click(function() {
+        domtoimage.toBlob(document.getElementById('sm-background'))
+            .then(function (blob) {
+                window.saveAs(blob, 'myIcon-108x108.png');
+            });
+    });
+    $('#download512').click(function() {
+        domtoimage.toBlob(document.getElementById('lg-background'))
+            .then(function (blob) {
+                window.saveAs(blob, 'myIcon-512x512.png');
+            });
+    });
+</script>
+<script src="resources/js/domvas.min.js"></script>
 <script src="resources/js/icon-maker-utils.js"></script> 
 <script src="resources/js/icon-maker.js"></script>  
 </div><!--//end content-->
   
 <script src="resources/js/isotope.js"></script>	
-<script src="resources/js/html2canvas.js"></script>
 
 
-      
+
 </div><!--//end cGrid-->
 
 </body>

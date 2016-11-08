@@ -13,6 +13,7 @@
 <link rel='stylesheet' href='resources/css/jquery.mobile-1.2.1.min.css' />	
 <link rel='stylesheet' href='resources/css/allSets.min.css' />
 <link rel='stylesheet' href='resources/css/icon-maker.css' />	
+<link rel='stylesheet' href='resources/css/icon-maker-styles-2.css' /> 
 <link rel='stylesheet' href='resources/css/spectrum.css' /> 
 
 <script src='resources/js/jquery-1.11.2.min.js'></script>	
@@ -26,745 +27,16 @@
 	 </script>
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
 <script src="resources/js/spectrum.js"></script>
- <script>
-  $( function() {
-    $( "#sm-glyph" ).draggable();
-    $( "#lg-glyph" ).draggable();
-  });
-  </script>
+
 <style>
-/*  ----------------------------------------------------- */
-/*  --------------------CANVAS----------------------- */
-/*  ---------------------------------------------------- */
-  canvas {
-      background:#f90!important;
-      border-radius: 50%;
-      border:0px solid green;
-      position:absolute;
-      left:20px;
-      top:0;
-      height:380px;
-      width:380px;
-      text-align:center;
+  #drawing-area {
+    border:2px solid red;
+    position:absolute;
+    height:600px;
+    width:600px;
+    z-index:60001;
   }
-/*  img {
-    background:green;
-    height:512px;
-    width:512px;
-  }*/
-  #canvas {
-      background:#f90;
-      border:0px solid green;
-      border-radius: none;
-      position:absolute;
-      left:50px;
-      top:150px;
-  }
-
-#myIconBackground {
-  position: relative;
-  display:block;
-  top:120px;
-  left:43.25%;
-  border:0px solid black;
-  width:256px;
-  height:256px;
-  border-radius: 50%;
-  background:#ffa500;
-  box-shadow: 6px 10px 10px #ccc;
-}
-#myIconSymbol {
-  border:0px solid orange;
-  width:250px;
-  height:250px;
-  padding:0;
-  line-height: 1.7em;
-  font-size: 150px;
-  position:relative;
-  top:0;
-  left:0;
-  text-align: center;
-}
-.downloadButton {
-  width:200px;
-  height:50px;
-  text-align: center;
-  line-height: 3em;
-  position:absolute;
-  top:450px;
-  left:20px;
-  border-radius: 8px;
-/*  box-shadow: 4px 4px 4px #cdcdcd;*/
-  background:#3ab9f2;
-  cursor:pointer;
-}
-#download108{
-  top:530px;
-}
-#propertiesPanel {
-   float:right;
-   position:fixed;
-   top:70px;
-   right:0px;
-   width:24.25%;
-   height:100%;
-   background:#343434;
-   border-left:1px solid white;
-}
-#glyph01 {background:#ffffff;}
-#glyph02 {background:#232323;}
-
-
-button {
-  float:left;
-  width:40%;
-  height:50px;
-  background:#34AADC;
-  margin:50px;
-  margin-left:20px!important;
-  margin-top:20px!important;
-  color:white;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-#icon-xpos-plus, #icon-xpos-minus, {
-    position:absolute!important;
-    top:650px;
-  }
-  #icon-ypos-plus, #icon-ypos-minus, {
-    position:absolute!important;
-    top:750px;
-  }
-/*  ----------------------------------------------------- */
-/*  --------------------end Canvas----------------------- */
-/*  ---------------------------------------------------- */
-      #slide-list {
-        width:260px;
-        border:0px solid green;
-      }
-      #slide-list  ul {
-        width:260px;
-      }
-      #slide-list p {
-        margin-top:10px;
-        display:inline-block;
-        border:0px solid green;
-      }
-      p.list-glyph {
-        display:inline-block;
-        position:relative;
-        top:-6px;
-        margin:0px 0 0 15px;
-        width:60px;
-        font-size:1.75em;
-        text-align:center;
-        color:#333!important;
-      }
-      .list-title {
-        margin:18px 0 0 20px;
-        width:100px;
-        color:#383f46;
-        line-height: 1.7em;
-        white-space: nowrap;
-      }
-      span.list-code {
-        color:#383f46!important;
-        border:0px solid green;
-        white-space: nowrap;
-      }
-      .list-glyph, .list-glyph >i{
-        color:#333!important;
-        font-size:1.15em!important;
-      }
-      #myPicksTotalLabel{
-        float:left;margin:-7px 0 0px 10px;border:0px solid red;
-      }
-      .ui-input-text {
-        border:0px solid yellow!important;
-      }
-      #bkgndColorPicker {
-        margin-top:50px;
-        background: none;
-      }
-      #fullBkgnd {
-        border:4px solid red;
-        margin-top:20px;
-      }
-      #iconColorPicker {
-        margin-top:50px;
-        background: none;
-      }
-      #fullIcon {
-        border:4px solid red;
-        margin-top:20px;
-      }
-      .sp-picker-container {
-        position:fixed;
-        margin:0;
-        padding:10px;
-        padding-bottom:50px;
-        background:#dedede;
-      }
-      .sp-cancel {
-        float:left;
-        position:absolute;
-        top:195px;
-        left:15px;
-        font-size:1.2em;
-      }
-      .sp-choose {
-        background: linear-gradient(to right, rgba(0,105,166,1) 0%, rgba(0,192,222,1) 100%);
-        position:absolute;
-        float:right;
-        top:170px;
-        right:10px;
-        height:30px!important;
-        width:100px;
-        padding:0;
-        margin:0;
-      }
-      #position-container {
-        /*background:#454545;*/
-        height:100px;
-        width:200px;
-        left:20px;
-        position:relative;
-        top:-20px;
-      }
-     #btn-move-up {
-        margin-left:35px;
-      }
-      #btn-move-left {
-        float:left;
-        position:absolute;
-        top:5px;
-      }
-      #btn-move-right {
-        float:right;
-        position:absolute;
-        top:5px;
-        right:0px;
-      }
-      #btn-move-down{
-        position:absolute;
-        bottom:2px;
-        left:35px;
-      }
-      .btn-move {
-        height:30px;
-        width:30px;
-        background:#ccc;
-        color:#444;
-        cursor:pointer;
-        line-height:1.5em;
-        margin-top:30%;
-        text-align:center;
-        border-radius: 4px
-      }
-      #cat-selector {
-        float:left;
-        width:180px;
-        height:32px;
-        margin:0;
-        padding:0;
-        position:absolute;
-        top:28px;
-        left:220px;
-        border:1px solid #ccc;
-        border-radius: 4px;
-      }
-      .label {
-        color:#999;
-        font-size:0.9em;
-        font-family:arial, sans-serif;
-        font-weight:normal;
-        margin:10px 0 0 10px;
-        line-height: 2em;
-      }
-      .fa-angle-down {
-        color:#999;
-        font-size:1.2em;
-        float:right;
-        margin-right:10px;
-        margin-top:6px;
-      }
-      #slider {
-        width: 20px;
-        height:20px;
-        background:red;
-        border:1px solid yellow;
-
-      }
-      #infoSlider {
-        border:1px solid white;
-        
-        width:200px;
-        color:white;
-      }
-
-    /*-----------DROP-DOWN MENUS------------*/
-
-    #filterDropDown {
-      margin:0;
-      padding:0;
-      padding-left:4px;
-      padding-top:6px;
-      position:absolute;
-      font-size: 0.9em;
-      line-height: 1.2em;
-      top:29px;
-      left:230px;
-      width:150px;
-      height:25px;
-      list-style: none!important;
-      border:1px solid #ddd;
-      border-radius:4px;
-      cursor:pointer;
-    }
-    #filterDropDown ul {
-      margin:0;
-      padding:0;
-      list-style: none;
-      background:none;
-      text-decoration: none;
-    }
-    #filterDropDown ul li ul {
-      margin-top:8px;
-      margin-left:-3px;
-      background:#f7fafd!important;
-      box-shadow: 1px 1px 2px #787878;
-    }
-    li.menuItem{
-      display:none;
-      line-height: 2em;
-      width:100%;
-      padding:0px;
-      margin:0;
-      border-top: 1px solid #ebebeb;
-    }
-    li.menuItem:hover {
-        background:#fc0;
-    }
-    li.menuItem a {
-        color: #383f46!important;
-        text-decoration: none!important;
-    }
-    li.menuItem:hover ~ a {
-      font-weight: bold;
-      color:#900!important;
-      text-decoration: none;
-    }
-    #filterDropDown:hover li.menuItem {
-      display:block;
-    }
-    li a.menuItemOn  {
-       font-weight: bold;
-       color:#900!important;
-       width:100%;
-       padding:4px;
-       text-decoration: none;
-    }
-    #gradientDropDown {
-      margin:0;
-      padding:0;
-      padding-left:4px;
-      padding-top:6px;
-      position:absolute;
-      font-size: 0.9em;
-      line-height: 1.2em;
-      top:165px;
-      right:44px;
-      width:150px;
-      height:25px;
-      list-style: none!important;
-      border:1px solid #ddd;
-      border-radius:4px;
-      cursor:pointer;
-      overflow: none;
-    }
-    #gradientDropDown ul {
-      margin:0;
-      padding:0;
-      height:100%;
-      list-style: none;
-      background:none;
-      text-decoration: none;
-    }
-    #gradientDropDown ul li ul li{
-      border:0px solid yellow;
-      margin-top:8px;
-      margin-left:-3px;
-      background:#f7fafd!important;
-      box-shadow: 1px 1px 2px #787878;
-    }
-    li.menuItem,
-    li.gradientItem{
-      display:none;
-      line-height: 2em;
-      width:100%;
-      padding:0px;
-      margin:0;
-      border-top: 0px solid #ebebeb;
-    }
-    #gradientDropDown:hover li.gradientItem {
-      display:block;
-    }
-
-    #down-arrow {
-      float:right;
-      position:absolute;
-      top:-1px;
-      right:16px;
-      color:#383d46;
-      font-size: 1.25em;
-      padding-top:2px;
-      padding-left:10px;
-    }
-    .backgroundColor {
-        float:left;
-        width:20px;
-        height:20px;
-        margin:5px;
-        cursor:pointer;
-        border:0px solid blue;
-      }
-      #bk01 {background:#FFF;}
-      #bk02 {background:#232323;}
-      #bk03 {background:#4CD964;}
-      #bk04 {background:#5AC8FA;}
-      #bk05 {background:#007AFF}
-      #bk06 {background: #8E8E93}
-      #bk07 {background:#34AADC;}
-      #bk08 {background:#5856D6;}
-      #bk09 {background:#FF2D55;}
-      #bk10 {background:#FF3B30;}
-      #bk11 {background:#FF9500}
-      #bk12 {background: #FFCC00}
-      #bk13 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
-      #bk14 {background: -webkit-linear-gradient(#f15f3e, #f8951d)}
-      #bk15 {background: -webkit-linear-gradient(#ffce06, #fedb4d)}
-      #bk16 {background: -webkit-linear-gradient(#4cb748, #9ccd63)}
-      #bk17 {background: -webkit-linear-gradient(#64c5f0, #76c9b6)}
-      #bk18 {background: -webkit-linear-gradient(#4265b0, #4cc8ee)}
-      #bk19 {background: -webkit-linear-gradient(#5a5daa, #975aa4)}
-      #bk20 {background: -webkit-linear-gradient(#965aa4, #db57a0)}
-      #bk21 {background: -webkit-linear-gradient(#2b2b2b, #4b4b4b)}
-      #bk22 {background: -webkit-linear-gradient(#898c90, #dbddde)}
-      #bk23 {background: -webkit-linear-gradient(#96d8e9, #4272b8)}
-      #bk24 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
-
-    li.showMyPicks {
-      display:hidden;
-      padding-top:10px;
-    }
-    li.showMyPicks:hover {
-      display:inherit;
-    }
-    .showMyPicksLabel {
-      float:right;
-      position:absolute;
-      top:20px;
-      left:720px;
-      color:#383f46;
-    }
-    #showAll{
-      margin-left:10px;
-    }
-    #myCount, .myPicks{
-        color:#f3a91d!important;
-    }
-    .menu li a:hover{
-        color:#f3a91d!important;
-    }
-    .cover {
-      display:none;
-      height:100%;
-      width:100%;
-      background-color:black;
-      opacity:0;
-      position: fixed;
-      left:0;
-      top:0;
-      z-index: 1000;
-    }
-    .degree_picker{
-  padding: 68px 0px 20px;
-}
-.depth_picker{
-  padding: 38px 0px 10px;
-}
-.ui-slider{
-  width: 0.2em; 
-  background: #e2e2e2;
-  border: 12px solid #f8f7f7;
-  color: #222222;
-  position: relative;
-  text-align: left;
-  margin: 0 auto; 
-}
-.ui-slider-range{
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  font-size: .7em;
-  display: block;
-  border: 0;  
-  font-weight: bold;
-}
-.ui-slider-handle{
-  border-radius: 50%;
-  background-color: #df3518;
-  left: -.45em;
-  margin-left: 0;
-  margin-bottom: -.6em;position: absolute;
-  z-index: 2;
-  width: 1.1em;
-  height: 1.1em;
-  cursor: default;
-  -ms-touch-action: none;
-  touch-action: none;
-}
-.ui-slider-handle:focus, .ui-slider-handle:active{
-  outline: none;
-}
-
-.depth_picker p, .degree_picker p{
-  text-align: center;
-  font-size: 24px;
-  font-family: 'proxima_novasemibold'; 
-}
-
-.increment, .decrement{
-  text-align: center;
-  display: block; 
-}
-
-.increment span, .decrement span{
-  margin: 0 auto;
-  width: 0.2em;
-  background: #e2e2e2;  
-}
-
-.increment span{
-  border-top-left-radius: 3px;
-  border-top-right-radius: 2px; 
-  padding: 9px 5px 5px 6px; 
-  cursor: pointer;
-}
-
-.decrement span{
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 2px;
-  border-top: 2px solid #e2e2e2;
-  padding: 6px 5px 1px 6px;
-  cursor: pointer;  
-}
-
-#slider-vertical{
-  height: 125px;
-}
-#slider {
-    width : 200px;
-}
-#iconSize {
-  margin:0;
-  padding:0;
-  font-size:1.2em;
-  width:50px;
-  height:50px;
-  position:absolute;
-  margin-top:500px;
-  background:white;
-}
-#bkgndSize {
-  margin:0;
-  padding:0;
-  font-size:1.2em;
-  width:50px;
-  height:50px;
-  position:absolute;
-  margin-top:400px;
-  background:yellow;
-}
-#sm-container{
-  background:#fff;
-  border:1px solid #ebebeb;
-  box-shadow: 0px 1px 1px #a7a7a7;
-  width:108px;
-  height:108px;
-  position:fixed;
-  left:430px;
-  top:100px;
-}
-/*#sm-background {
-  background: #f90;
-  border:1px solid #a7a7a7;
-  border-radius: 50%;
-  height:75px;
-  position:absolute;
-  left:15px;
-  top:7px;
-  width:75px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-}*/
-#sm-background {
-  background: #f90;
-  /*border:1px solid #a7a7a7;*/
-  border-radius: 50%;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:108px;
-  height:108px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-  overflow:hidden;
-}
-#sm-glyph-container {
-  border:0px solid red;
-  position:absolute;
-  text-align: center;
-  top:10%;
-  left:15%;
-}
-#sm-glyph {
- border:0px solid red;
- color:#fff;
-/* font-size:4vw;
- line-height: 9vh;*/
- font-size:4.25em;
- line-height: 1.2em;
- width:100%;
- height:100%;
- text-align:center;
-filter: drop-shadow(1px 1px 1px #b57a22);
-}
-#sm-mask {
-  border:0px solid red;
-  background: url('resources/img/108-mask.png')0 0;
-  height:512px;
-  width:512px;
-  z-index: 1000;
-}
-#lg-container{
-  background:#fff;
-  border:0px solid #ebebeb;
-  box-shadow: 0px 1px 1px #a7a7a7;
-  width:512px;
-  height:512px;
-  position:fixed;
-  left:430px;
-  top:230px;
-}
-/*#lg-background {
-  background: #f90;
-  border:1px solid #a7a7a7;
-  border-radius: 50%;
-  height:380px;
-  position:absolute;
-  left:65px;
-  top:27px;
-  width:380px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-}*/
-#lg-background {
-  background: #f90;
- /* border:1px solid #a7a7a7;*/
-  border-radius: 50%;
- 
-  position:relative;
-  left:0px;
-  top:0px;
-  width:512px;
-  height:512px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-   overflow:hidden;
-}
-#lg-glyph-container {
-  border:0px solid red;
-  position:absolute;
-  left:0;
-  right:0;
-  padding-top:10%;
-}
-#lg-glyph  {
- border:0px solid red;
- color:#fff;
-/* font-size:22vw;
- line-height: 47vh;*/
- font-size:22em;
- width:100%;
- height:100%;
- text-align:center;
- vertical-align: middle;
- filter: drop-shadow(1px 1px 1px #b57a22);
-}
-#lg-mask {
-  border:0px solid red;
-  background: url('resources/img/512-mask.png')0 0;
-  background-color: #fff;
-  height:100%;
-  width:100%;
-  z-index:10000!important;
-}
-#clip-mask {
-    width: 380px;
-    height:380px;
-    background: #1e90ff;
-}
-#iconSize {
-  position:absolute;
-  top:-250px;
-  left:50px;
-  background: none;
-/*  height:50px;
-  width:50px;*/
-}
-#icon_size_input {
-  background-color:white;
-  font-size:1em;
-  height:100%;
-  width:25%;
-  position:absolute;
-  top:0;
-  left:0;
-}
-.myRadioChoice{
-  width:30%;
-  height:50px;
-  background:yellow;
-}
-button {
-  background: light-blue;
-  border:0px;
-  color:white;
-  font-size:.9em;
-  height:30px;
-  border-radius: 4px!important;
-  box-shadow: none;
-  padding:0;
-  margin:0;
-  width:50px;
-}
-.panel-label {
-  top:20px;
-  left:20px;
-  position:absolute;
-  font-size:1.2em;
-}
-  
 </style>
-
-
 </head>
 	
 <body>
@@ -826,47 +98,46 @@ button {
 </div><!--end isotope container-->
 
 <!-- CANVAS AREA -->
+<div id="drawing-area" style="2px solid green; background-color: blue">
+      <div id="sm-container">
+          <div id="sm-background">
+                <div id="sm-glyph-container">
+                  <i class="fa fa-amazon" id="sm-glyph"></i>
+              </div>  <!-- // sm-glyph-container -->
+        </div> <!-- // sm-background -->
+      </div><!-- // sm-container -->
 
-<div id="sm-container">
-  <div id="sm-background" clipPathUnits="objectBoundingBox">
-        <div id="sm-glyph-container">
-          <i class="fa fa-amazon" id="sm-glyph"></i>
-      </div>
-</div>
-  <!-- <div id="sm-mask"></div> -->
-</div>
-
-<div id="lg-container">
-    <div id="lg-background" clipPathUnits="objectBoundingBox">
-        <div id="lg-glyph-container">
-            <i class="fa fa-amazon" id="lg-glyph"></i>
-        </div>
-    </div>
-<!--     <div id="lg-mask"></div> -->
-</div>
+      <div id="lg-container">
+          <div id="lg-background">
+              <div id="lg-glyph-container">
+                  <i class="fa fa-amazon" id="lg-glyph"></i>
+              </div><!-- // lg-glyph-container -->
+          </div><!-- // lg-background -->
+      </div><!-- // lg-container -->
+</div><!-- // drawing-area -->
 
 <!-- PROPERTIES PANEL -->
 
     <div id="propertiesPanel">
 
-    <p style="position:absolute; top:10px; left:20px">Controls Apply To:</p>
+ <!--    <p style="position:absolute; top:10px; left:20px">Controls Apply To:</p>
     <div style="position:absolute; top:46px; left:0px">
         <button id="btn-both">Both</button>
         <button id="btn-small-icon">108</button>
         <button id="btn-large-icon">512</button>
-    </div>
+    </div> -->
 
-    <div id="bkgndColorPicker" style="position:absolute;border:0px solid yellow;top:60px; left:20px;width:250px!important">
+    <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:20px; left:20px;width:250px!important">
+          <p style="margin-left:20px!important">
+          <p>Icon Color:<p/>
+          <p><input type='text' id="glyph-color" /></p>
+    </div> <!--//glyph-color-picker-->
+
+    <div id="bkgndColorPicker" style="position:absolute;border:0px solid yellow;top:80px; left:20px;height:50px;width:250px!important;border:0px solid red;">
           <p style="margin-left:20px!important">
           <p>Background Color:<p/>
           <p><input type='text' id="fullBkgnd" /></p>
   </div> <!--//colorPickerBkgnd-->
-
-      <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:220px; left:20px;width:250px!important">
-          <p style="margin-left:20px!important">
-          <p>Icon Color:<p/>
-          <p><input type='text' id="glyph-color" /></p>
-  </div> <!--//glyph-color-picker-->
 
     <!-- SWATCHES DROPDOWN-->  
     <div id="gradientDropDown" style="background:#ebebeb;">
@@ -905,14 +176,15 @@ button {
       </ul>
     </div>
 
-<div id="iconSize" style="position:absolute; top:-50px; left:20px">
-    <p style="position:relative;top:-130px;left:0px;width:150px;font-size:18px">Icon Size:<p/>
-    <input type="number" value="22" id="icon_size_input" style="position: relative; top:-80px;left:-30px" />
+<div id="iconSize" style="position:absolute;top:-120px;left:20px;width:80%;border:0px solid yellow">
+  <p style="font-size:18px">Icon Size</p>
+  <div id="larger" class="iconFontSize">larger</div>
+  <div id="smaller" class="iconFontSize">smaller</div>
 </div>
 
 <!-- PROPERTIES PANEL: DOWNLOAD -->
-<div id="download108" class="downloadButton">Download 108</div>
-<div id="download512" class="downloadButton">Download 512</div>
+<div id="download108" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i> Small Icon</div>
+<div id="download512" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i> Large Icon</div>
 
  </div><!--//END PROPERTIES-->
     <script type="text/javascript">
@@ -1014,7 +286,12 @@ button {
 </div><!--//end content-->
   
 <script src="resources/js/isotope.js"></script>	
-
+ <script>
+  $( function() {
+    $( "#sm-glyph" ).draggable();
+    $( "#lg-glyph" ).draggable();
+  });
+  </script>
 
 
 </div><!--//end cGrid-->

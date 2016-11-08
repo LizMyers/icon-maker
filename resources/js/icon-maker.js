@@ -526,21 +526,21 @@ $('#iconSize').keyup(function() {
 ///////////////////////// ICON MAKER /////////////////////////////////
 
 //WHICH ICON BUTTONS
-$('#btn-large-icon').on('click', function(){
+$('#lg-container').on('click', function(){
      smallIcon = false;
      largeIcon = true;
      console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
 });
-$('#btn-small-icon').on('click', function(){
+$('#sm-container').on('click', function(){
      largeIcon = false;
      smallIcon = true;
      console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
 });
-$('#btn-both').on('click', function(){
-     smallIcon = false;
-     largeIcon = false;
-     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
-});
+// $('#btn-both').on('click', function(){
+//      smallIcon = false;
+//      largeIcon = false;
+//      console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+// });
 
 
 //CHANGE GLYPH SIZE
@@ -575,6 +575,27 @@ $('#icon-smaller').on('click', function(){
     $('.myIcon').css('font-size', newTypeSize);
 });
 
+$('#larger').on('click', function(){
+    var smSize = parseInt($('#sm-glyph').css('font-size'));
+    var lgSize = parseInt($('#lg-glyph').css('font-size'));
+    var newSmSize = (smSize + 2);
+    var newLgSize = (lgSize + 10);
+    $('#sm-glyph').css('font-size', newSmSize) 
+    $('#lg-glyph').css('font-size', newLgSize);
+});
+
+$('#smaller').on('click', function(){
+    var smSize = parseInt($('#sm-glyph').css('font-size'));
+    console.log("smSize" + smSize);
+    var lgSize = parseInt($('#lg-glyph').css('font-size'));
+    var newSmSize = (smSize - 2);
+    var newLgSize = (lgSize - 10);
+    $('#sm-glyph').css('font-size', newSmSize) 
+    $('#lg-glyph').css('font-size', newLgSize);
+});
+
+
+
 //////////////////////////MOVE  GLYPH/////////////////////////////
 
 $('body').on('keydown', function(e) {
@@ -608,7 +629,7 @@ $('body').on('keydown', function(e) {
 			$('#lg-glyph').css('font-size', font_size);
 			$('#lg-glyph').css('line-height', line_height);
 		  }
-	} else { //SMALL icon
+	} else if (smallIcon) { //SMALL icon
  		if(e.keyCode == 37) { // left
 		    $('#sm-background #sm-glyph-container').animate({
 		      left: "-=5px"
@@ -642,36 +663,18 @@ $('body').on('keydown', function(e) {
 });
 
 
-//download button
 
 
 
-// $('#downloadButton').click(function() {
+// function updateColor(element, color) {
+//     var hexColor = "transparent";
+//     if (color) hexColor = color.toHexString();
+//     $(element).css("color", hexColor);
+// }
 
-//     var width = 512;
-//     var height = 512;
-
-//     html2canvas($('#lg-background'), {
-	
-//         	onrendered: function(canvas) {
-          
-//             // canvas is the final rendered <canvas> element
-//             var myImage = canvas.toDataURL("image/png");
-//             window.open(myImage);
-//         }
-//     });
+// $("#flatClearable").spectrum({
+//     flat: true,
+//     showInput: true,
+//     allowEmpty:true
 // });
-
-
-function updateColor(element, color) {
-    var hexColor = "transparent";
-    if (color) hexColor = color.toHexString();
-    $(element).css("color", hexColor);
-}
-
-$("#flatClearable").spectrum({
-    flat: true,
-    showInput: true,
-    allowEmpty:true
-});
 

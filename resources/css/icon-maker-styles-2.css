@@ -47,7 +47,7 @@ November 2016
   box-shadow: 6px 10px 10px #ccc;
 }
 #myIconSymbol {
-  border:0px solid orange;
+  border:2px solid green;
   width:250px;
   height:250px;
   padding:0;
@@ -59,44 +59,46 @@ November 2016
   text-align: center;
 }
 .downloadButton {
-  width:200px;
-  height:50px;
- /* text-align: center;*/
-  line-height: 3em;
-  position:absolute;
-  top:450px;
-  left:20px;
+  width:130px;
+  height:40px;
+  line-height: 2.4em;
+  float:right;
   border-radius: 8px;
   background:#3ab9f2;
-  background: -webkit-linear-gradient(bottom, rgba(0,105,166,1) 0%, rgba(0,192,222,1) 100%);
-  box-shadow: 2px 2px 3px #000;
+  background: -webkit-linear-gradient(bottom, rgba(0,192,222,1) 0%, rgba(0,105,166,1) 100%);
+  box-shadow: 2px 2px 3px #cdcdcd;
   cursor:pointer;
 }
 .downloadButton:hover {
-  background: -webkit-linear-gradient(top, rgba(0,105,166,1) 0%, rgba(0,192,222,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,192,222,1) 0%, rgba(0,105,166,1) 100%);
 }
-
-.fa-arrow-circle-o-down {
+.downloadButton .fa-arrow-circle-o-down {
     float:left;
+    borderpx solid white;
     font-size: 1.45em;
-    line-height: 2em;
-    margin:0 20px 0 20px;
+    line-height: 1.65em;
+    margin:0 24px 15px 10px;
   }
 #download108{
-  top:530px;
+  position:relative;
+  top:-70px;
+  right:40px!important;
 }
 #download512{
-  top:610px;
+  position: relative;
+  top:-70px;
+  right:20px;
 }
 #propertiesPanel {
    float:right;
    position:fixed;
    top:70px;
    right:0px;
+   min-width: 320px!important;
    width:24.25%;
    height:100%;
    background:#343434;
-   border-left:1px solid white;
+   border-left:1px solid #000;
 }
 #glyph01 {background:#ffffff;}
 #glyph02 {background:#232323;}
@@ -174,7 +176,7 @@ button {
         background: none;
       }
       #fullBkgnd {
-        border:4px solid red;
+        border:0px solid red;
         margin-top:20px;
       }
       #iconColorPicker {
@@ -560,6 +562,7 @@ button {
   left:20px;
   width:120px;
 }
+
 #iconSize {
   margin:0;
   padding:0;
@@ -601,40 +604,28 @@ button {
 }
 #sm-container{
   background:#fff;
-  border:1px solid #ebebeb;
+  border:0px solid #ebebeb;
+  border-radius: 6px;
   box-shadow: 0px 1px 1px #a7a7a7;
   width:108px;
   height:108px;
   position:fixed;
-  left:430px;
+  left:calc(50% - 210px);
   top:100px;
 }
-/*#sm-background {
-  background: #f90;
-  border:1px solid #a7a7a7;
-  border-radius: 50%;
-  height:75px;
-  position:absolute;
-  left:15px;
-  top:7px;
-  width:75px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-}*/
 #sm-background {
   background: #f90;
-  /*border:1px solid #a7a7a7;*/
+  float:clear;
   border-radius: 50%;
   position:absolute;
   left:0px;
   top:0px;
-  width:108px;
-  height:108px;
+  width:108px!important;
+  height:108px!important;
   z-index:10!important;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  overflow:hidden;
+  overflow:hidden!important;
 }
 #sm-glyph-container {
   border:0px solid red;
@@ -646,10 +637,9 @@ button {
 #sm-glyph {
  border:0px solid red;
  color:#fff;
-/* font-size:4vw;
- line-height: 9vh;*/
+ margin-top:44px;
  font-size:75px;
- line-height: 1.2em;
+ line-height: 0em;
  width:100%;
  height:100%;
  text-align:center;
@@ -664,40 +654,28 @@ button {
 }
 #lg-container{
   background:#fff;
-  border:0px solid #ebebeb;
+  border:0px solid red;
+  border-radius: 10px;
   box-shadow: 0px 1px 1px #a7a7a7;
   width:512px;
   height:512px;
   position:fixed;
-  left:430px;
   top:230px;
+  left:calc(50% - 218px);
 }
-/*#lg-background {
-  background: #f90;
-  border:1px solid #a7a7a7;
-  border-radius: 50%;
-  height:380px;
-  position:absolute;
-  left:65px;
-  top:27px;
-  width:380px;
-  z-index:10!important;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-}*/
 #lg-background {
   background: #f90;
- /* border:1px solid #a7a7a7;*/
+  float:clear;
   border-radius: 50%;
   position:relative;
   left:0px;
   top:0px;
-  width:512px;
-  height:512px;
+  width:512px!important;
+  height:512px!important;
   z-index:10!important;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-   overflow:hidden;
+  overflow:hidden!important;
 }
 #lg-glyph-container {
   border:0px solid red;
@@ -709,14 +687,12 @@ button {
 #lg-glyph  {
  border:0px solid red;
  color:#fff;
-/* font-size:22vw;
- line-height: 47vh;*/
  font-size:390px;
  line-height: 0px;
- width:100%;
- height:100%;
+ margin-top:206px!important;
+ width:512px;
  text-align:center;
- margin-top:40%;
+ margin-top:0;
  /*filter: drop-shadow(1px 1px 1px #b57a22);*/
 }
 #lg-mask {
@@ -726,6 +702,9 @@ button {
   height:100%;
   width:100%;
   z-index:10000!important;
+}
+.sm-container-selected, .lg-container-selected {
+  border:2px solid red!important;
 }
 #clip-mask {
     width: 380px;
@@ -754,6 +733,17 @@ button {
   height:50px;
   background:yellow;
 }
+.btn-icon-selector {
+  float:left;
+  display:block;
+  background:none;
+  width:70px;
+  height:30px;
+  line-height: 1.75em;
+  text-align: center;
+  border:1px solid #666;
+  cursor:pointer;
+}
 button {
   background: light-blue;
   border:0px;
@@ -772,6 +762,10 @@ button {
   left:20px;
   position:absolute;
   font-size:1.2em;
+}
+#drawing-area {
+  border:0px solid red!important;
+  z-index:50000;
 }
   
 </style>

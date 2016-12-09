@@ -69,7 +69,8 @@ $(document).on('pagecreate', '#cGrid', function() {
 			});
 		} //grabIcons
 
-	
+	//set both glyphes to selected
+            $('#both-icons').css('background', '#ff9900');
 
 }); //end pagecreate
 
@@ -508,93 +509,86 @@ $("#slider").slider({
     }
 });
 
-$('#iconSize').keyup(function() { 
-	icon_size = $('#iconSize').val()+'px';
-	$('#myIconSymbol').css('width', icon_size);
-	$('#myIconSymbol >').css('font-size', icon_size);
-	//iconSize(bg_size,icon_size);
-});
-
-
-
-// $('#shadow').keydown(function() { 
-// 	shadow_depth = $('#shadow').val()+'px';
-// 	$('#lg-glyph-container').css('filter', 'blur(20px) grayscale(20%)');
-	
-// });
-
 ///////////////////////// ICON MAKER /////////////////////////////////
 
 //WHICH ICON BUTTONS
 $('#lg-container').on('click', function(){
      smallIcon = false;
      largeIcon = true;
-     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+    $('#both-icons').css('background', 'none');
+    $('#512-icon').css('background', '#ff9900');
+    $('#108-icon').css('background', 'none');
 });
 $('#sm-container').on('click', function(){
      largeIcon = false;
      smallIcon = true;
-     console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
+     $('#both-icons').css('background', 'none');
+     $('#512-icon').css('background', 'none');
+     $('#108-icon').css('background', '#ff9900');
 });
-// $('#btn-both').on('click', function(){
-//      smallIcon = false;
-//      largeIcon = false;
-//      console.log("smallIcon is set to " + smallIcon + ", largeIcon is set to " + largeIcon);
-// });
+$('#both-icons').on('click', function(){
+     largeIcon = false;
+     smallIcon = false;
+     $('#both-icons').css('background', '#ff9900');
+     $('#512-icon').css('background', 'none');
+     $('#108-icon').css('background', 'none');
+});
+$('#512-icon').on('click', function(){
+     largeIcon = true;
+     smallIcon = false;
+     $('#both-icons').css('background', 'none');
+     $('#512-icon').css('background', '#ff9900');
+     $('#108-icon').css('background', 'none');
+});
+$('#108-icon').on('click', function(){
+     largeIcon = false;
+     smallIcon = true;
+     $('#both-icons').css('background', 'none');
+     $('#512-icon').css('background', 'none');
+     $('#108-icon').css('background', '#ff9900');
+});
 
 
 //CHANGE GLYPH SIZE
-$('#icon-bigger').on('click', function(){
-     if (smIcon) { //resize small icon
-     	     var iconSize = parseInt($('#sm-glyph').css('font-size'));
-	     var newIconSize = (iconSize + 1);
-	     $('#smIcon').css('font-size', newIconSize);
-	     var newLineHeight = (newIconSize * 2) + 3;
-	     $('#smIcon').css('lineheight', newLineHeight);
-     } else if (lgIcon) { //resize lgicon
-     	     var iconSize = parseInt($('#sm-glyph').css('font-size'));
-	     var newIconSize = (iconSize + 1);
-	     $('#smIcon').css('font-size', newIconSize);
-	     var newLineHeight = (newIconSize * 2) + 3;
-	     $('#smIcon').css('lineheight', newLineHeight);
-     } else { //resize both
-     	     var smIconSize = parseInt($('#sm-glyph').css('font-size'));
-	     var newIconSize = (iconSize + 1);
-	     $('#smIcon').css('font-size', newIconSize);
-	     var newLineHeight = (newIconSize * 2) + 3;
-	     $('#smIcon').css('lineheight', newLineHeight);
-     }
 
-});
-
-$('#icon-smaller').on('click', function(){
-     var myIcon = $('.myIcon');
-     var typeSize = parseInt($('.myIcon').css('font-size'));
-     console.log("typeSize: " +typeSize);
-     var newTypeSize =(typeSize - 10);
-    $('.myIcon').css('font-size', newTypeSize);
-});
 
 $('#larger').on('click', function(){
-    var smSize = parseInt($('#sm-glyph').css('font-size'));
-    var lgSize = parseInt($('#lg-glyph').css('font-size'));
-    var newSmSize = (smSize + 2);
-    var newLgSize = (lgSize + 10);
-    $('#sm-glyph').css('font-size', newSmSize) 
-    $('#lg-glyph').css('font-size', newLgSize);
+    if(smallIcon) {
+        var smSize = parseInt($('#sm-glyph').css('font-size'));
+        var newSmSize = (smSize + 3);
+        $('#sm-glyph').css('font-size', newSmSize);
+    } else if (largeIcon) {
+        var lgSize = parseInt($('#lg-glyph').css('font-size'));
+        var newLgSize = (lgSize + 9);
+        $('#lg-glyph').css('font-size', newLgSize);
+    } else {
+        var smSize = parseInt($('#sm-glyph').css('font-size'));
+        var lgSize = parseInt($('#lg-glyph').css('font-size'));
+        var newSmSize = (smSize + 3);
+        var newLgSize = (lgSize + 9);
+        $('#sm-glyph').css('font-size', newSmSize) 
+        $('#lg-glyph').css('font-size', newLgSize);
+    }
 });
 
 $('#smaller').on('click', function(){
-    var smSize = parseInt($('#sm-glyph').css('font-size'));
-    console.log("smSize" + smSize);
-    var lgSize = parseInt($('#lg-glyph').css('font-size'));
-    var newSmSize = (smSize - 2);
-    var newLgSize = (lgSize - 10);
-    $('#sm-glyph').css('font-size', newSmSize) 
-    $('#lg-glyph').css('font-size', newLgSize);
+    if(smallIcon) {
+        var smSize = parseInt($('#sm-glyph').css('font-size'));
+        var newSmSize = (smSize - 3);
+        $('#sm-glyph').css('font-size', newSmSize);
+    } else if (largeIcon) {
+        var lgSize = parseInt($('#lg-glyph').css('font-size'));
+        var newLgSize = (lgSize - 9);
+        $('#lg-glyph').css('font-size', newLgSize);
+    } else {
+        var smSize = parseInt($('#sm-glyph').css('font-size'));
+        var lgSize = parseInt($('#lg-glyph').css('font-size'));
+        var newSmSize = (smSize - 3);
+        var newLgSize = (lgSize - 9);
+        $('#sm-glyph').css('font-size', newSmSize);
+        $('#lg-glyph').css('font-size', newLgSize);
+    }
 });
-
-
 
 //////////////////////////MOVE  GLYPH/////////////////////////////
 
@@ -662,19 +656,4 @@ $('body').on('keydown', function(e) {
 	}
 });
 
-
-
-
-
-// function updateColor(element, color) {
-//     var hexColor = "transparent";
-//     if (color) hexColor = color.toHexString();
-//     $(element).css("color", hexColor);
-// }
-
-// $("#flatClearable").spectrum({
-//     flat: true,
-//     showInput: true,
-//     allowEmpty:true
-// });
 

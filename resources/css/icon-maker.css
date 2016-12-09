@@ -13,6 +13,7 @@ body {
     font-weight:normal!important;
     text-shadow:none!important;
     background:none!important;
+    min-width: 800px!important;
 }
 .ui-content {background:none!important;}
 #nav {
@@ -39,7 +40,8 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0069a6', endColorstr='#00c0de', GradientType=1 );
 }
 #cGrid {
-  background:#dbe1e6!important;
+  /*background:#dbe1e6!important;*/
+  background:#eae3d9!important;
 }
 #cGrid.ui-content {
   background: yellow!important;
@@ -289,7 +291,8 @@ a#setToggle, .menu{background: none!important}
 
 #container {
     width:30%;
-    height:6000px!important; 
+    min-width:290px!important;
+    height:10000px!important; 
     margin:0px!important;
     margin-left:-20px!important;
     padding-top:80px!important;
@@ -298,7 +301,8 @@ a#setToggle, .menu{background: none!important}
     padding-bottom:0px!important;
     margin-bottom:-40px!important;
     border-right:1px solid #fff;
-    background:#343434;
+    /*background:#343434;*/
+    background:#322e28;
   }
 #container .item {
     border:0px solid orange;
@@ -544,7 +548,7 @@ a#setToggle, .menu{background: none!important}
       font-size:.9em!important;
       line-height: 2em;
       text-align: left!important;
-      border:1px solid red;
+      border:0px solid red;
  }
 #btnInfo{
 	float:right!important;

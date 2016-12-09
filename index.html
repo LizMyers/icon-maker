@@ -28,15 +28,6 @@
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
 <script src="resources/js/spectrum.js"></script>
 
-<style>
-  #drawing-area {
-    border:2px solid red;
-    position:absolute;
-    height:600px;
-    width:600px;
-    z-index:60001;
-  }
-</style>
 </head>
 	
 <body>
@@ -87,6 +78,8 @@
     <div id="alexaLogo">
       <img src="resources/img/alexaLogo.png" />
     </div>   
+  <div id="download512" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i> <span style="margin-left:-17px">512 x 512</span></div>
+  <div id="download108" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i><span style="margin-left:-17px">108 x 108</span></div>
 
 </div><!-- nav -->
 </div><!-- end header -->
@@ -98,7 +91,8 @@
 </div><!--end isotope container-->
 
 <!-- CANVAS AREA -->
-<div id="drawing-area" style="2px solid green; background-color: blue">
+<div id="drawing-area" style="min-width: 1000px!important">
+
       <div id="sm-container">
           <div id="sm-background">
                 <div id="sm-glyph-container">
@@ -106,7 +100,7 @@
               </div>  <!-- // sm-glyph-container -->
         </div> <!-- // sm-background -->
       </div><!-- // sm-container -->
-
+      
       <div id="lg-container">
           <div id="lg-background">
               <div id="lg-glyph-container">
@@ -118,73 +112,61 @@
 
 <!-- PROPERTIES PANEL -->
 
-    <div id="propertiesPanel">
+<div id="propertiesPanel">
+    
+    <div id="icon-selector" style="position:absolute;top:10px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
+        <p style="font-size:18px;line-height:18px;">Selection</p>
+        <div id="both-icons" class="btn-icon-selector" style="pointer:cursor">Both</div>
+        <div id="108-icon" class="btn-icon-selector" style="pointer:cursor">108px</div>
+        <div id="512-icon" class="btn-icon-selector" style="pointer:cursor">512px</div>
+    </div><!--end iconSelector-->
 
- <!--    <p style="position:absolute; top:10px; left:20px">Controls Apply To:</p>
-    <div style="position:absolute; top:46px; left:0px">
-        <button id="btn-both">Both</button>
-        <button id="btn-small-icon">108</button>
-        <button id="btn-large-icon">512</button>
-    </div> -->
+    <div id="iconSize" style="position:absolute;top:-400px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
+      <p style="font-size:18px;line-height:18px;">Icon Size</p>
+      <div id="smaller" class="iconFontSize"><i class="fa fa-caret-down" style="margin-left:-10px"></i> smaller</div>
+      <div id="larger" class="iconFontSize"><i class="fa fa-caret-up" style="margin-left:-10px"></i> larger</div>
+    </div>
 
-    <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:20px; left:20px;width:250px!important">
+    <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:198px; left:20px;width:100px!important">
           <p style="margin-left:20px!important">
           <p>Icon Color:<p/>
           <p><input type='text' id="glyph-color" /></p>
     </div> <!--//glyph-color-picker-->
 
-    <div id="bkgndColorPicker" style="position:absolute;border:0px solid yellow;top:80px; left:20px;height:50px;width:250px!important;border:0px solid red;">
-          <p style="margin-left:20px!important">
+    <div id="bkgndColorPicker" style="position:relative;border:0px solid orange;top:166px; left:134px;height:40px;width:150px!important;">
+          <p style="margin-left:10px!important">
           <p>Background Color:<p/>
           <p><input type='text' id="fullBkgnd" /></p>
   </div> <!--//colorPickerBkgnd-->
 
+      <span style="position:relative;top:230px;left:20px">Background Swatches:<p/>
     <!-- SWATCHES DROPDOWN-->  
-    <div id="gradientDropDown" style="background:#ebebeb;">
-    <ul>
-      <li><span id="gradientType" style="color:#444;font-family:arial, sans-serif;font-weight:normal">Swatches</span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px;"></i></li>
-      <li>
-        <ul style="z-index:60000!important">
-                <li class="gradientItem" style="height:150px;width:100%;border:1px solid black;background-color:#454545!important">
-                      <div id="bk01" class="backgroundColor"></div>
-                      <div id="bk02" class="backgroundColor"></div>
-                      <div id="bk03" class="backgroundColor"></div>
-                      <div id="bk04" class="backgroundColor"></div>
-                      <div id="bk05" class="backgroundColor"></div>
-                      <div id="bk06" class="backgroundColor"></div>
-                      <div id="bk07" class="backgroundColor"></div>
-                      <div id="bk08" class="backgroundColor"></div>
-                      <div id="bk09" class="backgroundColor"></div>
-                      <div id="bk10" class="backgroundColor"></div>
-                      <div id="bk11" class="backgroundColor"></div>
-                      <div id="bk12" class="backgroundColor"></div>
-                      <div id="bk13" class="backgroundColor"></div>
-                      <div id="bk14" class="backgroundColor"></div>
-                      <div id="bk15" class="backgroundColor"></div>
-                      <div id="bk16" class="backgroundColor"></div>
-                      <div id="bk17" class="backgroundColor"></div>
-                      <div id="bk18" class="backgroundColor"></div>
-                      <div id="bk19" class="backgroundColor"></div>
-                      <div id="bk20" class="backgroundColor"></div>
-                      <div id="bk21" class="backgroundColor"></div>
-                      <div id="bk22" class="backgroundColor"></div>
-                      <div id="bk23" class="backgroundColor"></div>
-                      <div id="bk24" class="backgroundColor"></div>
-              </li>
-        </ul>
-        </li>
-      </ul>
+    <div id="swatchesPanel" style="position:relative; top:0px;left:0px;width:80%;height:100px;border:2px solid #232323">
+            <div id="bk01" class="backgroundColor"></div>
+            <div id="bk02" class="backgroundColor"></div>
+            <div id="bk03" class="backgroundColor"></div>
+            <div id="bk04" class="backgroundColor"></div>
+            <div id="bk05" class="backgroundColor"></div>
+            <div id="bk06" class="backgroundColor"></div>
+            <div id="bk07" class="backgroundColor"></div>
+            <div id="bk08" class="backgroundColor"></div>
+            <div id="bk09" class="backgroundColor"></div>
+            <div id="bk10" class="backgroundColor"></div>
+            <div id="bk11" class="backgroundColor"></div>
+            <div id="bk12" class="backgroundColor"></div>
+            <div id="bk13" class="backgroundColor"></div>
+            <div id="bk14" class="backgroundColor"></div>
+            <div id="bk15" class="backgroundColor"></div>
+            <div id="bk16" class="backgroundColor"></div>
+            <div id="bk17" class="backgroundColor"></div>
+            <div id="bk18" class="backgroundColor"></div>
+            <div id="bk19" class="backgroundColor"></div>
+            <div id="bk20" class="backgroundColor"></div>
+            <div id="bk21" class="backgroundColor"></div>
+            <div id="bk22" class="backgroundColor"></div>
+            <div id="bk23" class="backgroundColor"></div>
+            <div id="bk24" class="backgroundColor"></div>
     </div>
-
-<div id="iconSize" style="position:absolute;top:-120px;left:20px;width:80%;border:0px solid yellow">
-  <p style="font-size:18px">Icon Size</p>
-  <div id="larger" class="iconFontSize">larger</div>
-  <div id="smaller" class="iconFontSize">smaller</div>
-</div>
-
-<!-- PROPERTIES PANEL: DOWNLOAD -->
-<div id="download108" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i> Small Icon</div>
-<div id="download512" class="downloadButton"><i class="fa fa-arrow-circle-o-down"></i> Large Icon</div>
 
  </div><!--//END PROPERTIES-->
     <script type="text/javascript">

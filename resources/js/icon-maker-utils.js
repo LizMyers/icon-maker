@@ -1,16 +1,16 @@
-// Maraschino-Utils.js 
+// Maraschino-Utils.js
 // by Liz Myers
 // May 27, 2015
 
 var Utils = {
-    
+
     displayIcons: function(allSets) {
-            
+
 		//init category totals
 		var nBusiness=0;
 		var nEntertainment=0;
 		var nFood=0;
-                       var nHealth=0;
+    var nHealth=0;
 		var nNature=0;
 		var nObjects=0;
 		var nOffice=0;
@@ -20,22 +20,23 @@ var Utils = {
 		var nSports=0;
 		var nTechnology=0;
 		var nUI=0;
-			
+
         var icon='';
         var i=0;
         var nMdSet=0;
         var nFaSet=0;
         var nGlSet=0;
         var nIoSet=0;
-       
+
         var icons = $.map(allSets, function(icon, i) {
-            
+
                 var id = i+1;
                 var name = icon.name;
                 var code = icon.symbol;
                 var category = icon.category;
                 var set = icon.set;
                 var keywords = icon.keywords;
+                var nameToLowerCase = icon.name.toLowerCase();
 
                 switch(set) {
                         case "mdSet":
@@ -121,36 +122,36 @@ var Utils = {
                         nUI++;
                         $("#nUI").text(nUI);
                         //console.log("UI: "+nUI);
-                    break; 
+                    break;
                 }
                // if (code.substr(0, 2)=="fa") {
                     var author = icon.set;
-                    var symbol = icon.symbol;  
+                    var symbol = icon.symbol;
                     var myPicksArray = JSON.parse(localStorage.getItem('myPicksArray'));
                     var index = $.inArray(JSON.stringify(i+1), myPicksArray);
                     var isMyPick = ((index!==-1) && ((i+1)==myPicksArray[index])) ? "mypicks" : "";
-  					
+
                             var item = '<div data-title="'+symbol+'"class="hvr-sweep-to-top item '+category+' '+author+' '+isMyPick+'"data-id="'+i+'"data-category="'+category+'"data-libe="'+set+'">'+
-    
+
                                             '<p class = "glyph"><i class="'+symbol+'"></i></p>'+
                                             '<p class="keywords">'+name+'</p>'+
                                             '<p class="keywords">'+category+'</p>'+
-                                            '<p class="keywords">'+keywords+'</p>'
+                                            '<p class="keywords">'+keywords+','+nameToLowerCase+'</p>'
                                             '</div>';
-            
+
                 //UPDATE COUNT TOTALS
                 $('#nMdSet').text(nMdSet);
                 $('#nFaSet').text(nFaSet);
                 $('#nGlSet').text(nGlSet);
                 $('#nIoSet').text(nIoSet);
                 //$('#iconsTotal').text(i+1);
-                
+
                 $('#container').append(item);
-                
+
             return item;
-            
+
         });//map function
-        	  
+
 	}//end displayIcons function
 
 } //end Utils

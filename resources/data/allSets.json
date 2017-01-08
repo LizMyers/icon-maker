@@ -4254,5 +4254,26 @@
     "category":"social",
     "set":"faSet",
     "keywords":"social"
+  },
+  {
+    "name":"Football",
+    "symbol":"icon-football",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"football, ball, nfl, american football"
+  },
+  {
+    "name":"Helmut",
+    "symbol":"icon-helmut",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"football, ball, nfl, american football, helmut"
+  },
+  {
+    "name":"Whistle",
+    "symbol":"icon-whistle",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"football, ball, nfl, american football, whistle"
   }
 ]

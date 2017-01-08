@@ -14,6 +14,7 @@
 <link rel='stylesheet' href='resources/css/allSets.min.css' />
 <link rel='stylesheet' href='resources/css/icon-maker.css' />	
 <link rel='stylesheet' href='resources/css/icon-maker-styles-2.css' /> 
+<link rel='stylesheet' href='resources/css/bkgndSwatches.css' /> 
 <link rel='stylesheet' href='resources/css/spectrum.css' /> 
 
 <script src='resources/js/jquery-1.11.2.min.js'></script>	
@@ -85,7 +86,6 @@
 </div><!-- end header -->
 	
 <div data-role='content'>
-
 <div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item", "getSortData": {  "number": ".number parseInt", "name": ".name", "category": "[data-category]" }, "layoutMode" : "fitRows"}'>
 
 </div><!--end isotope container-->
@@ -95,17 +95,21 @@
 
       <div id="sm-container">
           <div id="sm-background">
+            <div id="sm-background-border">
                 <div id="sm-glyph-container">
                   <i class="fa fa-amazon" id="sm-glyph"></i>
               </div>  <!-- // sm-glyph-container -->
+           </div> <!-- // sm-background-border -->
         </div> <!-- // sm-background -->
       </div><!-- // sm-container -->
       
       <div id="lg-container">
           <div id="lg-background">
+            <div id="lg-background-border">
               <div id="lg-glyph-container">
                   <i class="fa fa-amazon" id="lg-glyph"></i>
               </div><!-- // lg-glyph-container -->
+            </div><!-- // lg-background-border -->
           </div><!-- // lg-background -->
       </div><!-- // lg-container -->
 </div><!-- // drawing-area -->
@@ -123,8 +127,14 @@
 
     <div id="iconSize" style="position:absolute;top:-400px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
       <p style="font-size:18px;line-height:18px;">Icon Size</p>
-      <div id="smaller" class="iconFontSize"><i class="fa fa-caret-down" style="margin-left:-10px"></i> smaller</div>
-      <div id="larger" class="iconFontSize"><i class="fa fa-caret-up" style="margin-left:-10px"></i> larger</div>
+
+           <div id="smaller" class="iconFontSize"><img src="resources/img/zoom02.png"  style="position:absolute;top:59px;left:6px;-webkit-user-select: none;"  /> 
+      <span style="position:absolute;top:-148px!mportant;left:30px;-webkit-user-select: none; ">
+      smaller</span></div>
+
+      <div id="larger" class="iconFontSize"><img src="resources/img/zoom01.png"  style="position:absolute;top:58px;left:118px;-webkit-user-select: none; "  /> 
+      <span style="position:absolute;top:-12px!mportant;left:144px;-webkit-user-select: none; ">
+      larger</span></div>
     </div>
 
     <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:198px; left:20px;width:100px!important">
@@ -141,7 +151,7 @@
 
       <span style="position:relative;top:230px;left:20px">Background Swatches:<p/>
     <!-- SWATCHES DROPDOWN-->  
-    <div id="swatchesPanel" style="position:relative; top:0px;left:0px;width:80%;height:100px;border:2px solid #232323">
+    <div id="swatchesPanel" style="position:relative; top:0px;left:0px;width:80%;height:150px;border:2px solid #232323;overflow-y:scroll;">
             <div id="bk01" class="backgroundColor"></div>
             <div id="bk02" class="backgroundColor"></div>
             <div id="bk03" class="backgroundColor"></div>
@@ -166,6 +176,50 @@
             <div id="bk22" class="backgroundColor"></div>
             <div id="bk23" class="backgroundColor"></div>
             <div id="bk24" class="backgroundColor"></div>
+            <div id="bk25" class="backgroundColor"></div>
+            <div id="bk26" class="backgroundColor"></div>
+            <div id="bk27" class="backgroundColor"></div>
+            <div id="bk28" class="backgroundColor"></div>
+            <div id="bk29" class="backgroundColor"></div>
+            <div id="bk30" class="backgroundColor"></div>
+            <div id="bk31" class="backgroundColor"></div>
+            <div id="bk32" class="backgroundColor"></div>
+            <div id="bk33" class="backgroundColor"></div>
+            <div id="bk34" class="backgroundColor"></div>
+            <div id="bk35" class="backgroundColor"></div>
+            <div id="bk36" class="backgroundColor"></div>
+            <div id="bk37" class="backgroundColor"><img src='resources/img/NFL_Arizona_Cardinals.png' title="Arizona Cardinals" /></div>
+            <div id="bk38" class="backgroundColor"><img src='resources/img/NFL_Atlanta_Falcons.png' title="Atlanta Falcons" /></div>
+            <div id="bk39" class="backgroundColor"><img src='resources/img/NFL_Baltimore_Ravens.png' title="Baltimore Ravens" /></div>
+            <div id="bk40" class="backgroundColor"><img src='resources/img/NFL_Buffalo_Bills.png' title="Buffalo Bills"/></div>
+            <div id="bk41" class="backgroundColor"><img src='resources/img/NFL_Carolina_Panthers.png' title="Carolina Panthers" /></div>
+            <div id="bk42" class="backgroundColor"><img src='resources/img/NFL_Chicago_Bears.png' title="Chicago Bears" /></div>
+            <div id="bk43" class="backgroundColor"><img src='resources/img/NFL_Cincinnati_Bengals.png' title="Cincinnati Bengals" /></div>
+            <div id="bk44" class="backgroundColor"><img src='resources/img/NFL_Cleveland_Browns.png' title="Cleveland Browns" /></div>
+            <div id="bk45" class="backgroundColor"><img src='resources/img/NFL_Dallas_Cowboys.png' title="Dallas Cowboys" /></div>
+            <div id="bk46" class="backgroundColor"><img src='resources/img/NFL_Denver_Broncos.png' title="Denver Broncos" /></div>
+            <div id="bk47" class="backgroundColor"><img src='resources/img/NFL_Detroit_Lions.png' title="Detroit Lions" /></div>
+            <div id="bk48" class="backgroundColor"><img src='resources/img/NFL_Green_Bay_Packers.png' title="Green Bay Packers" /></div>
+            <div id="bk49" class="backgroundColor"><img src='resources/img/NFL_Houston_Texans.png' title="Houston Texans" /></div>
+            <div id="bk50" class="backgroundColor"><img src='resources/img/NFL_Indianapolis_Colts.png' title="Indianapolis Colts" /></div>
+            <div id="bk51" class="backgroundColor"><img src='resources/img/NFL_Jacksonville_Jaguars.png' title="Jacksonville Jaguars" /></div>
+            <div id="bk52" class="backgroundColor"><img src='resources/img/NFL_Kansas_City_Chiefs.png' title="Kansas City Chiefs" /></div>
+            <div id="bk53" class="backgroundColor"><img src='resources/img/NFL_LA_Rams.png' title="LA Rams" /></div>
+            <div id="bk54" class="backgroundColor"><img src='resources/img/NFL_Miami_Dolphins.png' title="Miami Dolphins" /></div>
+            <div id="bk55" class="backgroundColor"><img src='resources/img/NFL_MN_Vikings.png' title="MN Vikings" /></div>
+            <div id="bk56" class="backgroundColor"><img src='resources/img/NFL_New_England_Patriots.png' title="New England Patriots" /></div>
+            <div id="bk57" class="backgroundColor"><img src='resources/img/NFL_New_Orleans_Saints.png' title="New Orleans Saints" /></div>
+            <div id="bk58" class="backgroundColor"><img src='resources/img/NFL_NY_Giants.png' title="NY Giants" /></div>
+            <div id="bk59" class="backgroundColor"><img src='resources/img/NFL_NY_Jets.png' title="NY Jets" /></div>
+            <div id="bk60" class="backgroundColor"><img src='resources/img/NFL_Oakland_Raiders.png' title="Oakland Raiders" /></div>
+            <div id="bk61" class="backgroundColor"><img src='resources/img/NFL_Philadelphia_Eagles.png' title="Philadelphia Eagles" /></div>
+            <div id="bk62" class="backgroundColor"><img src='resources/img/NFL_Pittsburgh_Steelers.png' title="Pittsburgh Steelers" /></div>
+            <div id="bk63" class="backgroundColor"><img src='resources/img/NFL_San_Diego_Chargers.png' title="San Diego Chargers" /></div>
+            <div id="bk64" class="backgroundColor"><img src='resources/img/NFL_SF_49ers.png' title="SF 49ers" /></div>
+            <div id="bk65" class="backgroundColor"><img src='resources/img/NFL_Seattle_Seahawks.png' title="Seattle Seahawks" /></div>
+            <div id="bk66" class="backgroundColor"><img src='resources/img/NFL_Tampa_Bay_Buccaneers.png' title="Tampa Bay Bucaneers" /></div>
+            <div id="bk67" class="backgroundColor"><img src='resources/img/NFL_Tennessee_Titans.png' title="Tennessee Titans" /></div>
+            <div id="bk68" class="backgroundColor"><img src='resources/img/NFL_WA_Redskins.png' title="WA Redskins" /></div>
     </div>
 
  </div><!--//END PROPERTIES-->
@@ -250,21 +304,32 @@
     <script src="resources/js/dom-to-image.min.js"></script> 
     <script>
     $('#download108').click(function() {
-        domtoimage.toBlob(document.getElementById('sm-background'))
+        domtoimage.toBlob(document.getElementById('sm-background'), {height:108, width: 108})
             .then(function (blob) {
                 window.saveAs(blob, 'myIcon-108x108.png');
             });
     });
     $('#download512').click(function() {
-        domtoimage.toBlob(document.getElementById('lg-background'))
+        domtoimage.toBlob(document.getElementById('lg-background'), {height:512, width: 512})
             .then(function (blob) {
                 window.saveAs(blob, 'myIcon-512x512.png');
             });
     });
 </script>
+<!-- <script>
+$('#download512').click(function() {
+      domtoimage.toBlob(document.getElementById('lg-background'))
+          .then(function (blob) {
+              window.saveAs(blob, 'myIcon_512.png');
+          });
+    });
+</script> -->
+
+<!-- <script src="resources/js/dom-to-image.min.js"></script> -->
 <script src="resources/js/domvas.min.js"></script>
 <script src="resources/js/icon-maker-utils.js"></script> 
 <script src="resources/js/icon-maker.js"></script>  
+<script src="resources/js/bkgndSwatches.js"></script>  
 </div><!--//end content-->
   
 <script src="resources/js/isotope.js"></script>	
@@ -274,7 +339,6 @@
     $( "#lg-glyph" ).draggable();
   });
   </script>
-
 
 </div><!--//end cGrid-->
 

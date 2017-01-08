@@ -1,6 +1,6 @@
 /*
 Icon-Maker for Alexa
-by Liz Myers 
+by Liz Myers
 lizmyers@amazon.com
 November 2016
 */
@@ -286,7 +286,7 @@ button {
       }
       #infoSlider {
         border:1px solid white;
-        
+
         width:200px;
         color:white;
       }
@@ -416,30 +416,6 @@ button {
         cursor:pointer;
         border:0px solid blue;
       }
-      #bk01 {background:#FFF;}
-      #bk02 {background:#232323;}
-      #bk03 {background:#4CD964;}
-      #bk04 {background:#5AC8FA;}
-      #bk05 {background:#007AFF}
-      #bk06 {background: #8E8E93}
-      #bk07 {background:#34AADC;}
-      #bk08 {background:#5856D6;}
-      #bk09 {background:#FF2D55;}
-      #bk10 {background:#FF3B30;}
-      #bk11 {background:#FF9500}
-      #bk12 {background: #FFCC00}
-      #bk13 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
-      #bk14 {background: -webkit-linear-gradient(#f15f3e, #f8951d)}
-      #bk15 {background: -webkit-linear-gradient(#ffce06, #fedb4d)}
-      #bk16 {background: -webkit-linear-gradient(#4cb748, #9ccd63)}
-      #bk17 {background: -webkit-linear-gradient(#64c5f0, #76c9b6)}
-      #bk18 {background: -webkit-linear-gradient(#4265b0, #4cc8ee)}
-      #bk19 {background: -webkit-linear-gradient(#5a5daa, #975aa4)}
-      #bk20 {background: -webkit-linear-gradient(#965aa4, #db57a0)}
-      #bk21 {background: -webkit-linear-gradient(#2b2b2b, #4b4b4b)}
-      #bk22 {background: -webkit-linear-gradient(#898c90, #dbddde)}
-      #bk23 {background: -webkit-linear-gradient(#96d8e9, #4272b8)}
-      #bk24 {background: -webkit-linear-gradient(#ee3369, #f15f3e)}
 
     li.showMyPicks {
       display:hidden;
@@ -482,13 +458,13 @@ button {
   padding: 38px 0px 10px;
 }
 .ui-slider{
-  width: 0.2em; 
+  width: 0.2em;
   background: #e2e2e2;
   border: 12px solid #f8f7f7;
   color: #222222;
   position: relative;
   text-align: left;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .ui-slider-range{
   bottom: 0;
@@ -498,7 +474,7 @@ button {
   z-index: 1;
   font-size: .7em;
   display: block;
-  border: 0;  
+  border: 0;
   font-weight: bold;
 }
 .ui-slider-handle{
@@ -521,24 +497,24 @@ button {
 .depth_picker p, .degree_picker p{
   text-align: center;
   font-size: 24px;
-  font-family: 'proxima_novasemibold'; 
+  font-family: 'proxima_novasemibold';
 }
 
 .increment, .decrement{
   text-align: center;
-  display: block; 
+  display: block;
 }
 
 .increment span, .decrement span{
   margin: 0 auto;
   width: 0.2em;
-  background: #e2e2e2;  
+  background: #e2e2e2;
 }
 
 .increment span{
   border-top-left-radius: 3px;
-  border-top-right-radius: 2px; 
-  padding: 9px 5px 5px 6px; 
+  border-top-right-radius: 2px;
+  padding: 9px 5px 5px 6px;
   cursor: pointer;
 }
 
@@ -547,7 +523,7 @@ button {
   border-bottom-right-radius: 2px;
   border-top: 2px solid #e2e2e2;
   padding: 6px 5px 1px 6px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 #slider-vertical{
@@ -627,21 +603,34 @@ button {
   clip-path: circle(50% at 50% 50%);
   overflow:hidden!important;
 }
+#sm-background-border {
+  background: none;
+  float:clear;
+  border-radius: 50%;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:96px!important;
+  height:96px!important;
+  z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  overflow:hidden!important;
+}
 #sm-glyph-container {
   border:0px solid red;
   position:absolute;
   text-align: center;
   top:10%;
-  left:15%;
+  left:0;
 }
 #sm-glyph {
  border:0px solid red;
  color:#fff;
  margin-top:44px;
- font-size:75px;
+ font-size:66px;
  line-height: 0em;
- width:100%;
- height:100%;
+ width:108px;
  text-align:center;
  /*filter: drop-shadow(1px 1px 1px #b57a22);*/
 }
@@ -677,6 +666,20 @@ button {
   clip-path: circle(50% at 50% 50%);
   overflow:hidden!important;
 }
+#lg-background-border {
+  background: none;
+  float:clear;
+  border-radius: 50%;
+  position:relative;
+  left:0px;
+  top:0px;
+  width:485px!important;
+  height:485px!important;
+  z-index:10!important;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  overflow:hidden!important;
+}
 #lg-glyph-container {
   border:0px solid red;
   position:absolute;
@@ -687,7 +690,7 @@ button {
 #lg-glyph  {
  border:0px solid red;
  color:#fff;
- font-size:390px;
+ font-size:370px;
  line-height: 0px;
  margin-top:206px!important;
  width:512px;
@@ -767,5 +770,5 @@ button {
   border:0px solid red!important;
   z-index:50000;
 }
-  
+
 </style>

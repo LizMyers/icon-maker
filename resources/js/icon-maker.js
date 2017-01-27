@@ -5,9 +5,14 @@ lizmyers@amazon.com
 November 2016
 */
 
-var mySet;
+//var mySet;
 var largeIcon = false;
 var smallIcon = false;
+
+var smGlyphShadowLength = 100;
+localStorage.setItem ('smGlyphShadowLength', smGlyphShadowLength);
+var lgGlyphShadowLength = 200;
+localStorage.setItem ('lgGlyphShadowLength', lgGlyphShadowLength);
 
 $(document).on('pagecreate', '#cGrid', function() {
 
@@ -172,7 +177,8 @@ $(document).on('pageshow', '#cGrid', function() {
 				$('#setGroup').find('a').removeClass('selected').find('i').removeClass('selected');
 				$('#filterType').text('All Categories');
 			}
-                                    window.scrollTo(0, 0);
+
+            window.scrollTo(0, 0);
 		}
 		return false;
 	});
@@ -195,7 +201,6 @@ $(document).on('pageshow', '#cGrid', function() {
 
 
 //////////////////////////// CATEGORIES MENU /////////////////////////////////////	
-
 
 $('.menuItem ').on('click', this, function() {
 	$('#search').val('');
@@ -250,25 +255,87 @@ $('.menuItem ').on('click', this, function() {
 
 });
 
+$('#btnAddShadow').on('click', function(){
 
-var orginalWidth = $("#image").width();
+    var myShadowColor = localStorage.getItem('myShadowColor');
+    console.log("myColor: " + myShadowColor);
 
-$("#infoSlider").text(orginalWidth + ', 100%');
+    var myShadowDir = localStorage.getItem('shadowDirection');
+    console.log("shadow direction: " + myShadowDir);
 
-$("#slider").slider({
-    value: 0,
-    min: -50,
-    max: 50,
-    step: 10,
-    slide: function (event, ui) {
-        var fraction = (1 + ui.value / 100),
-            newWidth = orginalWidth * fraction;
-  
-        $("#infoSlider").text(newWidth + ', ' + Math.floor(fraction * 100) + '%');
+    // var smGlyphShadowLength = localStorage.getItem('smGlyphShadowLength');
+    // console.log("sm glyph shadow length: " + smGlyphShadowLength);
 
-        $("#image").width(newWidth);
-    }
+    //var lgGlyphShadowLength = localStorage.getItem('lgGlyphShadowLength');
+    //console.log("lg glyph shadow length: " + lgGlyphShadowLength);
+    
+
+    $('#sm-glyph').longShadow({
+        colorShadow: myShadowColor,
+        sizeShadow: 100,
+        directionShadow: myShadowDir
+    });
+
+    $('#lg-glyph').longShadow({
+        colorShadow: myShadowColor,
+        sizeShadow: 200,
+        directionShadow: myShadowDir
+    });
+    
+    $('#lg-background-border').css('border', '14px solid ' + myShadowColor);
+    $('#sm-background-border').css('border', '6px solid ' + myShadowColor);
 });
+
+//////////////////////////// REMOVE SHADOWS ///////////////////////////
+
+$('#btnRemoveShadow').on('click', function() {
+    console.log("remove shadow clicked");
+    $('#sm-glyph').css('text-shadow', '');
+    $('#lg-glyph').css('text-shadow', '');
+});
+
+//////////////////////////// SHADOW DIRECTION MENU /////////////////////////////////////	
+
+$('.dirItem ').on('click', this, function() {
+
+	var dirSelector = $(this).attr('data-direction-value');
+	switch(dirSelector) {
+		case '.top':
+		console.log('Shadow Dir = top')
+		localStorage.setItem('shadowDirection', 'top');
+		break;
+		case '.top-right':
+		console.log('Shadow Dir = top right')
+		localStorage.setItem('shadowDirection', 'top-right');
+		break;
+		case '.east':
+		console.log('Shadow Dir = right')
+		localStorage.setItem('shadowDirection', 'right');
+		break;
+		case '.bottom-right':
+		console.log('Shadow Dir = bottom-right')
+		localStorage.setItem('shadowDirection', 'bottom-right');
+		break;
+		case '.bottom':
+		console.log('Shadow Dir = bottom')
+		localStorage.setItem('shadowDirection', 'bottom');
+		break;
+		case '.bottom-left':
+		console.log('Shadow Dir = bottom-left')
+		localStorage.setItem('shadowDirection', 'bottom-left');
+		break;
+		case '.left':
+		console.log('Shadow Dir = left')
+		localStorage.setItem('shadowDirection', 'left');
+		break;
+		case '.top-left':
+		console.log('Shadow Dir = top-left')
+		localStorage.setItem('shadowDirection', 'top-left');
+		break;
+	}
+
+});
+
 
 ///////////////////////// ICON MAKER /////////////////////////////////
 
@@ -276,7 +343,7 @@ $("#slider").slider({
 $('#lg-container').on('click', function(){
      smallIcon = false;
      largeIcon = true;
-    $('#both-icons').css('background', 'none');
+    $('#both-icons').css('background', 'transparent');
     $('#512-icon').css('background', '#ff9900');
     $('#108-icon').css('background', 'none');
 });
@@ -350,6 +417,50 @@ $('#smaller').on('click', function(){
     }
 });
 
+//////////////////////////FLIP  GLYPH/////////////////////////////
+
+$('#flip-h').on('click', function(){
+	console.log("flip-h");
+    if(smallIcon) {
+        $('#sm-glyph-container').toggleClass('flip-h');
+    } else if (largeIcon) {
+        $('#lg-glyph-container').toggleClass('flip-h');
+    } else {
+		$('#sm-glyph').toggleClass('flip-h');
+		$('#lg-glyph').toggleClass('flip-h');
+    }
+});
+
+//////////////////////////SWATCHES SCROLL PANEL/////////////////////////////
+
+$('#swatchesPanel').on('scroll', function(){
+	console.log("scrolling swatches!");
+	if($('#swatchesPanel').scrollTop() > 246) {
+		$('#swatches').find('span').html('MLB Colors:');
+	} else if ($('#swatchesPanel').scrollTop() > 80) {
+		$('#swatches').find('span').html('NFL Colors:');
+	} else {
+		$('#swatches').find('span').html('Background Swatches:');
+	}
+});
+
+//////////////////////////LONG SHADOW/////////////////////////////
+$('#longShadowBtn').on('click', function() {
+		console.log("clicked da btn");
+
+		$('#sm-glyph').longShadow({
+		    colorShadow: '#000000',
+		    sizeShadow: 0,
+		    directionShadow: 'bottom-right'
+		});
+		$('#lg-glyph').longShadow({
+		    colorShadow:'#000000',
+		    sizeShadow: 0,
+		    directionShadow: 'bottom-right'
+		});
+		longShadow = true;
+	});
+
 //////////////////////////MOVE  GLYPH/////////////////////////////
 
 $('body').on('keydown', function(e) {
@@ -385,11 +496,22 @@ $('body').on('keydown', function(e) {
 		  }
 	} else if (smallIcon) { //SMALL icon
  		if(e.keyCode == 37) { // left
-		    $('#sm-background #sm-glyph-container').animate({
-		      left: "-=5px"
-		    });
+	 		if ($("#sm-glyph").hasClass("flip-h")) {
+				  $("#sm-glyph").animate({left: "+=5px"});
+				} else {
+			    $('#sm-background #sm-glyph-container').animate({
+			      left: "-=5px"
+			    });
+			}
 		  }
 		  else if(e.keyCode == 39) { // right
+		  	 if ($("#sm-glyph").hasClass("flip-h")) {
+				  $("#sm-glyph").animate({left: "-=5px"});
+				} else {
+			    $('#sm-background #sm-glyph-container').animate({
+			      left: "+=5px"
+			   });
+			}
 		    $('#sm-background #sm-glyph-container').animate({
 		      left: "+=5px"
 		    });

@@ -15,20 +15,13 @@
 <link rel='stylesheet' href='resources/css/icon-maker.css' />	
 <link rel='stylesheet' href='resources/css/icon-maker-styles-2.css' /> 
 <link rel='stylesheet' href='resources/css/bkgndSwatches.css' /> 
-<link rel='stylesheet' href='resources/css/spectrum.css' /> 
+<!-- <link rel='stylesheet' href='resources/css/rangeslider.css' />  -->
+<link rel='stylesheet' href='resources/css/spectrum.css' />
 
 <script src='resources/js/jquery-1.11.2.min.js'></script>	
 <script src='resources/js/jquery-ui.js'></script> 
-	<script language="text/javascript">
-			//configure jQM
-			$(document).bind("mobileinit", function () {
-			$.mobile.ajaxEnabled = false;
-			$.mobile.defaultPageTransition= 'none';
-		});
-	 </script>
 <script src='resources/js/jquery.mobile-1.4.0.min.js'></script>	
 <script src="resources/js/spectrum.js"></script>
-
 </head>
 	
 <body>
@@ -84,6 +77,8 @@
 
 </div><!-- nav -->
 </div><!-- end header -->
+
+
 	
 <div data-role='content'>
 <div id="container" class="js-isotope" data-isotope-options='{ "itemSelector": ".item", "getSortData": {  "number": ".number parseInt", "name": ".name", "category": "[data-category]" }, "layoutMode" : "fitRows"}'>
@@ -91,67 +86,75 @@
 </div><!--end isotope container-->
 
 <!-- CANVAS AREA -->
-<div id="drawing-area" style="min-width: 1000px!important">
-
+<div id="drawing-area">
+     
       <div id="sm-container">
           <div id="sm-background">
             <div id="sm-background-border">
-                <div id="sm-glyph-container">
+                <div id="sm-glyph-container" class="flat-icon" data-show-alpha="true">
                   <i class="fa fa-amazon" id="sm-glyph"></i>
               </div>  <!-- // sm-glyph-container -->
-           </div> <!-- // sm-background-border -->
-        </div> <!-- // sm-background -->
-      </div><!-- // sm-container -->
-      
+            </div> <!-- // sm-background-border -->
+          </div> <!-- // sm-background -->
+        </div><!-- // sm-container -->
+      <div id="sm-glyph-label"><span>108x108px</span></div>
+     
+    
+
       <div id="lg-container">
           <div id="lg-background">
             <div id="lg-background-border">
-              <div id="lg-glyph-container">
+              <div id="lg-glyph-container" class="flat-icon" data-show-alpha="true">
                   <i class="fa fa-amazon" id="lg-glyph"></i>
               </div><!-- // lg-glyph-container -->
             </div><!-- // lg-background-border -->
           </div><!-- // lg-background -->
-      </div><!-- // lg-container -->
+        </div><!-- // lg-container -->
+      <div id="lg-glyph-label"><span>512x512px</span></div>
+      
 </div><!-- // drawing-area -->
 
 <!-- PROPERTIES PANEL -->
 
-<div id="propertiesPanel">
+<div id="propertiesPanel" style="float:right;width:28%;overflow:scroll-x">
     
-    <div id="icon-selector" style="position:absolute;top:10px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
-        <p style="font-size:18px;line-height:18px;">Selection</p>
+    <div id="icon-selector" style="position:absolute;top:5px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
+        <p style="font-size:15px;line-height:15px;border:0px solid orange">Selection:</p>
         <div id="both-icons" class="btn-icon-selector" style="pointer:cursor">Both</div>
         <div id="108-icon" class="btn-icon-selector" style="pointer:cursor">108px</div>
         <div id="512-icon" class="btn-icon-selector" style="pointer:cursor">512px</div>
     </div><!--end iconSelector-->
 
-    <div id="iconSize" style="position:absolute;top:-400px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
-      <p style="font-size:18px;line-height:18px;">Icon Size</p>
+    <div id="iconSize" style="position:absolute;top:-420px;left:20px;width:70%;min-width:200px;border:0px solid yellow">
+      <p style="font-size:15px;line-height:15px;">Icon Size:</p>
 
-           <div id="smaller" class="iconFontSize"><img src="resources/img/zoom02.png"  style="position:absolute;top:59px;left:6px;-webkit-user-select: none;"  /> 
+    <div id="smaller" class="iconFontSize" style="margin-top: -8px"><img src="resources/img/zoom02.png"  style="position:absolute;top:42px;left:6px;-webkit-user-select: none;"  /> 
       <span style="position:absolute;top:-148px!mportant;left:30px;-webkit-user-select: none; ">
       smaller</span></div>
 
-      <div id="larger" class="iconFontSize"><img src="resources/img/zoom01.png"  style="position:absolute;top:58px;left:118px;-webkit-user-select: none; "  /> 
+
+    <div id="larger" class="iconFontSize" style="margin-top: -8px"><img src="resources/img/zoom01.png"  style="position:absolute;top:41px;left:118px;-webkit-user-select: none; "  /> 
       <span style="position:absolute;top:-12px!mportant;left:144px;-webkit-user-select: none; ">
       larger</span></div>
     </div>
 
-    <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:198px; left:20px;width:100px!important">
+    <div id="glyphColorPicker" style="position:absolute;border:0px solid yellow;top:154px; left:20px;width:100px!important">
           <p style="margin-left:20px!important">
-          <p>Icon Color:<p/>
-          <p><input type='text' id="glyph-color" /></p>
+          <p style="font-size:15px;line-height:15px;">Icon Color:</p>
+          <p style="margin-top: -8px"><input type='text' id="glyph-color" /></p>
     </div> <!--//glyph-color-picker-->
 
-    <div id="bkgndColorPicker" style="position:relative;border:0px solid orange;top:166px; left:134px;height:40px;width:150px!important;">
+    <div id="bkgndColorPicker" style="position:relative;border:0px solid orange;top:122px; left:134px;height:40px;width:150px!important;">
           <p style="margin-left:10px!important">
-          <p>Background Color:<p/>
-          <p><input type='text' id="fullBkgnd" /></p>
-  </div> <!--//colorPickerBkgnd-->
+          <p style="font-size:15px;line-height:15px;">Background Color:</p>
+          <p  style="margin-top: -8px"><input type='text' id="fullBkgnd" /></p>
+    </div> <!--//colorPickerBkgnd-->
 
-      <span style="position:relative;top:230px;left:20px">Background Swatches:<p/>
-    <!-- SWATCHES DROPDOWN-->  
-    <div id="swatchesPanel" style="position:relative; top:0px;left:0px;width:80%;height:150px;border:2px solid #232323;overflow-y:scroll;">
+      
+    <!-- SWATCHES MENU--> 
+    <div id="swatches" style="position:relative; top:154px; left:0px">
+      <span style="font-size: 15px;line-height:15px;position:relative;top:0px;left:20px">Background Swatches:</span> 
+        <div id="swatchesPanel" style="position:relative; top:10px;left:20px;width:250px;height:120px;border:2px solid #232323;overflow-y:scroll;">
             <div id="bk01" class="backgroundColor"></div>
             <div id="bk02" class="backgroundColor"></div>
             <div id="bk03" class="backgroundColor"></div>
@@ -188,6 +191,7 @@
             <div id="bk34" class="backgroundColor"></div>
             <div id="bk35" class="backgroundColor"></div>
             <div id="bk36" class="backgroundColor"></div>
+            <!--NFL-->
             <div id="bk37" class="backgroundColor"><img src='resources/img/NFL_Arizona_Cardinals.png' title="Arizona Cardinals" /></div>
             <div id="bk38" class="backgroundColor"><img src='resources/img/NFL_Atlanta_Falcons.png' title="Atlanta Falcons" /></div>
             <div id="bk39" class="backgroundColor"><img src='resources/img/NFL_Baltimore_Ravens.png' title="Baltimore Ravens" /></div>
@@ -220,11 +224,248 @@
             <div id="bk66" class="backgroundColor"><img src='resources/img/NFL_Tampa_Bay_Buccaneers.png' title="Tampa Bay Bucaneers" /></div>
             <div id="bk67" class="backgroundColor"><img src='resources/img/NFL_Tennessee_Titans.png' title="Tennessee Titans" /></div>
             <div id="bk68" class="backgroundColor"><img src='resources/img/NFL_WA_Redskins.png' title="WA Redskins" /></div>
-    </div>
+            <div class="backgroundColor"><img src='resources/img/blank.png' /></div>
+            <div class="backgroundColor"><img src='resources/img/blank.png' /></div>
+            <div class="backgroundColor"><img src='resources/img/blank.png' /></div>
+            <div class="backgroundColor"><img src='resources/img/blank.png' /></div>
+            <!--MLB-->
+            <div id="bk69" class="backgroundColor"><img src='resources/img/MLB_Arizona_Diamondbacks.png' title="Arizona Diamondbacks" /></div>
+            <div id="bk70" class="backgroundColor"><img src='resources/img/MLB_Atlanta_Braves.png' title="Atlanta Braves" /></div>
+            <div id="bk71" class="backgroundColor"><img src='resources/img/MLB_Baltimore_Oriols.png' title="Baltimore Oriols" /></div>
+            <div id="bk72" class="backgroundColor"><img src='resources/img/MLB_Boston_Redsox.png' title="Boston Redsox"/></div>
+            <div id="bk73" class="backgroundColor"><img src='resources/img/MLB_Chicago_Cubs.png' title="Chicago Cubs" /></div>
+            <div id="bk74" class="backgroundColor"><img src='resources/img/MLB_Chicago_Whitesox.png' title="Chicago Whitesox" /></div>
+            <div id="bk75" class="backgroundColor"><img src='resources/img/MLB_Cincinnati_Reds.png' title="Cincinnati Reds" /></div>
+            <div id="bk76" class="backgroundColor"><img src='resources/img/MLB_Cleveland_Indians.png' title="Cleveland Indians" /></div>
+            <div id="bk77" class="backgroundColor"><img src='resources/img/MLB_Colorado_Rockies.png' title="Colorado Rockies" /></div>
+            <div id="bk78" class="backgroundColor"><img src='resources/img/MLB_Detroit_Tigers.png' title="Detroit Tigers" /></div>
+            <div id="bk79" class="backgroundColor"><img src='resources/img/MLB_Miami_Marlins.png' title="Miami Marlins" /></div>
+            <div id="bk80" class="backgroundColor"><img src='resources/img/MLB_Houston_Astros.png' title="Houston Astros" /></div>
+            <div id="bk81" class="backgroundColor"><img src='resources/img/MLB_Kansas_City_Royals.png' title="Kansas City Royals" /></div>
+            <div id="bk82" class="backgroundColor"><img src='resources/img/MLB_LA_Angels.png' title="LA Angels" /></div>
+            <div id="bk83" class="backgroundColor"><img src='resources/img/MLB_LA_Dodgers.png' title="LA Dodgers" /></div>
+            <div id="bk84" class="backgroundColor"><img src='resources/img/MLB_Milwaukee_Brewers.png' title="Milwaukee Brewers" /></div>
+            <div id="bk85" class="backgroundColor"><img src='resources/img/MLB_Minnesota_Twins.png' title="Minnesota Twins" /></div>
+            <div id="bk86" class="backgroundColor"><img src='resources/img/MLB_NewYork_Mets.png' title="New York Mets" /></div>
+            <div id="bk87" class="backgroundColor"><img src='resources/img/MLB_NewYork_Yankees.png' title="New York Yankees" /></div>
+            <div id="bk88" class="backgroundColor"><img src='resources/img/MLB_Oakland_As.png' title="Oakland As" /></div>
+            <div id="bk89" class="backgroundColor"><img src='resources/img/MLB_Philadelphia_Phillies.png' title="Philadelphia Phillies"/></div>
+            <div id="bk90" class="backgroundColor"><img src='resources/img/MLB_Pittsburgh_Pirates.png' title="Pittsburgh Pirates"/></div>
+            <div id="bk91" class="backgroundColor"><img src='resources/img/MLB_StLouis_Cardinals.png' title="St Louis Cardinals" /></div>
+            <div id="bk92" class="backgroundColor"><img src='resources/img/MLB_SanDiego_Padres.png' title="San Diego Padres" /></div>
+            <div id="bk93" class="backgroundColor"><img src='resources/img/MLB_SanFrancisco_Giants.png' title="San Francisco Giants" /></div>
+            <div id="bk94" class="backgroundColor"><img src='resources/img/MLB_Seattle_Mariners.png' title="Seattle Mariners" /></div>
+            <div id="bk95" class="backgroundColor"><img src='resources/img/MLB_TampaBay_Rays.png' title="Tampa Bay Rays" /></div>
+            <div id="bk96" class="backgroundColor"><img src='resources/img/MLB_Texas_Rangers.png' title="Texas Rangers" /></div>
+            <div id="bk97" class="backgroundColor"><img src='resources/img/MLB_Toronto_BlueJays.png' title="Toronto Blue Jays" /></div>
+            <div id="bk98" class="backgroundColor"><img src='resources/img/MLB_Washington_Nationals.png' title="Washington Nationals" /></div>
+        </div>
+    </div><!--//end swatches panel-->
+
+    <!-- LONG SHADOW--> 
+    <div id="longShadow" style="position:relative; top:150px; left:0px">
+       <div id="shadowColorPicker" style="position:relative;border:0px solid orange;top:20px; left:20px;height:40px;width:150px!important;">
+              <p style="margin-left:10px!important">
+              <p style="font-size:15px;line-height:15px;">Shadow Color:</p>
+              <p  style="margin-top: -8px"><input type='text' id="shadowColor" /></p>
+      </div> <!--//longShadowColorpicker-->
+
+      <div id="borderColorPicker" style="position:relative;border:0px solid orange;top:-36px; left:144px;height:40px;width:150px!important;">
+              <p style="margin-left:10px!important">
+              <p style="font-size:15px;line-height:15px;">Border Color:</p>
+              <p  style="margin-top: -8px"><input type='text' id="borderColor" /></p>
+      </div> <!--//colorPickerBkgnd-->
+
+  <!-- SHADOW DIRECTION DROPDOWN-->  
+ <!--    <div id="shadowDropDown" style="position:relative;border:0px solid orange;top:-27px;left:150px;height:40px;width:150px!important;">
+    <ul>
+      <li><span id="shadowDirection" style="color:#fff;font-family:arial, sans-serif;font-weight:normal">Direction: </span><i class="fa fa-angle-down" style="border:0px solid green;margin-top:-2px;color:#fff"></i></li>
+      <li><span id="currentDir"></span>
+        <ul id="myShadowDirection">
+            <li data-direction-value=".top" class="dirItem"><a href="#" class="ui-link">Top</a></li>
+            <li data-direction-value=".top-right" class="dirItem"><a href="#" class="ui-link">Top-Right</a></li>
+            <li data-direction-value=".right" class="dirItem"><a href="#" class="ui-link">Right</a></li>
+            <li data-direction-value=".bottom-right" class="dirItem"><a href="#" class="ui-link">Bottom-Right</a></li>
+            <li data-direction-value=".bottom" class="dirItem"><a href="#" class="ui-link">Bottom</a></li>
+            <li data-direction-value=".bottom-left" class="dirItem"><a href="#" class="ui-link">Bottom-Left</a></li>
+            <li data-direction-value=".left" class="dirItem"><a href="#" class="ui-link">Left</a></li>
+            <li data-direction-value=".top-left" class="dirItem"><a href="#" class="ui-link">Top-Left</a></li>
+        </ul>
+        </li>
+      </ul>
+    </div> -->
+
+<!--      <div id="btnAddShadow" style="cursor:pointer;position:absolute;top:150px;left:20px!important;width:200px;height:34px;text-align:center;border-radius:10;background:#090;line-height:2em;color:white"> Add Shadow </div>
+
+    <div id="btnRemoveShadow" style="cursor:pointer;position:absolute;top:200px;left:20px!important;width:200px;height:34px;text-align:center;border-radius:10;background:#900;line-height:2em;color:white"> Remove Shadow </div> -->
+
+    
+
+ <!--    <div class="range-slider">
+      <input class="range-slider__range" type="range" value="10" min="0" max="200">
+      <span class="range-slider__value">0</span>
+    </div> -->
 
  </div><!--//END PROPERTIES-->
-    <script type="text/javascript">
 
+
+  <script type="text/javascript">
+
+      $("#shadowColor").spectrum({
+
+          containerClassName: 'awesome',
+          color: null,
+          flat: false,
+          showInput: true,
+          showAlpha: false,
+          className: "shadow-spectrum",
+          showInitial: true,
+          showInput: true,
+          allowEmpty:true,
+          clickoutFiresChange:true,
+          showPalette: false,
+          showSelectionPalette: true,
+          preferredFormat: "hex",
+          localStorageKey: "spectrum.shadow",
+          move: function (color) {
+          },
+          show: function () {
+            //$(this).spectrum('container').css('float', 'clear');
+          },
+          beforeShow: function () {
+          },
+
+          hide: function () {
+          
+          },
+          change: function() {
+
+              var myShadowColor = $('#shadowColor').spectrum('get');
+              console.log("shadowColor: " + myShadowColor);
+
+              var myBorderColor = $('#borderColor').spectrum('get');
+              console.log("borderColor: " + myBorderColor);
+              
+              if(myShadowColor == null && largeIcon) {
+                $('#lg-glyph').css('text-shadow', '');
+              } else if (myShadowColor == null && smallIcon) {
+                $('#sm-glyph').css('text-shadow', '');
+              } else if (myShadowColor == null) {
+                $('#lg-glyph').css('text-shadow', '');
+                $('#sm-glyph').css('text-shadow', '');
+              } else if (smallIcon) {
+                $('#sm-glyph').longShadow({
+                    colorShadow: myShadowColor,
+                    sizeShadow: 100,
+                    directionShadow: 'bottom-right'
+                });
+                $('#sm-background-border').css('border', '6px solid ' + myShadowColor);
+              } else if (largeIcon) {
+                $('#lg-glyph').longShadow({
+                    colorShadow: myShadowColor,
+                    sizeShadow: 200,
+                    directionShadow: 'bottom-right'
+                });
+                $('#lg-background-border').css('border', '14px solid ' + myShadowColor);
+              } else {
+                // console.log("Changing the shadow")
+                // console.log(myShadowColor)
+                // console.log($('#sm-glyph'))
+                  $('#sm-glyph').longShadow({
+                    colorShadow: myShadowColor,
+                    sizeShadow: 100,
+                    directionShadow: 'bottom-right'
+                  });
+                  $('#lg-glyph').longShadow({
+                    colorShadow: myShadowColor,
+                    sizeShadow: 200,
+                    directionShadow: 'bottom-right'
+                  });
+
+              }
+             
+              if (myBorderColor == null) {
+                //if no border - add one to trap shadow color
+                $('#lg-background-border').css('border', '14px solid ' + myShadowColor);
+                $('#sm-background-border').css('border', '6px solid ' + myShadowColor);
+                //update border color picker
+                $("#borderColor").spectrum("set", myShadowColor);
+              }
+
+          }
+         
+      });
+  </script>
+
+  <script type="text/javascript">
+
+      $("#borderColor").spectrum({
+          color: null,
+          flat: false,
+          showInput: true,
+          showAlpha: false,
+          className: "border-spectrum",
+          showInitial: true,
+          showInput: true,
+          allowEmpty:true,
+          clickoutFiresChange:true,
+          showPalette: false,
+          showSelectionPalette: true,
+          preferredFormat: "hex",
+          localStorageKey: "spectrum.border",
+          move: function (color) {
+
+          },
+          show: function () {
+          
+          },
+          beforeShow: function () {
+    
+          },
+
+          hide: function () {
+          
+          },
+          change: function() {
+            var myBorderColor = $('#borderColor').spectrum('get');
+
+              if(myBorderColor == null && largeIcon) {
+                $('#lg-background-border').css('border', 'none'); 
+                $('#lg-glyph').css('top', '0px');
+                $('#lg-glyph').css('left', '0px');
+              } else if (myBorderColor == null && smallIcon) {
+                $('#sm-background-border').css('border', 'none');
+                $('#sm-glyph').css('top', '0px');
+                $('#sm-glyph').css('left', '0px');
+              } else if (myBorderColor == null) {
+                $('#sm-background-border').css('border', 'none');
+                $('#sm-glyph').css('top', '0px');
+                $('#sm-glyph').css('left', '0px');
+                $('#lg-background-border').css('border', 'none');
+                $('#lg-glyph').css('top', '0px');
+                $('#lg-glyph').css('left', '0px');
+              } else if (largeIcon) {
+                $('#lg-background-border').css('border', '14px solid ' + myBorderColor);
+                $('#lg-glyph').css('top', '-20px');
+                $('#lg-glyph').css('left', '-20px');
+              } else if (smallIcon) {
+                $('#sm-background-border').css('border', '6px solid ' + myBorderColor);
+                $('#sm-glyph').css('top', '-6px');
+                $('#sm-glyph').css('left', '-6px');
+              } else {
+                $('#lg-background-border').css('border', '14px solid ' + myBorderColor);
+                $('#lg-glyph').css('top', '-20px');
+                $('#lg-glyph').css('left', '-20px');
+                $('#sm-background-border').css('border', '6px solid ' + myBorderColor);
+                $('#sm-glyph').css('top', '-6px');
+                $('#sm-glyph').css('left', '-6px');
+              }
+          }
+         
+      });
+  </script>
+
+  <script>
     $("#fullBkgnd").spectrum({
         color: "#f90",
         flat: false,
@@ -260,11 +501,10 @@
         }
        
     });
-
     </script>
     <script>
         $("#glyph-color").spectrum({
-        color: "#fff",
+        color: "#efefef",
         flat: false,
         showInput: true,
         className: "full-spectrum",
@@ -288,12 +528,12 @@
           var newColor2 = $('#glyph-color').spectrum('get');
           console.log("glyph-color" + newColor2);
           if (largeIcon) {
-            $("#lg-glyph").css('color', "'"+ newColor2 + "'");
+            $("#lg-glyph").css('color', "'" + newColor2 + "'");
           } else if (smallIcon) {
-            $("#sm-glyph").css('color',  "'"+ newColor2 + "'");
+            $("#sm-glyph").css('color',  "'" + newColor2 + "'");
           } else {
-            $("#sm-glyph").css('color',  "'"+ newColor2 + "'");
-            $("#lg-glyph").css('color',  "'"+ newColor2 + "'");
+            $("#sm-glyph").css('color',  "'" + newColor2 + "'");
+            $("#lg-glyph").css('color',  "'" + newColor2 + "'");
           }
         }
        
@@ -316,20 +556,11 @@
             });
     });
 </script>
-<!-- <script>
-$('#download512').click(function() {
-      domtoimage.toBlob(document.getElementById('lg-background'))
-          .then(function (blob) {
-              window.saveAs(blob, 'myIcon_512.png');
-          });
-    });
-</script> -->
-
-<!-- <script src="resources/js/dom-to-image.min.js"></script> -->
-<script src="resources/js/domvas.min.js"></script>
 <script src="resources/js/icon-maker-utils.js"></script> 
 <script src="resources/js/icon-maker.js"></script>  
 <script src="resources/js/bkgndSwatches.js"></script>  
+<script src="resources/js/jquery.longShadow.js"></script> 
+
 </div><!--//end content-->
   
 <script src="resources/js/isotope.js"></script>	
@@ -338,8 +569,8 @@ $('#download512').click(function() {
     $( "#sm-glyph" ).draggable();
     $( "#lg-glyph" ).draggable();
   });
-  </script>
-
+</script>
+  
 </div><!--//end cGrid-->
 
 </body>

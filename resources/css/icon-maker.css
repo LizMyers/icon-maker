@@ -48,7 +48,7 @@ body {
 }
 #alexaLogo {
     margin-top:4px;
-    margin-left:46.59%;
+    margin-left:calc(50% - 60px);
     font-family: 'Helvetica', sans-serif;
     color:#eaa7cb;
     font-size:1.5em;
@@ -216,8 +216,6 @@ h1 {
   font-weight: bold;
   border:0px solid red;
 }
-
-
 header a {
 	display:block;
 	width:50px;
@@ -236,7 +234,6 @@ header a {
 	background:#222;
 	border:1px solid black!important;
 }
-
 b{
 	font-weight:normal!important;
 }
@@ -248,7 +245,6 @@ iframe{
 	-moz-box-shadow:0 0 0 #000!important;
 	box-shadow:0 0 0 #000!important;
 }
-
 #pickList{
 	float:right;
 	position:absolute;
@@ -289,8 +285,10 @@ a#setToggle, .menu{background: none!important}
 	height:100px;
 	}
 
+
 #container {
     width:30%;
+    background:#322e28;
     min-width:290px!important;
     height:10000px!important; 
     margin:0px!important;
@@ -301,8 +299,7 @@ a#setToggle, .menu{background: none!important}
     padding-bottom:0px!important;
     margin-bottom:-40px!important;
     border-right:1px solid #fff;
-    /*background:#343434;*/
-    background:#322e28;
+    
   }
 #container .item {
     border:0px solid orange;
@@ -361,8 +358,8 @@ a#setToggle, .menu{background: none!important}
  }
  .name {
  	 margin-left:4px;
-       margin-top:-1px;
-       width:140px;
+   margin-top:-1px;
+   width:140px;
 	 font-size:0.75em!important;
 	 line-height: 1.5em!important;
 	 color:#383f46!important;	
@@ -540,15 +537,15 @@ a#setToggle, .menu{background: none!important}
       border:0px solid red;
  }
   #picksList  > li .code {
-      display:inline-block;
-      position:relative;
-      left:-24px!important;
-      top:14px;
-      color:#383f46;
-      font-size:.9em!important;
-      line-height: 2em;
-      text-align: left!important;
-      border:0px solid red;
+  display:inline-block;
+  position:relative;
+  left:-24px!important;
+  top:14px;
+  color:#383f46;
+  font-size:.9em!important;
+  line-height: 2em;
+  text-align: left!important;
+  border:0px solid red;
  }
 #btnInfo{
 	float:right!important;

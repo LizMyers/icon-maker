@@ -16,27 +16,50 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
+  display: inline-block;
+  font: normal normal normal 16px/1 icomoon;
+  font-size: inherit;
+  text-rendering: auto;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: .98;
 
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-.icon-football:before {
+.icon-berlin:before {
   content: "\e900";
 }
-.icon-helmut:before {
+.icon-london:before {
   content: "\e901";
 }
-.icon-whistle:before {
+.icon-seattle:before {
   content: "\e902";
 }
+.icon-baseball_helmut:before {
+  content: "\e903";
+}
+.icon-baseball:before {
+  content: "\e904";
+}
+.icon-baseball_bats:before {
+  content: "\e905";
+}
+.icon-football:before {
+  content: "\e906";
+}
+.icon-football_helmut:before {
+  content: "\e907";
+}
+.icon-whistle:before {
+  content: "\e908";
+}
+
 
 /*----------------------------------
 --------- Font Awesome -----

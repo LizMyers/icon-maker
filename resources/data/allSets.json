@@ -4256,6 +4256,34 @@
     "keywords":"social"
   },
   {
+    "name":"Baseball-Helmut",
+    "symbol":"icon-baseball-helmut",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"baseball, ball, mlb, american baseball, helmut"
+  },
+  {
+    "name":"Baseball",
+    "symbol":"icon-baseball",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"baseball, ball, mlb, american baseball"
+  },
+  {
+    "name":"Baseball-Bats",
+    "symbol":"icon-baseball-bats",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"baseball, ball, mlb, american baseball, bats"
+  },
+  {
+    "name":"Football-Helmut",
+    "symbol":"icon-football-helmut",
+    "category":"sports",
+    "set":"faSet",
+    "keywords":"football, ball, nfl, american football, helmut"
+  },
+  {
     "name":"Football",
     "symbol":"icon-football",
     "category":"sports",
@@ -4263,17 +4291,31 @@
     "keywords":"football, ball, nfl, american football"
   },
   {
-    "name":"Helmut",
-    "symbol":"icon-helmut",
-    "category":"sports",
-    "set":"faSet",
-    "keywords":"football, ball, nfl, american football, helmut"
-  },
-  {
     "name":"Whistle",
     "symbol":"icon-whistle",
     "category":"sports",
     "set":"faSet",
     "keywords":"football, ball, nfl, american football, whistle"
+  },
+  {
+    "name":"Seattle",
+    "symbol":"icon-seattle",
+    "category":"travel",
+    "set":"faSet",
+    "keywords":"space needle, city"
+  },
+  {
+    "name":"Berlin",
+    "symbol":"icon-berlin",
+    "category":"travel",
+    "set":"faSet",
+    "keywords":"brandenburg gate, brandenburger tor, city"
+  },
+  {
+    "name":"London",
+    "symbol":"icon-london",
+    "category":"travel",
+    "set":"faSet",
+    "keywords":"big ben, city"
   }
 ]

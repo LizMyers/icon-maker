@@ -293,7 +293,7 @@ button {
 
     /*-----------DROP-DOWN MENUS------------*/
 
-    #filterDropDown {
+    #filterDropDown, #shadowDropDown {
       margin:0;
       padding:0;
       padding-left:4px;
@@ -310,20 +310,20 @@ button {
       border-radius:4px;
       cursor:pointer;
     }
-    #filterDropDown ul {
+    #filterDropDown ul, #shadowDropDown ul {
       margin:0;
       padding:0;
       list-style: none;
-      background:none;
+      background:none;o
       text-decoration: none;
     }
-    #filterDropDown ul li ul {
+    #filterDropDown ul li ul, #shadowDropDown ul li ul {
       margin-top:8px;
       margin-left:-3px;
       background:#f7fafd!important;
       box-shadow: 1px 1px 2px #787878;
     }
-    li.menuItem{
+    li.menuItem, li.dirItem {
       display:none;
       line-height: 2em;
       width:100%;
@@ -331,19 +331,19 @@ button {
       margin:0;
       border-top: 1px solid #ebebeb;
     }
-    li.menuItem:hover {
+    li.menuItem:hover, li.dirItem:hover {
         background:#fc0;
     }
-    li.menuItem a {
+    li.menuItem a, li.dirItem a {
         color: #383f46!important;
         text-decoration: none!important;
     }
-    li.menuItem:hover ~ a {
+    li.menuItem:hover ~ a, li.dirItem:hover ~ a {
       font-weight: bold;
       color:#900!important;
       text-decoration: none;
     }
-    #filterDropDown:hover li.menuItem {
+    #filterDropDown:hover li.menuItem, #shadowDropDown:hover li.dirItem {
       display:block;
     }
     li a.menuItemOn  {
@@ -537,6 +537,7 @@ button {
   position:relative;
   left:20px;
   width:120px;
+  margin-top: -8px;
 }
 
 #iconSize {
@@ -561,7 +562,7 @@ button {
   font-size:16px;
   color:white;
   text-align:center;
-  line-height:2em;s
+  line-height:2em;
   text-align:center;
   cursor:pointer;
 }
@@ -586,7 +587,7 @@ button {
   width:108px;
   height:108px;
   position:fixed;
-  left:calc(50% - 210px);
+  left:calc(50% - 230px);
   top:100px;
 }
 #sm-background {
@@ -625,6 +626,7 @@ button {
   left:0;
 }
 #sm-glyph {
+ display:inline-block;
  border:0px solid red;
  color:#fff;
  margin-top:44px;
@@ -633,6 +635,16 @@ button {
  width:108px;
  text-align:center;
  /*filter: drop-shadow(1px 1px 1px #b57a22);*/
+}
+#sm-glyph-label {
+  position:fixed;
+  display:block;
+  top:190px;
+  left:calc(50% - 116px);
+  width:200px;
+  height:50px;
+  font-size:0.75em;
+  color:#999;"
 }
 #sm-mask {
   border:0px solid red;
@@ -650,7 +662,7 @@ button {
   height:512px;
   position:fixed;
   top:230px;
-  left:calc(50% - 218px);
+  left:calc(50% - 232px);
 }
 #lg-background {
   background: #f90;
@@ -688,6 +700,7 @@ button {
   padding-top:10%;
 }
 #lg-glyph  {
+ display: inline-block;
  border:0px solid red;
  color:#fff;
  font-size:370px;
@@ -697,6 +710,16 @@ button {
  text-align:center;
  margin-top:0;
  /*filter: drop-shadow(1px 1px 1px #b57a22);*/
+}
+#lg-glyph-label {
+  position:fixed;
+  display:block;
+  top:210px;
+  left:calc(50% + 200px);
+  width:200px;
+  height:50px;
+  font-size:0.75em;
+  color:#999;"
 }
 #lg-mask {
   border:0px solid red;
@@ -741,11 +764,12 @@ button {
   display:block;
   background:none;
   width:70px;
-  height:30px;
-  line-height: 1.75em;
+  height:28px;
+  line-height: 1.65em;
   text-align: center;
-  border:1px solid #666;
+  border:1px solid #676767;
   cursor:pointer;
+  margin-top:-8px;
 }
 button {
   background: light-blue;
@@ -767,8 +791,9 @@ button {
   font-size:1.2em;
 }
 #drawing-area {
-  border:0px solid red!important;
-  z-index:50000;
+
 }
+.flip-h {
+  -webkit-transform: scale(-1, 1);
 
 </style>

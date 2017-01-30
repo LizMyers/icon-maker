@@ -10,7 +10,7 @@ var Utils = {
 		var nBusiness=0;
 		var nEntertainment=0;
 		var nFood=0;
-    var nHealth=0;
+        var nHealth=0;
 		var nNature=0;
 		var nObjects=0;
 		var nOffice=0;
@@ -40,10 +40,11 @@ var Utils = {
 
                 switch(set) {
                         case "mdSet":
+                          console.log("LM set: "+nMdSet);
                           nMdSet++;
                         break;
                         case "faSet":
-                         //console.log("font-awesome: "+nFaSet);
+                          console.log("font-awesome: "+nFaSet);
                           nFaSet++;
                         break;
                         case "glyphSet":
@@ -65,7 +66,7 @@ var Utils = {
                     case "entertainment":
                         nEntertainment++;
                         $("#nEntertainment").text(nEntertainment);
-                       //console.log("Entertainment: "+nEntertainment);
+                        //console.log("Entertainment: "+nEntertainment);
                     break;
                     case "food":
                         nFood++;

@@ -5,7 +5,6 @@ lizmyers@amazon.com
 November 2016
 */
 
-<style>
 /*  ----------------------------------------------------- */
 /*  --------------------CANVAS----------------------- */
 /*  ---------------------------------------------------- */
@@ -332,23 +331,23 @@ button {
       border-top: 1px solid #ebebeb;
     }
     li.menuItem:hover, li.dirItem:hover {
-        background:#fc0;
+        background:#f90;
+        color:#fff!important;
     }
     li.menuItem a, li.dirItem a {
-        color: #383f46!important;
-        text-decoration: none!important;
+        color: #383f46;
+        text-decoration:none;
     }
-    li.menuItem:hover ~ a, li.dirItem:hover ~ a {
-      font-weight: bold;
-      color:#900!important;
+    li.menuItem:hover a, li.dirItem:hover a {
       text-decoration: none;
+      color:#fff!important;
     }
     #filterDropDown:hover li.menuItem, #shadowDropDown:hover li.dirItem {
       display:block;
     }
     li a.menuItemOn  {
        font-weight: bold;
-       color:#900!important;
+       color:#fff!important;
        width:100%;
        padding:4px;
        text-decoration: none;
@@ -437,9 +436,9 @@ button {
     #myCount, .myPicks{
         color:#f3a91d!important;
     }
-    .menu li a:hover{
+ /*   .menu li a:hover{
         color:#f3a91d!important;
-    }
+    }*/
     .cover {
       display:none;
       height:100%;
@@ -790,10 +789,113 @@ button {
   position:absolute;
   font-size:1.2em;
 }
-#drawing-area {
-
-}
 .flip-h {
   -webkit-transform: scale(-1, 1);
 
-</style>
+  table {
+  border:0px solid red;
+  height:100%;
+  margin:0;
+  min-width:1500px!important;
+  padding:0;
+  position:fixed;
+  width:100%; 
+}
+td {
+  margin:0;
+  padding:0;
+}
+#col1 {
+  background:#232323;
+  float:left;
+  height:100%;
+  overflow-y:scroll;
+  vertical-align: top;
+  width:28%;
+}
+#col2 {
+  background:none;
+  float:left;
+  height:740px;
+  min-width: 450px;
+  overflow:hidden;
+  vertical-align: top;
+  width:40%;
+}
+#col3 {
+  float:right;
+  height:740px!important;
+  overflow-y:hidden;
+  vertical-align: top;
+  width:24%;
+}
+
+@media all 
+and (max-width: 2000px)
+and (min-width: 900px) {
+
+table {
+  border:2px solid red;
+  height:100%;
+  margin:0;
+  min-width:1500px!important;
+  padding:0;
+  position:fixed;
+  width:100%;
+}
+td {
+  margin:0;
+  padding:0;
+}
+#col1 {
+  background:#232323;
+  float:left;
+  height:100%;
+  overflow-y:scroll;
+  vertical-align: top;
+  width:28%;
+}
+#col2 {
+  background:none;
+  float:left;
+  height:740px;
+  min-width: 450px;
+  overflow:hidden;
+  vertical-align: top;
+  width:40%;
+}
+#col3 {
+  float:right;
+  height:740px!important;
+  overflow-y:hidden;
+  vertical-align: top;
+  width:24%;
+}
+#sm-container{
+  background:red;
+  border:0px solid #ebebeb;
+  border-radius: 6px;
+  box-shadow: 0px 1px 1px #a7a7a7;
+  width:108px;
+  height:108px;
+  position:fixed;
+/*  left:calc(50% - 230px);*/
+left:50px;
+  top:100px;
+}
+
+}
+/* ----------- Non-Retina Screens ----------- */
+/*@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}*/
+
+/* ----------- Retina Screens ----------- */
+/*@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}*/

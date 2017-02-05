@@ -1,0 +1,87 @@
+
+	table {
+		border:0px solid red;
+		height:100%;
+		margin:0;
+		min-width:1500px!important;
+		padding:0;
+		position:fixed;
+		width:100%;	
+	}
+	td {
+		margin:0;
+		padding:0;
+	}
+	#col1 {
+		background:#232323;
+		float:left;
+		height:100%;
+		min-width: 400px!important;
+		overflow-y:scroll;
+		vertical-align: top;
+		width:28%!important;
+	}
+	#col2 {
+		background:none;
+		float:left;
+		height:740px;
+		overflow:hidden;
+		vertical-align: top;
+		width:48%;
+	}
+	#col3 {
+		float:right;
+		height:740px!important;
+		overflow-y:hidden;
+		vertical-align: top;
+		width:24%;
+	}
+	#container {
+		width:600px;
+	}
+
+@media screen 
+and (min-width: 50px)
+and (max-width: 1400px) 
+ {
+
+	table {;
+	  height:100%;
+	  margin:0;
+	  padding:0;
+	  position:fixed;
+	  width:1300px!important;
+	}
+	td {
+	  margin:0;
+	  padding:0;
+	}
+	#sm-container{
+	  left:430px;
+	}
+	#sm-glyph-label {
+	  left:540px;
+	}
+	#lg-container{
+	  left:420px;
+	}
+	#lg-glyph-label {
+	  left:858px;
+	}
+
+}
+/* ----------- Non-Retina Screens ----------- */
+/*@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}*/
+
+/* ----------- Retina Screens ----------- */
+/*@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}*/
+

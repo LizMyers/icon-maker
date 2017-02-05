@@ -26,6 +26,9 @@ $(document).on('pagecreate', '#cGrid', function() {
 		icons,
 		$container = $('#container');
 
+	 var $htmlBody = $('html, body');
+  		
+
 	var allSets = JSON.parse(localStorage.getItem("allSets"));
 
 	if (allSets == null || allSets == 'undefined' || allSets == '') {
@@ -70,7 +73,7 @@ $(document).on('pagecreate', '#cGrid', function() {
 				},
 				complete: function() {
 				finishedLoadingData();
-                                                $('#container').css('background', 'red');
+                $('#container').css('background', 'red');
 				}
 			});
 		} //grabIcons
@@ -88,6 +91,7 @@ $(document).on('pagebeforeshow', '#cGrid', function() {
 	/////////////////////////////// INIT VARS //////////////////////////////////////
 
 	// $('#clearSearch').css('visibility', 'hidden');
+	var $htmlBody = $('html, body');
 	var $container = $('#container');
 	var $item = $('#container .item');
 
@@ -110,11 +114,6 @@ $(document).on('pagebeforeshow', '#cGrid', function() {
 			$('#ionicSet').trigger('click');
 		}
 	}
-
-	setTimeout(function(){
-		console.log("opening my set");
-		 openMySet();
-		}, 3000);
     
 	/////////////////////////////// CHANGE GLYPH ////////////////////////////////////////////  
 
@@ -161,7 +160,7 @@ $(document).on('pageshow', '#cGrid', function() {
 			$('#btnClearCategories').css('color', '#555');
 			$('#clearSearch').show();
 			var kwd = $('input').val();
-			var mySet="ionicSet";
+			
 
 			//IF SEARCH IS EMPTY 
 			if (kwd == ' ' || !kwd || kwd == 'undefined') {
@@ -178,7 +177,7 @@ $(document).on('pageshow', '#cGrid', function() {
 				$('#filterType').text('All Categories');
 			}
 
-            window.scrollTo(0, 0);
+            $('#col1').scrollTop();
 		}
 		return false;
 	});
@@ -248,11 +247,14 @@ $('.menuItem ').on('click', this, function() {
 		$('#filterType').text('UI Elements')
 		break;
 	}
-	
+	$('#container').isotope('on', 'layoutComplete', function() {
+	    $('#col1').animate({
+	      scrollTop: $('#container').offset().top
+	    })
+	});
 	$('#container').isotope({
 		filter: catSelector
 	});
-
 });
 
 $('#btnAddShadow').on('click', function(){

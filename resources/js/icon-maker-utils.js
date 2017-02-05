@@ -40,11 +40,11 @@ var Utils = {
 
                 switch(set) {
                         case "mdSet":
-                          console.log("LM set: "+nMdSet);
+                          //console.log("LM set: "+nMdSet);
                           nMdSet++;
                         break;
                         case "faSet":
-                          console.log("font-awesome: "+nFaSet);
+                          //console.log("font-awesome: "+nFaSet);
                           nFaSet++;
                         break;
                         case "glyphSet":

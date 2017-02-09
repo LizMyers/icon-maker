@@ -5068,73 +5068,423 @@
    "keywords": "social"
  },
  {
-   "name": "Baseball",
-   "symbol": "fa icon-baseball",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "sports, american"
- },
- {
-   "name": "Football",
-   "symbol": "fa icon-football",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "sports, american"
- },
- {
-   "name": "Baseball Bats",
-   "symbol": "fa icon-bats",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "sports, american"
- },
- {
-   "name": "Berlin",
-   "symbol": "fa icon-berlin",
-   "category": "travel",
-   "set": "MdSet",
-   "keywords": "berlin, germany, de, city"
- },
- {
-   "name": "Berlin",
-   "symbol": "fa icon-gate",
-   "category": "travel",
-   "set": "MdSet",
-   "keywords": "berlin, germany, de, brandenburger tor, city"
- },
- {
-   "name": "Baseball Helmut",
-   "symbol": "fa icon-hardhat",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "sports, american"
- },
- {
-   "name": "Football Helmut",
-   "symbol": "fa icon-helmut",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "sports, american"
- },
- {
-   "name": "London",
-   "symbol": "fa icon-london",
-   "category": "travel",
-   "set": "MdSet",
-   "keywords": "uk, england, city"
- },
- {
-   "name": "Seattle",
-   "symbol": "fa icon-seattle",
-   "category": "travel",
-   "set": "MdSet",
-   "keywords": "us, space needle, city"
- },
- {
-   "name": "Whistle",
-   "symbol": "fa icon-whistle",
-   "category": "sports",
-   "set": "MdSet",
-   "keywords": "referee"
- }
+    "name": "Bats",
+    "symbol": "icon-bats",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "sports, american, baseball"
+  },
+  {
+    "name": "Baseball Helmut",
+    "symbol": "icon-baseball-helmut",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "sports, american"
+  },
+  {
+    "name": "Baseball",
+    "symbol": "icon-baseball",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "sports, american"
+  },
+  {
+    "name": "Berlin",
+    "symbol": "icon-gate",
+    "category": "travel",
+    "set": "mdSet",
+    "keywords": "berlin, germany, de, city,  brandenburger tor"
+  },
+  {
+    "name": "Berlin",
+    "symbol": "icon-berlin",
+    "category": "travel",
+    "set": "mdSet",
+    "keywords": "berlin, germany, de, city"
+  },
+  {
+    "name": "Football Helmut",
+    "symbol": "icon-football-helmut",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "sports, american"
+  },
+  {
+    "name": "Football",
+    "symbol": "icon-football",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "sports, american"
+  },
+  {
+    "name": "London",
+    "symbol": "icon-big-ben",
+    "category": "travel",
+    "set": "mdSet",
+    "keywords": "uk, england, city"
+  },
+  {
+    "name": "Seattle",
+    "symbol": "icon-seattle",
+    "category": "travel",
+    "set": "mdSet",
+    "keywords": "us, space needle, city"
+  },
+  {
+    "name": "Tennis Ball",
+    "symbol": "icon-tennis",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "tennis, ball, wimbledon"
+  },
+  {
+    "name": "Whistle",
+    "symbol": "icon-whistle",
+    "category": "sports",
+    "set": "mdSet",
+    "keywords": "referee"
+  },
+  {
+    "name": "Ambulance",
+    "symbol": "icon-ambulance-air",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Ambulance",
+    "symbol": "icon-ambulance-car",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Bandaid",
+    "symbol": "icon-bandaid",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Blood Pressure",
+    "symbol": "icon-blood-pressure",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Broken Arm",
+    "symbol": "icon-broken-arm",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Broken Leg",
+    "symbol": "icon-broken-leg",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Capsule",
+    "symbol": "icon-capsule",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Chart",
+    "symbol": "icon-chart",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, clipboard"
+  },
+  {
+    "name": "Cigarette",
+    "symbol": "icon-cigarette",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, smoker"
+  },
+  {
+    "name": "Crutches",
+    "symbol": "icon-crutches",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Doctor",
+    "symbol": "icon-doctor",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Doctor",
+    "symbol": "icon-doctor-female",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Doctor",
+    "symbol": "icon-doctor-male",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Elderly",
+    "symbol": "icon-elderly",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Eye",
+    "symbol": "icon-eye",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Eye Dropper",
+    "symbol": "icon-eye-dropper",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Flask",
+    "symbol": "icon-flask",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, beaker, test, chemistry"
+  },
+  {
+    "name": "Gurney",
+    "symbol": "icon-gurney",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Heartbeat",
+    "symbol": "icon-heartbeat",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Hospital",
+    "symbol": "icon-hospital",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Hospital",
+    "symbol": "icon-hospital-sign",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "IV Drip",
+    "symbol": "icon-iv-drip",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "IV Drips",
+    "symbol": "icon-iv-drips",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Martini",
+    "symbol": "icon-martini",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Medical Bag",
+    "symbol": "icon-medical-bag",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Medicine",
+    "symbol": "icon-medicine",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, pills, prescription"
+  },
+  {
+    "name": "Microscope",
+    "symbol": "icon-microscope",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Mother Child",
+    "symbol": "icon-mother-child",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, baby"
+  },
+  {
+    "name": "Nurse",
+    "symbol": "icon-nurse",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Operating Theatre",
+    "symbol": "icon-operating",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Oxygen",
+    "symbol": "icon-oxygen",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Patient",
+    "symbol": "icon-patient",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, bed"
+  },
+  {
+    "name": "Pharmacist",
+    "symbol": "icon-pharmacist",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, bed"
+  },
+  {
+    "name": "Pills",
+    "symbol": "icon-pills",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Poison",
+    "symbol": "icon-poison",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Pregnant Woman",
+    "symbol": "icon-pregnant",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Prescription",
+    "symbol": "icon-prescription",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Radiation",
+    "symbol": "icon-radioactive",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Ribbon",
+    "symbol": "icon-ribbon",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Scale",
+    "symbol": "icon-scale",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, weight"
+  },
+  {
+    "name": "Scalpal",
+    "symbol": "icon-scalpal",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Scan",
+    "symbol": "icon-scan",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Stethoscope",
+    "symbol": "icon-stethoscope",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Surgeon",
+    "symbol": "icon-surgeon",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Syringe",
+    "symbol": "icon-syringe",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Test Tubes",
+    "symbol": "icon-test-tubes",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  },
+  {
+    "name": "Urine Sample",
+    "symbol": "icon-urine-sample",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, test"
+  },
+  {
+    "name": "Wheelchair",
+    "symbol": "icon-wheelchair",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health, disabled"
+  },
+  {
+    "name": "X-ray",
+    "symbol": "icon-x-ray",
+    "category": "healthcare",
+    "set": "mdSet",
+    "keywords": "medicine, health"
+  }
 ]

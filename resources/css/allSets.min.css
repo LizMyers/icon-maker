@@ -2370,33 +2370,185 @@
 
 }
 
-.icon-baseball:before {
+.icon-bats:before {
   content: "\e900";
 }
-.icon-football:before {
+.icon-baseball-helmut:before {
   content: "\e901";
 }
-.icon-bats:before {
+.icon-baseball:before {
   content: "\e902";
 }
-.icon-berlin:before {
+.icon-gate:before {
   content: "\e903";
 }
-.icon-gate:before {
+.icon-berlin:before {
   content: "\e904";
 }
-.icon-hardhat:before {
+.icon-football-helmut:before {
   content: "\e905";
 }
-.icon-helmut:before {
+.icon-football:before {
   content: "\e906";
 }
-.icon-london:before {
+.icon-tennis:before {
+  content: "\e909";
+}
+.icon-big-ben:before {
   content: "\e907";
 }
 .icon-seattle:before {
   content: "\e908";
 }
 .icon-whistle:before {
-  content: "\e909";
+  content: "\e90a";
 }
+.icon-ambulance-air:before {
+  content: "\e90b";
+}
+.icon-ambulance-car:before {
+  content: "\e90c";
+}
+.icon-bandaid:before {
+  content: "\e90d";
+}
+.icon-blood-pressure:before {
+  content: "\e90e";
+}
+.icon-broken-arm:before {
+  content: "\e90f";
+}
+.icon-broken-leg:before {
+  content: "\e910";
+}
+.icon-capsule:before {
+  content: "\e911";
+}
+.icon-chart:before {
+  content: "\e912";
+}
+.icon-cigarette:before {
+  content: "\e913";
+}
+.icon-crutches:before {
+  content: "\e914";
+}
+.icon-doctor-female:before {
+  content: "\e915";
+}
+.icon-doctor-male:before {
+  content: "\e916";
+}
+.icon-doctor:before {
+  content: "\e917";
+}
+.icon-elderly:before {
+  content: "\e918";
+}
+.icon-eye-dropper:before {
+  content: "\e919";
+}
+.icon-eye:before {
+  content: "\e91a";
+}
+.icon-flask:before {
+  content: "\e91b";
+}
+.icon-gurney:before {
+  content: "\e91c";
+}
+.icon-heartbeat:before {
+  content: "\e91d";
+}
+.icon-hospital-sign:before {
+  content: "\e91e";
+}
+.icon-hospital:before {
+  content: "\e91f";
+}
+.icon-iv-drip:before {
+  content: "\e920";
+}
+.icon-iv-drips:before {
+  content: "\e921";
+}
+.icon-martini:before {
+  content: "\e922";
+}
+.icon-medical-bag:before {
+  content: "\e923";
+}
+.icon-medicine:before {
+  content: "\e927";
+}
+.icon-microscope:before {
+  content: "\e928";
+}
+.icon-mother-child:before {
+  content: "\e929";
+}
+.icon-nurse:before {
+  content: "\e92a";
+}
+.icon-operating:before {
+  content: "\e92b";
+}
+.icon-oxygen:before {
+  content: "\e92c";
+}
+.icon-patient:before {
+  content: "\e92d";
+}
+.icon-pharmacist:before {
+  content: "\e92e";
+}
+.icon-pills:before {
+  content: "\e92f";
+}
+.icon-poison:before {
+  content: "\e930";
+}
+.icon-pregnant:before {
+  content: "\e931";
+}
+.icon-prescription:before {
+  content: "\e932";
+}
+.icon-radioactive:before {
+  content: "\e933";
+}
+.icon-ribbon:before {
+  content: "\e934";
+}
+.icon-scale:before {
+  content: "\e935";
+}
+.icon-scalpal:before {
+  content: "\e936";
+}
+.icon-scan:before {
+  content: "\e937";
+}
+.icon-stethoscope:before {
+  content: "\e938";
+}
+.icon-surgeon:before {
+  content: "\e939";
+}
+.icon-syringe:before {
+  content: "\e93a";
+}
+.icon-test-tubes:before {
+  content: "\e93b";
+}
+.icon-urine-sample:before {
+  content: "\e93c";
+}
+.icon-wheelchair:before {
+  content: "\e93d";
+}
+.icon-x-ray:before {
+  content: "\e93e";
+}
+
+

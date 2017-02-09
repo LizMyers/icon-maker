@@ -76,7 +76,7 @@ var Utils = {
                     case "healthcare":
                         nHealth++;
                         $("#nHealth").text(nHealth);
-                        //console.log("Food: "+nFood);
+                        console.log("Healthcare: "+nHealth);
                     break;
                     case "nature":
                         nNature++;

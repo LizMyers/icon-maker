@@ -1,0 +1,382 @@
+** jquery; version 1.11.2 -- https://code.jquery.com/jquery/
+** jquery mobile 1.4.0; version 1.4.0 -- http://jquerymobile.com/download/all/
+** jquery-ui; version 1.12 -- https://jqueryui.com/
+
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+* For jquery see also this required NOTICE:
+    http://www.apache.org/licenses/LICENSE-2.0
+* For jquery mobile 1.4.0 see also this required NOTICE:
+    http://www.apache.org/licenses/LICENSE-2.0
+* For jquery-ui see also this required NOTICE:
+    http://www.apache.org/licenses/LICENSE-2.0
+
+-----
+
+** spectrum.js; version 1.0 -- https://bgrins.github.io/spectrum/
+Copyright (c) Brian Grinstead
+
+Copyright (c) Brian Grinstead
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-----
+
+** longshadow.js; version 1.0 -- https://github.com/dangvanthanh/jquery.longShadow
+Copyright (c) 2013 Dang Van Thanh
+
+The MIT License (MIT)
+
+Copyright (c) 2013 Dang Van Thanh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Contact GitHub API Training Shop Blog About
+
+-----
+
+** dom-to-image.min.js; version 1.0 -- https://github.com/tsayen/dom-to-image
+Copyright 2015 Anatolii Saienko
+
+The MIT License (MIT)
+
+Copyright 2015 Anatolii Saienko
+https://github.com/tsayen
+
+Copyright 2012 Paul Bakaus
+http://paulbakaus.com/
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-----
+
+** FileSaver.min.js; version 1.0 -- https://github.com/eligrey/FileSaver.js/
+Copyright © 2016 Eli Grey.
+
+The MIT License
+
+Copyright © 2016 Eli Grey.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-----
+
+** Isotope.js; version 3.0.2 -- http://isotope.metafizzy.co
+Commercial License
+
+   Isotope Commercial Developer License
+ is license grants you one individual developer to use Isotope for an unlimited number of applications.
+Download the latest code, documentation and demos from: isotope.meta zzy.co/isotope-docs.zip.
+View demos and documentation at isotope.meta zzy.co. Once your site goes live, We’d love to see the results.
+ ank you for your purchase! Your purchase helps support our small business and makes the web a little bit better.
+David DeSandro Founder, Meta zzy
+   
+ Isotope Commercial Developer License Agreement
+ is Software License Agreement (the “Agreement”) is between Meta zzy LLC (“Meta zzy”) and You (including your agents and a liates), a commercial licensee of Meta zzy's software. If you have not purchased a Isotope commercial license from Meta zzy, these terms do not apply to you, and your use of the Meta zzy software is instead governed by the GNU General Public License, version 3 (available at www.gnu.org/licenses/gpl-3.0.txt).
+1. De nitions
+1.1. “Application” means any software, application, or elements that Your Licensed Developers develop using the
+Software or Modi cations in accordance with this Agreement.
+1.2. “End User” means an end user of Your Application who acquires a license to such solely for their own use and not for distribution, resale, user interface design, or software development purposes.
+1.3. “Licensed Developer” shall mean an individual person permitted to use the Software and make Modi cations for your Applications, whether such person is Your employee or a consultant or contractor providing services to You.
+1.4. “Modi cation” means any revision, adaptation, or derivative of the Software produced by You. 1.5.  e “Software” means Isotope version 3.
+2. Commercial license grant
+2.1. Subject to the terms of this Agreement, Meta zzy grants to You a revocable, non-exclusive, non-transferable license: (i) for one (1) Licensed Developer to use the Software to create Modi cations and Applications; (ii) for You to distribute the Software and/or Modi cations to an unlimited number of End Users solely as integrated into the Applications; and (iii) for End Users to use the Software as incorporated into Your Applications in accordance with the terms of this Agreement.
+2.2. You are entitled to receive all updates to the major version of the Software licensed by you, as well as any later version of the Software that Meta zzy, in writing, explicitly authorizes you to use. (For illustration purposes only, if you purchased a license for version 3.0, this licenses authorizes you to use version 3.9, but not 4.0.) Meta zzy makes no representation that any update will be compatible with your Application.
+3. Ownership
+3.1.  is is a license agreement and not an agreement for sale. Meta zzy reserves ownership of all intellectual property rights inherent in or relating to the Software and corresponding source code, which include all copyright, patent rights, all rights in relation to registered and unregistered trademarks (including service marks), con dential information (including trade secrets and know-how) and all rights other than those expressly granted by this Agreement.
+  
+ 3.2. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement a xed to, incorporated in or otherwise applied in connection with the Software. Notwithstanding the above, you are permitted to produce, use, and distribute compressed or “mini ed” copies of the Software that do not bear the notices contained in the Software’s source code, so long as you otherwise comply with the terms of this license.
+4. Prohibited Uses
+4.1. Your Application must have substantially di erent functionality than, and must not compete directly with, the
+Software.
+4.2. You may not distribute the Software or Modi cations except as included within Your Application.
+4.3. If You produce an Application for a customer, You are responsible for ensuring that your customer does not make use of the Software except with Applications licensed herein.
+4.4. Your Application must not enable End Users to produce separate applications that incorporate the Software or Modi cations. For example, if Your Application is a development toolkit or library, an application builder, a website builder that can be used to incorporate the Software into a new Application, You must obtain a separate OEM license from Meta zzy.
+5. Termination
+5.1.  is Agreement and the license granted hereunder shall continue until terminated in accordance with this Section. Unless otherwise speci ed in this Agreement, the license shall last as long as Your use of the Software is in compliance with the terms herein.
+5.2. Meta zzy shall have the right to terminate this Agreement and the license granted hereunder immediately if You breach any of the material terms of this Agreement, and You fail to cure such material breach within thirty (30) days of receipt of notice from Meta zzy. Upon termination of this Agreement, all licenses granted to You in this Agreement shall terminate automatically and You shall immediately cease use and distribution of the Software.
+5.3. Upon termination of this Agreement, You must cease all use of the Software. If, prior to your breach of this Agreement, you delivered Applications incorporating the Software to Your End Users, those End Users’ licenses shall survive termination.
+6. Disclaimer of Warranties
+6.1. TO THE EXTENT PERMITTED BY LAW, METAFIZZY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT, WITH REGARD TO THE SOFTWARE. WE DO NOT GUARANTEE THAT THE OPERATION OF THE SOFTWARE OR YOUR APPLICATION WILL BE UNINTERRUPTED OR ERROR-FREE, AND YOU ACKNOWLEDGE THAT IT IS NOT TECHNICALLY PRACTICABLE FOR US TO DO SO.
+ 7. Limitation of Liabilities
+7.1. TO THE EXTENT PERMITTED BY LAW, IN NO EVENT SHALL METAFIZZY BE LIABLE UNDER ANY LEGAL OR EQUITABLE THEORY FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE OR THE CODE IT PRODUCES OR ANY OTHER SUBJECT MATTER RELATING TO THIS AGREEMENT, EVEN IF METAFIZZY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, METAFIZZY’S ENTIRE LIABILITY WITH RESPECT TO ANY SUBJECT MATTER RELATING TO THIS AGREEMENT SHALL BE LIMITED TO THE GREATER OF: (I) THE AMOUNT ACTUALLY PAID BY YOU FOR THE LICENSE, OR (II) FIVE HUNDRED DOLLARS ($500).
+8. Indemni cation
+8.1. While redistributing the Software or Modi cations thereof as part of Your Application, You may choose to o er acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this Agreement. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, and not on Meta zzy’s behalf.
+8.2. You agree to indemnify, hold harmless, and defend Meta zzy and its owners, o cers, agents, and a liates from and against any and all claims, lawsuits and proceedings (collectively “Claims”), and all expenses, costs (including attorney's fees), judgments, damages and other liabilities resulting from such Claims, that arise or result from: (i) Your use of the Software in violation of this Agreement; (ii) the use or distribution of Your Application, except to the extent such claim is based solely on the inclusion of the Software therein; (iii) Your Modi cation of the Software’s source code; or (iv) Your accepting support, warranty, indemnity, or additional liability as described in Section 8.1.
+9. Payment and Taxes
+9.1. All payments under this Agreement are due to Meta zzy upon Your purchase of a license to the Software.
+9.2. Each party shall be responsible for all taxes (including, but not limited to, taxes based upon its income) or levies imposed on it under applicable laws, regulations and tax treaties as a result of this Agreement and any payments made hereunder (including those required to be withheld or deducted from payments); provided that You shall be responsible for any value added tax, use tax, sales tax, or similar tax, and shall pay or reimburse Meta zzy for the same upon invoice. Each party shall furnish evidence of such paid taxes as is su cient to enable the other party to obtain any credits available to it, including original tax withholding certi cates.
+10. Miscellaneous
+10.1. Software Updates and Upgrades.  e license granted herein applies only to the version of the Software available when purchased in connection with the terms of this Agreement, and to any updates and/or upgrades to which You may be entitled. Any previous or subsequent license granted to You for use of the Software shall be
+ governed by the terms and conditions of the agreement entered in connection with purchase or download of that version of the Software.
+10.2. Survival.  e provisions of sections 4 through 10 will survive termination of this Agreement.
+10.3. Compliance with Applicable Laws. You agree that You will comply with all applicable laws and regulations
+with respect to the Software, including without limitation all export control laws and regulations.
+10.4. Marketing. You agree to Meta zzy’s use of Your name, trade name, and trademark, for use in Meta zzy’s marketing materials and its website, solely to identify you as a customer of Meta zzy.
+10.5. Assignment.  is Agreement may be assigned by Meta zzy in whole or in part and will inure to the bene t of Meta zzy’s successors and assigns. You may not assign or transfer this Agreement without Meta zzy’s prior written consent. Notwithstanding the foregoing, however, if You transfer ownership of an Application to a customer for which it was developed, You may assign this Agreement to that customer (the “Assignee”) provided: (i) You provide written notice to Meta zzy prior to the e ective date of such assignment; and (ii) there is a written agreement, wherein the Assignee accepts the terms of this Agreement.
+10.6. Entire Agreement.  e terms and conditions stated herein set forth the entire agreement of the parties and replace and supersede all other contracts, agreements, and understandings, written or oral, relating to the subject matter hereof.
+10.7. Severability. In the event that any portion of this Agreement is held to be unenforceable, such portions shall not limit or otherwise modify or a ect any other portion of this Agreement.
+10.8. Modi cation; Waiver.  is Agreement cannot be amended except by a written instrument executed by each of the parties.  e failure of either party to enforce any provision of this Agreement may not be deemed a waiver of that or any other provision of this Agreement.
+10.9. Governing Law.  is Agreement is governed by the laws of the Commonwealth of Virginia (notwithstanding con icts of laws provisions), and all parties irrevocably submit to the jurisdiction of the state or federal courts of the Commonwealth of Virginia and further agree to commence any litigation which may arise hereunder in the state or federal courts located in the judicial district of Alexandria, Virginia.  e UN Convention on Contracts for the International Sale of Goods is expressly excluded.
+10.10. Government Use. If the Software or any related documentation is licensed to the U.S. Government or any agency thereof, it will be considered to be “commercial computer software” or “commercial computer software documentation,” as those terms are used in 48 CFR § 12.212 or 48 CFR § 227.7202, and is being licensed with only those rights as are granted to all other licensees as set forth in this Agreement.
+
+-----
+
+** Font-Awesome Icons; version 4.7.0 -- http://fontawesome.io
+http://fontawesome.io/license/
+
+Multiple licenses are used: MIT, Creative Commons, and Open Source. Pease see http://fontawesome.io/license/ for details.

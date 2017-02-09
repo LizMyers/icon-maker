@@ -2370,113 +2370,122 @@
 
 }
 
-.icon-bats:before {
+.icon-piano:before {
   content: "\e900";
 }
-.icon-baseball-helmut:before {
+.icon-guitar:before {
   content: "\e901";
 }
-.icon-baseball:before {
+.icon-bats:before {
   content: "\e902";
 }
-.icon-gate:before {
+.icon-baseball-helmut:before {
   content: "\e903";
 }
-.icon-berlin:before {
+.icon-baseball:before {
   content: "\e904";
 }
-.icon-football-helmut:before {
+.icon-gate:before {
   content: "\e905";
 }
-.icon-football:before {
+.icon-berlin:before {
   content: "\e906";
 }
-.icon-tennis:before {
-  content: "\e909";
-}
-.icon-big-ben:before {
+.icon-football-helmut:before {
   content: "\e907";
 }
-.icon-seattle:before {
+.icon-football:before {
   content: "\e908";
 }
-.icon-whistle:before {
+.icon-big-ben:before {
+  content: "\e909";
+}
+.icon-seattle:before {
   content: "\e90a";
 }
-.icon-ambulance-air:before {
+.icon-tennis:before {
   content: "\e90b";
 }
-.icon-ambulance-car:before {
+.icon-whistle:before {
   content: "\e90c";
 }
-.icon-bandaid:before {
+.icon-ambulance-air:before {
   content: "\e90d";
 }
-.icon-blood-pressure:before {
+.icon-ambulance-car:before {
   content: "\e90e";
 }
-.icon-broken-arm:before {
+.icon-bandaid:before {
   content: "\e90f";
 }
-.icon-broken-leg:before {
+.icon-blood-pressure:before {
   content: "\e910";
 }
-.icon-capsule:before {
+.icon-broken-arm:before {
   content: "\e911";
 }
-.icon-chart:before {
+.icon-broken-leg:before {
   content: "\e912";
 }
-.icon-cigarette:before {
+.icon-capsule:before {
   content: "\e913";
 }
-.icon-crutches:before {
+.icon-chart:before {
   content: "\e914";
 }
-.icon-doctor-female:before {
+.icon-cigarette:before {
   content: "\e915";
 }
-.icon-doctor-male:before {
+.icon-crutches:before {
   content: "\e916";
 }
-.icon-doctor:before {
+.icon-doctor-female:before {
   content: "\e917";
 }
-.icon-elderly:before {
+.icon-doctor-male:before {
   content: "\e918";
 }
-.icon-eye-dropper:before {
+.icon-doctor:before {
   content: "\e919";
 }
-.icon-eye:before {
+.icon-elderly:before {
   content: "\e91a";
 }
-.icon-flask:before {
+.icon-eye-dropper:before {
   content: "\e91b";
 }
-.icon-gurney:before {
+.icon-eye:before {
   content: "\e91c";
 }
-.icon-heartbeat:before {
+.icon-flask:before {
   content: "\e91d";
 }
-.icon-hospital-sign:before {
+.icon-gurney:before {
   content: "\e91e";
 }
-.icon-hospital:before {
+.icon-heartbeat:before {
   content: "\e91f";
 }
-.icon-iv-drip:before {
+.icon-hospital-sign:before {
   content: "\e920";
 }
-.icon-iv-drips:before {
+.icon-hospital:before {
   content: "\e921";
 }
-.icon-martini:before {
+.icon-iv-drip:before {
   content: "\e922";
 }
-.icon-medical-bag:before {
+.icon-iv-drips:before {
   content: "\e923";
+}
+.icon-martini:before {
+  content: "\e924";
+}
+.icon-medical-bag:before {
+  content: "\e925";
+}
+.icon-medical:before {
+  content: "\e926";
 }
 .icon-medicine:before {
   content: "\e927";
@@ -2550,5 +2559,3 @@
 .icon-x-ray:before {
   content: "\e93e";
 }
-
-

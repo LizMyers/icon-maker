@@ -179,7 +179,7 @@
    "symbol": "fa fa-apple",
    "category": "technology",
    "set": "faSet",
-   "keywords": "technology"
+   "keywords": "technology, food"
  },
  {
    "name": "Archive",
@@ -522,7 +522,7 @@
    "symbol": "fa fa-beer",
    "category": "entertainment",
    "set": "faSet",
-   "keywords": "entertainment, media"
+   "keywords": "entertainment, party, food, drink"
  },
  {
    "name": "Behance",
@@ -585,7 +585,7 @@
    "symbol": "fa fa-birthday-cake",
    "category": "food",
    "set": "faSet",
-   "keywords": "food, party, anniversary"
+   "keywords": "food, party, anniversary drink"
  },
  {
    "name": "BitBucket",
@@ -1180,7 +1180,7 @@
    "symbol": "fa fa-code-fork",
    "category": "technology",
    "set": "faSet",
-   "keywords": "technology"
+   "keywords": "technology, food"
  },
  {
    "name": "Codepen",
@@ -1201,7 +1201,7 @@
    "symbol": "fa fa-coffee",
    "category": "entertainment",
    "set": "faSet",
-   "keywords": "entertainment, media"
+   "keywords": "entertainment, party, drink, food"
  },
  {
    "name": "Cog",
@@ -2748,7 +2748,7 @@
    "symbol": "fa fa-lemon-o",
    "category": "nature",
    "set": "faSet",
-   "keywords": "nature"
+   "keywords": "nature, food"
  },
  {
    "name": "Level Down",
@@ -3833,7 +3833,7 @@
    "symbol": "fa fa-shopping-basket",
    "category": "business",
    "set": "faSet",
-   "keywords": "eCommerce"
+   "keywords": "eCommerce, food"
  },
  {
    "name": "Cart",
@@ -4064,7 +4064,7 @@
    "symbol": "fa fa-spoon",
    "category": "food",
    "set": "faSet",
-   "keywords": "utensils"
+   "keywords": "utensils, food, drink"
  },
  {
    "name": "Spotify",
@@ -5310,7 +5310,7 @@
     "symbol": "icon-martini",
     "category": "healthcare",
     "set": "mdSet",
-    "keywords": "medicine, health"
+    "keywords": "medicine, health, drink, food"
   },
   {
     "name": "Medical Bag",
@@ -5486,5 +5486,19 @@
     "category": "healthcare",
     "set": "mdSet",
     "keywords": "medicine, health"
+  },
+  {
+    "name": "Guitar",
+    "symbol": "icon-guitar",
+    "category": "entertainment",
+    "set": "mdSet",
+    "keywords": "accoustic guitar, music"
+  },
+  {
+    "name": "Piano",
+    "symbol": "icon-piano",
+    "category": "entertainment",
+    "set": "mdSet",
+    "keywords": "music, keyboard"
   }
 ]
